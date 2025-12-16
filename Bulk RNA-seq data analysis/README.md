@@ -6,10 +6,9 @@ This repository contains scripts for bulk RNA-seq data analysis.
 
 ### 1_rawData_process.sh
 Description of what this script does:
-- quality control
-- trimming
 - alignment
-- quantification
+- quality control
+- gene annotation
 
 ## Step 2: Identification of Differentially Expressed Genes
 
