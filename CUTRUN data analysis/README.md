@@ -11,7 +11,7 @@ This section describes the CUT&RUN data analysis workflow implemented in this re
 
 **Input:** raw FASTQ files  
 **Output:** trimmed FASTQ files  
-**Main tools:** trimmomatic 
+**Tools:** trimmomatic 
 
 ---
 
@@ -23,7 +23,7 @@ This section describes the CUT&RUN data analysis workflow implemented in this re
 
 **Input:** trimmed FASTQ files  
 **Output:** spike-in–mapped BAM files  
-**Main tools:** bowtie2, samtools  
+**Tools:** bowtie2, samtools  
 
 ---
 
@@ -37,7 +37,7 @@ This section describes the CUT&RUN data analysis workflow implemented in this re
 
 **Input:** trimmed FASTQ files  
 **Output:** filtered BAM files, bigWig tracks, peak files  
-**Main tools:** bowtie2, samtools, picard, MACS2  
+**Tools:** bowtie2, samtools, picard, MACS2  
 
 ---
 
@@ -49,6 +49,6 @@ This section describes the CUT&RUN data analysis workflow implemented in this re
 
 **Input:** CUT&RUN peak files  
 **Output:** motif enrichment results and motif logos  
-**Main tools:** MEME / FIMO  
+**Tools:** MEME / FIMO  
 
 ---
