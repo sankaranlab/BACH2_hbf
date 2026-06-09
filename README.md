@@ -21,9 +21,9 @@ Scripts and supplementary files for the manuscript:
 The analyses in this repository support the identification of a BACH2–NRF2 regulatory axis controlling fetal hemoglobin (HbF) expression. The workflow broadly proceeds as follows:
 
 1. **Statistical genetics** — Meta-GWAS, fine-mapping, and heritability/genetic-correlation analyses identify and characterize HbF-associated loci, implicating BACH2.
-2. **CUT&RUN** — Maps BACH2 and NRF2 occupancy genome-wide in erythroid cells, linking GWAS variants to regulatory elements.
+2. **SCAVENGE** — Propagates fine-mapped GWAS variant scores across a bone marrow scATAC-seq cell graph to identify the hematopoietic cell types most relevant to HbF regulation.
 3. **Bulk RNA-seq** — Characterizes transcriptional changes upon BACH2 knockdown, highlighting upregulation of fetal globin genes (*HBG1/HBG2*).
-4. **SCAVENGE** — Propagates fine-mapped GWAS variant scores across a bone marrow scATAC-seq cell graph to identify the hematopoietic cell types most relevant to HbF regulation.
+4. **CUT&RUN** — Maps BACH2 and NRF2 occupancy genome-wide in erythroid cells, linking GWAS variants to regulatory elements.
 
 ---
 
