@@ -31,7 +31,7 @@ Steps 0–2 should be run for all samples before Step 3. After Step 1, collect t
 ## [`0_trim_fastq.sh`](0_trim_fastq.sh) — Adapter trimming and read length normalization
 
 ```bash
-bash 0_trim_fastq.sh <sample_name>
+$ bash 0_trim_fastq.sh <sample_name>
 ```
 
 Two-stage trimming of raw paired-end reads:
@@ -50,7 +50,7 @@ Two-stage trimming of raw paired-end reads:
 ## [`1_run.spikein.mapping.sh`](1_run.spikein.mapping.sh) — Spike-in mapping
 
 ```bash
-bash 1_run.spikein.mapping.sh <sample_name>
+$ bash 1_run.spikein.mapping.sh <sample_name>
 ```
 
 Maps trimmed reads to the *E. coli* K-12 MG1655 genome to quantify spike-in reads for calibration. The number of properly paired spike-in reads (`samtools view -c -F 12`) is appended to `spikein.read` for all samples. After running this for all samples, use the spike-in counts to compute per-sample normalization scale factors before proceeding to Step 3.
@@ -66,7 +66,7 @@ Maps trimmed reads to the *E. coli* K-12 MG1655 genome to quantify spike-in read
 ## [`2_run.cutrun.sh`](2_run.cutrun.sh) — Alignment, peak calling, and track generation
 
 ```bash
-bash 2_run.cutrun.sh <sample_name>
+$ bash 2_run.cutrun.sh <sample_name>
 ```
 
 Main processing pipeline, aligned to hg38:
@@ -90,7 +90,7 @@ Main processing pipeline, aligned to hg38:
 ## [`3_motif_calling.sh`](3_motif_calling.sh) — Motif enrichment analysis
 
 ```bash
-bash 3_motif_calling.sh <sample_name>
+$ bash 3_motif_calling.sh <sample_name>
 ```
 
 Scans CUT&RUN peaks for TF motif enrichment using FIMO. Expects spike-in–normalized, downsampled narrow peak files as input (see note in [How to use](#how-to-use) above).
