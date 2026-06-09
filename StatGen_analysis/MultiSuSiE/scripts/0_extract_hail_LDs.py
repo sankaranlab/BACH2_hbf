@@ -29,7 +29,7 @@ import os
 import time
 
 import hail as hl
-from hail.linalg import BlockMatrix
+from hail.linalg import BlockMatrix  
 import numpy as np
 import pandas as pd
 
@@ -198,7 +198,7 @@ def main():
     )
 
     parser.add_argument(
-        "--pops", nargs="+", choices=["EUR", "AFR"], default=["EUR", "AFR"],
+        "--pops", nargs="+", choices=["EUR", "AFR", "EAS", "CSA"], default=["EUR", "AFR"],
         help="Populations to fetch (default: EUR AFR)",
     )
     parser.add_argument(
@@ -210,7 +210,7 @@ def main():
         help="Reference genome version (default: GRCh37)",
     )
     parser.add_argument(
-        "--gcp-project", default="xcheng-trial",
+        "--gcp-project", default="user-trial",
         help=(
             "GCP project ID for requester-pays GCS buckets. "
             "Required when the job runs outside Google Cloud."
