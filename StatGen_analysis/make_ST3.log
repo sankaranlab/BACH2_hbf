@@ -1,0 +1,123 @@
+========================= Job Information ========================
+Job ID: 19047027
+Job Name: correct_ST3
+Node: compute-10-18
+Start Time: Sat Apr 25 02:16:57 EDT 2026
+Working Directory: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis
+Number of CPUs: 1
+Clock Time Limit: 
+Memory per Node: 131072
+===================================================================
+
+Running command: python make_SuppTab3.py correctMAMA
+[+0.0s] Incompatible allele rows will be written to supplementary_table_3_correctMAMA_incompatible.tsv
+[1/6] Loading FEMA meta-analysis...
+  Loaded FEMA from cohort_sumstats/METAL_hbf_inv_ALL_info6_mac40_SE_gcOn_hg38.tsv.gz: 21849438 rows x 17 cols
+  [+142.0s] FEMA rows with P < 1e-300: 23
+MarkerName	Chr	Position	A1	A2	P_RAW	P_META_log10p
+rs13019832	2	60483436.0	G	A	1.92e-326	325.7166987712965
+rs1427407	2	60490908.0	G	T	2.33e-350	349.63264407897395
+rs766432	2	60492835.0	C	A	8.29e-343	342.0814454694497
+rs4671393	2	60493816.0	G	A	1.00e-343	343.0
+rs1896295	2	60496951.0	C	T	1.44e-301	300.84163750790475
+rs7606173	2	60498316.0	G	C	1.70e-332	331.7695510786217
+rs9399136	6	135081201.0	C	T	1.72e-401	400.76447155309245
+rs1331309	6	135085040.0	G	T	2.54e-346	345.5951662833801
+rs9376090	6	135090090.0	C	T	2.52e-413	412.59859945921846
+rs7776054	6	135097778.0	G	A	2.11e-414	413.6757175447023
+rs11759553	6	135101158.0	T	A	1.41e-371	370.8507808873446
+rs9373124	6	135102071.0	C	T	1.64e-361	360.7851561519523
+rs35959442	6	135103041.0	G	C	1.56e-376	375.8068754016455
+rs4895440	6	135105420.0	T	A	1.89e-375	374.72353819582673
+rs4895441	6	135105435.0	G	A	2.52e-411	410.59859945921846
+rs9376092	6	135106006.0	C	A	2.81e-386	385.55129368009494
+rs9389269	6	135106021.0	C	T	9.76e-426	425.0105501823333
+rs9402686	6	135106679.0	G	A	3.02e-426	425.5199930570428
+rs7758845	6	135107399.0	C	A	1.15e-371	370.9393021596464
+rs6920211	6	135110180.0	C	T	1.50e-340	339.8239087409443
+rs9494142	6	135110502.0	C	T	6.75e-378	377.170696227169
+rs9494145	6	135111414.0	C	T	9.93e-357	356.00305075150465
+rs9483788	6	135114363.0	C	T	2.40e-337	336.6197887582884
+  [+168.0s] FEMA loaded: 21849438 rows x 13 cols
+  [+168.0s] FEMA rows with ambiguous coordinates: 55487
+[+176.0s] [2/6] Loading and merging BIOS panels...
+  Loaded BIOS from cohort_sumstats/BIOS_LL_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz: 5034403 rows x 20 cols
+  [+231.8s] Loaded BIOS LL: 5034403 rows x 12 cols
+    BIOS_LL: matched=5043267, same=2789264, swapped=2252487, incompatible=1516, recovered_by_rsid=9234, unmatched=16806171
+  [+387.6s] Merged BIOS LL
+  Loaded BIOS from cohort_sumstats/BIOS_LLS_660Q_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz: 4644635 rows x 20 cols
+  [+440.3s] Loaded BIOS LLS_660Q: 4644635 rows x 12 cols
+    BIOS_LLS: matched=4653353, same=2563886, swapped=2087775, incompatible=1692, recovered_by_rsid=416, unmatched=17196085
+  [+585.3s] Merged BIOS LLS_660Q
+  Loaded BIOS from cohort_sumstats/BIOS_RS_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz: 5101860 rows x 20 cols
+  [+641.2s] Loaded BIOS RS: 5101860 rows x 12 cols
+    BIOS_RS: matched=5110865, same=2828508, swapped=2280730, incompatible=1627, recovered_by_rsid=257, unmatched=16738573
+  [+782.8s] Merged BIOS RS
+[+783.3s] [3/6] Loading and merging remaining cohorts...
+  Loaded GTEx from cohort_sumstats/GTEx_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz: 4651929 rows x 14 cols
+  [+819.7s] Loaded GTEx: 4651929 rows x 12 cols
+    GTEx: matched=4657449, same=2445696, swapped=2211520, incompatible=233, recovered_by_rsid=3381, unmatched=17191989
+  [+981.5s] Merged GTEx
+  Loaded Sardinia from cohort_sumstats/Sardinia_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz: 8775956 rows x 14 cols
+  [+1061.2s] Loaded Sardinia: 8775956 rows x 12 cols
+    SARDINIA: matched=8799090, same=4821066, swapped=3975269, incompatible=2755, recovered_by_rsid=18427, unmatched=13050348
+  [+1245.0s] Merged Sardinia
+  Loaded Sweden from cohort_sumstats/Sweden_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz: 6277626 rows x 19 cols
+  [+1306.9s] Loaded Sweden: 6277626 rows x 12 cols
+    SWEDEN: matched=6297543, same=3505861, swapped=2789851, incompatible=1831, recovered_by_rsid=3967, unmatched=15551895
+  [+1447.3s] Merged Sweden
+  Loaded Interval from cohort_sumstats/Interval_chrALL_MAF0p1pct_hg38_info6_pass-z-check.clean.tsv.gz: 7788658 rows x 14 cols
+  [+1499.8s] Loaded Interval: 7788658 rows x 12 cols
+    INTERVAL: matched=7813992, same=4218470, swapped=3592677, incompatible=2845, recovered_by_rsid=4965, unmatched=14035446
+  [+1708.7s] Merged Interval
+  Loaded Tanzania from cohort_sumstats/Tanzania_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz: 17594066 rows x 16 cols
+  [+1879.8s] Loaded Tanzania: 17594066 rows x 12 cols
+    TANZANIA: matched=17624880, same=9884418, swapped=7735451, incompatible=5011, recovered_by_rsid=2984, unmatched=4224558
+  [+2107.7s] Merged Tanzania
+  Loaded StJude from cohort_sumstats/StJude_chrALL_MAF0p1pct_hg38_info6_se-cap-10.clean.tsv.gz: 9515453 rows x 17 cols
+  [+2179.0s] Loaded StJude: 9515453 rows x 12 cols
+    StJude: matched=9535209, same=5332993, swapped=4198585, incompatible=3631, recovered_by_rsid=11593, unmatched=12314229
+  [+2397.9s] Merged StJude
+  Loaded TOPMed from cohort_sumstats/TOPMed_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz: 11683427 rows x 18 cols
+  [+2505.5s] Loaded TOPMed: 11683427 rows x 12 cols
+    TOPMED: matched=11703212, same=6604037, swapped=5095657, incompatible=3518, recovered_by_rsid=41, unmatched=10146226
+  [+2738.0s] Merged TOPMed
+  Loaded Thai from cohort_sumstats/Thai_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz: 6174336 rows x 15 cols
+  [+2792.7s] Loaded Thai: 6174336 rows x 12 cols
+    THAI: matched=6185015, same=3313386, swapped=2869063, incompatible=2566, recovered_by_rsid=222, unmatched=15664423
+  [+3005.6s] Merged Thai
+[+3006.1s] [4/6] Loading and merging MAMA cohorts...
+  Loaded MAMA from MAMA/XC_SNPaligned_16865_EUR_HBF.res: 3760527 rows x 12 cols
+  [+3035.9s] Loaded MAMA EUR: 3760527 rows x 11 cols
+    EUR_MAMA: matched=3762632, same=1993993, swapped=1767724, incompatible=915, recovered_by_rsid=0, unmatched=18086806
+  [+3191.3s] Merged MAMA EUR
+  Loaded MAMA from MAMA/XC_SNPaligned_16865_AFR_HBF.res: 3760527 rows x 12 cols
+  [+3221.0s] Loaded MAMA AFR: 3760527 rows x 11 cols
+    AFR_MAMA: matched=3762632, same=1993993, swapped=1767724, incompatible=915, recovered_by_rsid=0, unmatched=18086806
+  [+3379.6s] Merged MAMA AFR
+  Loaded MAMA from MAMA/XC_SNPaligned_16865_THAI_HBF.res: 3760527 rows x 12 cols
+  [+3409.9s] Loaded MAMA THAI: 3760527 rows x 11 cols
+    THAI_MAMA: matched=3762632, same=1993993, swapped=1767724, incompatible=915, recovered_by_rsid=0, unmatched=18086806
+  [+3575.6s] Merged MAMA THAI
+[+3578.6s] Wrote ambiguous FEMA coordinate audit: 55487 rows, 55487 with recovered CHR/BP
+[+3578.6s] [5/6] Post-merge filtering and summary...
+  [+3588.3s] Filtered significant SNPs (log10p > 6.00): 21849438 -> 2193
+  [+3588.3s] Filtered SNPs with non-single-nucleotide alleles: 2193 -> 2193
+  [+3588.3s] Filtered non-integer chromosomes: 2193 -> 2193
+[+3588.5s] Done. Supplementary Table 3 (with NAs) written: 2193 SNPs with -log10P values
+  [+3588.5s] Filtered SNPs with missing MAMA data: 2193 -> 976
+Chromosome 2: 240 SNPs
+Chromosome 5: 2 SNPs
+Chromosome 6: 434 SNPs
+Chromosome 11: 188 SNPs
+Chromosome 13: 1 SNPs
+Chromosome 17: 42 SNPs
+Chromosome 19: 69 SNPs
+Overall: 976 SNPs
+[+3588.5s] [6/6] Writing output file...
+[+3588.6s] Done. Supplementary Table 3 written: 976 SNPs (all P values converted to -log10P)
+JobID                               JobName  Partition    Account  AllocCPUS      State ExitCode    Elapsed     MaxRSS 
+------------ ------------------------------ ---------- ---------- ---------- ---------- -------- ---------- ---------- 
+19047027                        correct_ST3 bch-compu+        bch          2    RUNNING      0:0   01:00:42            
+19047027.ba+                          batch                   bch          2    RUNNING      0:0   01:00:42            
+19047027.ex+                         extern                   bch          2    RUNNING      0:0   01:00:42            
