@@ -1,18 +1,35 @@
-# Bulk RNA-seq Data Analysis Pipeline
+# Bulk RNA-seq Analysis
 
-This repository contains scripts for bulk RNA-seq data analysis.
+Scripts for processing bulk RNA-seq data from a BACH2 knockdown experiment in erythroid cells (day-11 differentiation, scramble control vs. BACH2-sh2) and identifying differentially expressed genes.
 
-## Step 1: Raw Bulk RNA-seq Data Processing
+---
 
-### 1_rawData_process.sh
-Description of what this script does:
-- alignment
-- quality control
-- gene annotation
+## [`1_rawData_process.sh`](1_rawData_process.sh) — Alignment and read counting
 
-## Step 2: Identification of Differentially Expressed Genes
+```bash
+$ bash 1_rawData_process.sh <sample_name>
+```
 
-### 2_DiffGene.identification.r
-- DESeq2
-- normalization
-- volcano plots
+Aligns paired-end reads to hg38 (STAR), filters, and quantifies per-gene counts (featureCounts).
+
+| | |
+|---|---|
+| **Input** | `raw_data/<sample>_R1/R2_001.fastq.gz` |
+| **Output** | `output/<sample>/<sample>.count.bed` |
+| **Tools** | STAR, samtools, featureCounts (Subread) |
+
+---
+
+## [`2_DiffGene.identification.r`](2_DiffGene.identification.r) — Differential expression
+
+```bash
+$ Rscript 2_DiffGene.identification.r
+```
+
+Runs DESeq2 on scramble vs. BACH2-sh2 samples (2 replicates each) and generates volcano plots. DEGs called at p < 0.05 and |log2FC| > 0.5.
+
+| | |
+|---|---|
+| **Input** | `<sample>.count.bed` files from step 1 |
+| **Output** | `DEGs.p=<threshold>.2fold.scatter.png`, `genelist.png` |
+| **Tools** | R, DESeq2, ggplot2 |
