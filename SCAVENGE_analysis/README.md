@@ -62,7 +62,7 @@ $ python 1_liftover.py
 
 ## Step 2: SCAVENGE TRS computation
 
-**Script:** [`2_scavenge.granja2019.R`](scavenge.granja2019.R)
+**Script:** [`2_scavenge.granja2019.R`](2_scavenge.granja2019.R)
 
 Computes per-cell trait relevance scores (TRS) for HbF using the SCAVENGE framework.
 

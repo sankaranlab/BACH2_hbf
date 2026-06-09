@@ -31,7 +31,7 @@ The analyses in this repository support the identification of a BACH2–NRF2 reg
 
 | Directory | Description |
 |-----------|-------------|
-| [`StatGen_analysis/`](StatGen_analysis/) | Meta-GWAS, fine-mapping, heritability partitioning, and genetic correlation analyses |
+| [`StatGen_analysis/`](StatGen_analysis/) | Meta-GWAS, COJO fine-mapping, SNP heritability estimation, and genetic correlation analyses |
 | [`SCAVENGE_analysis/`](SCAVENGE_analysis/) | Per-cell trait relevance scoring using SCAVENGE on Granja 2019 bone marrow scATAC-seq data |
 | [`BulkRNAseq_analysis/`](BulkRNAseq_analysis/) | STAR alignment, featureCounts quantification, and DESeq2 differential expression for BACH2-sh2 vs. scramble control |
 | [`CUTRUN_analysis/`](CUTRUN_analysis/) | End-to-end CUT&RUN pipeline: trimming, spike-in normalization, hg38 alignment, peak calling, bigWig tracks, and FIMO motif scanning |
