@@ -32,7 +32,7 @@ module load r/4.4.2
 # Set working directory.
 # NOTE: the paths below are environment-specific; adapt them to your system.
 LABSHARE="/path/to/shared"
-WDIR="${LABSHARE}/projects/xhcheng/HbF/bach2_multi_finemap"
+WDIR="${LABSHARE}/BACH2_hbf/StatGen_analysis/MultiSuSiE"
 cd "$WDIR"
 
 ## take $GENE from sbatch
@@ -44,8 +44,8 @@ cd "$WDIR"
 for POP in {"EUR","AFR"}; do
     echo "$(date) Running SuSiE for ${GENE} in ${POP}"
     ## commands here
-    z_input=$WDIR/loci/finemap_input/${GENE}_flank${FLANK}_info6_mac40.single.${POP}.z
-    ld_input=$WDIR/loci/finemap_input/${GENE}_flank${FLANK}_info6_mac40.single.${POP}.ld
+    z_input=$WDIR/finemap_input/${GENE}_flank${FLANK}_info6_mac40.single.${POP}.z
+    ld_input=$WDIR/finemap_input/${GENE}_flank${FLANK}_info6_mac40.single.${POP}.ld
     prefix=${GENE}_flank${FLANK}_info6_mac40.${POP}.susie
     # take n_cred from sbatch command line argument; if not provided, set to default value 5
     # n_cred=${n_cred:-15}
@@ -63,8 +63,8 @@ POP="THAI"
 for subPop in {"_subCSA","_subEAS"}; do
         echo "$(date) Running SuSiE for ${GENE} in ${POP} sub-population ${subPop}"
     ## commands here
-    z_input=$WDIR/loci/finemap_input/${GENE}_flank${FLANK}_info6_mac40${subPop}.single.${POP}.z
-    ld_input=$WDIR/loci/finemap_input/${GENE}_flank${FLANK}_info6_mac40${subPop}.single.${POP}.ld
+    z_input=$WDIR/finemap_input/${GENE}_flank${FLANK}_info6_mac40${subPop}.single.${POP}.z
+    ld_input=$WDIR/finemap_input/${GENE}_flank${FLANK}_info6_mac40${subPop}.single.${POP}.ld
     prefix=${GENE}_flank${FLANK}_info6_mac40${subPop}.${POP}.susie
     # take n_cred from sbatch command line argument; if not provided, set to default value 5
     # n_cred=${n_cred:-15}

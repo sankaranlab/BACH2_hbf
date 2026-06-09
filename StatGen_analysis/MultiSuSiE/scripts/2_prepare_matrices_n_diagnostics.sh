@@ -40,7 +40,7 @@ set -euo pipefail
 # Set working directory.
 # NOTE: the paths below are environment-specific; adapt them to your system.
 LABSHARE="/path/to/shared"
-WDIR="${LABSHARE}/projects/xhcheng/HbF/bach2_multi_finemap"
+WDIR="${LABSHARE}/BACH2_hbf/StatGen_analysis/MultiSuSiE"
 cd $WDIR
 
 # Parameters
@@ -54,11 +54,11 @@ THAI_GWAS="raw/hg19_sumstats/Thai_gwas_hg19_info6_cleaned_merged.tsv.gz"
 # THAI_GWAS="raw/og_Thai_chrALL_INFO4MAF0p1pct_hg19.tsv"
 EUR_GWAS="fema/hg19_output/METAL_hbf_inv_EUR_info6_mac40_SE_gcOff_hg19.tsv.gz"
 AFR_GWAS="fema/hg19_output/METAL_hbf_inv_AFR_info6_mac40_SE_gcOff_hg19.tsv.gz"
-OUTPUT_PREFIX="loci/finemap_input/${GENE}_flank${FLANK}_info6_mac40_${ANC}ANC_sub${subPOP}"
-LD_DIR="ld/ref_ld/"
+OUTPUT_PREFIX="finemap_input/${GENE}_flank${FLANK}_info6_mac40_${ANC}ANC_sub${subPOP}"
+LD_DIR="ref_ld/"
 # THAI_LD="ld/thai_dbsnp_QCed_${GENE}_1Mb_flanking.ld"
-# THAI_LD="ld/ref_ld/UKBB.CSA.ldadj.${GENE}_flank1Mb.npy"
-THAI_LD="ld/ref_ld/UKBB.${subPOP}.ldadj.${GENE}_flank1Mb.npy"
+# THAI_LD="ref_ld/UKBB.CSA.ldadj.${GENE}_flank1Mb.npy"
+THAI_LD="ref_ld/UKBB.${subPOP}.ldadj.${GENE}_flank1Mb.npy"
 FINEMAP_OUTDIR="single_anc_finemap/finemap_output/"
 
 SKIP_DIAG_FLAG=()
@@ -68,7 +68,7 @@ fi
 
 # Run step2b
 if [[ $ANC -eq 3 ]]; then
-    python scripts/step2b_prepare_3way_matrices_n_diagnostics.py \
+    python scripts/2_prepare_3way_matrices_n_diagnostics.py \
     --gene "$GENE" \
     --flank "$FLANK" \
     --input-files \
@@ -81,7 +81,7 @@ if [[ $ANC -eq 3 ]]; then
     --finemap-outdir "$FINEMAP_OUTDIR" \
     "${SKIP_DIAG_FLAG[@]}" 
 elif [[ $ANC -eq 2 ]]; then
-    python scripts/step2b_prepare_2way_matrices_n_diagnostics.py \
+    python scripts/2_prepare_2way_matrices_n_diagnostics.py \
     --gene "$GENE" \
     --flank "$FLANK" \
     --input-files \

@@ -21,15 +21,15 @@ GENE="${GENE:?GENE is not set. Pass with: sbatch --export=GENE=<GENE> ...}"
 # Set working directory.
 # NOTE: the paths below are environment-specific; adapt them to your system.
 LABSHARE="/path/to/shared"
-WDIR="${LABSHARE}/projects/xhcheng/HbF/bach2_multi_finemap"
+WDIR="${LABSHARE}/BACH2_hbf/StatGen_analysis/MultiSuSiE"
 cd "$WDIR"
 
 ## commands here
-z_input=$WDIR/loci/finemap_input/${GENE}_flank1Mb_info6.single.${POP}.z
-ld_input=$WDIR/loci/finemap_input/${GENE}_flank1Mb_info6.single.${POP}.ld
+z_input=$WDIR/finemap_input/${GENE}_flank1Mb_info6.single.${POP}.z
+ld_input=$WDIR/finemap_input/${GENE}_flank1Mb_info6.single.${POP}.ld
 prefix=${GENE}_flank1Mb_info6_susie
 
-master_file=$WDIR/loci/finemap_input/${GENE}_flank1Mb_info6.single.${POP}.master
+master_file=$WDIR/finemap_input/${GENE}_flank1Mb_info6.single.${POP}.master
 
 finemap --sss \
   --in-files $WDIR/$master_file \

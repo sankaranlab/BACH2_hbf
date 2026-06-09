@@ -40,7 +40,7 @@ set -euo pipefail
 # Set working directory.
 # NOTE: the paths below are environment-specific; adapt them to your system.
 LABSHARE="/path/to/shared"
-WDIR="${LABSHARE}/projects/xhcheng/HbF/bach2_multi_finemap"
+WDIR="${LABSHARE}/BACH2_hbf/StatGen_analysis/MultiSuSiE"
 cd $WDIR
 
 THAI_GWAS="${WDIR}/qc/sumstats/Thai_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz"
@@ -58,7 +58,7 @@ liftOver -minMatch=0.98 -multiple ${WDIR}/raw/hg19_sumstats/Thai_gwas_hg38_info6
 # merge them and verify:
 echo ""
 echo "$(date) Merging liftover results"
-python scripts/step1_merge_liftover_coord.py \
+python scripts/1_merge_liftover_coord.py \
   --gwas-file ${THAI_GWAS} -from hg38 --to hg19 \
   --liftover-bed ${WDIR}/raw/hg19_sumstats/Thai_gwas_hg19_info6.bed \
   -o ${WDIR}/raw/hg19_sumstats/Thai_gwas_hg19_info6_cleaned_merged.tsv.gz \
