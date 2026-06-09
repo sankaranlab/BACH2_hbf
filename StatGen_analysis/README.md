@@ -1,9 +1,9 @@
-# Statistical Genetics Analysis 
+# Statistical Genetics Analysis
 
-This directory primarily focuses on scripts on all stat gen analyses downstream of GWAS, i.e., meta-analyses, SNP heritability, genetic correlaton, conditional analysis, and multi-ancestry fine-mapping. 
+This directory hosts scripts on statistical genetics analyses downstream of GWAS: meta-analyses, SNP heritability estimation, genetic correlation, conditional analysis, and multi-ancestry fine-mapping.
 
------
-## Table of Content
+---
+## Table of Contents
 
 - [0. Data download](#data-download)
 - [1. Fixed-effect Meta Analysis (FEMA) via METAL](#fema)
@@ -20,7 +20,7 @@ This directory primarily focuses on scripts on all stat gen analyses downstream 
 
 <a id="data-download"></a>
 
-We have uploaded all our GWAS summary statistics to the GWAS catalog. They could be accessed via:
+All GWAS summary statistics have been uploaded to the GWAS Catalog and can be accessed via:
 
 | Cohort          | Access Code |
 |-----------------|-------------|
@@ -45,7 +45,7 @@ Summary statistics that were initially in hg19 was lifted over to hg38. The outp
 *  Minor allele count (MAC), if available, $> \max(2Nf_{\min},~\min(40, \sqrt{N}), ~ 20)$
 *  INFO score > 0.6
 
-The QC logs could be found in `re_gwas_qc_mac40_260416.log`. After QC, the column names are:
+QC logs are in `re_gwas_qc_mac40_260416.log`. After QC, the column names are:
 
 | Col Name   |   Content                                                                    |
 |------------|------------------------------------------------------------------------------|
@@ -69,7 +69,7 @@ The QC logs could be found in `re_gwas_qc_mac40_260416.log`. After QC, the colum
 
 ### 1.1. Main analysis
 
-We conducted fixed-effect meta-analysis (FEMA) using METAL (v2020-05-05) to combine GWAS summary statistics across all cohorts. The analysis was performed with sample-size weighted scheme and included genomic control correction.
+Fixed-effect meta-analysis (FEMA) was performed using METAL (v2020-05-05), combining GWAS summary statistics across all cohorts with a sample-size weighted scheme and genomic control correction.
 
 A METAL configuration file was prepared with the following key parameters:
 
@@ -84,29 +84,29 @@ MINMAXFREQ ON
 TRACKPOSITIONS OFF
 ```
 
-The configuration file specified all cohort summary statistics to be included. The input files we used for our analyses could be found at `FEMA/METAL_hbf_all_Nscheme_gcOff_info6.txt`. Note that `TRACKPOSITIONS` is set "OFF" as [sometimes cohorts could be missed when it's set on](https://github.com/statgen/METAL/issues/51).
+The configuration file specified all cohort summary statistics to be included. The input file is at `FEMA/METAL_hbf_all_Nscheme_gcOff_info6.txt`. Note: `TRACKPOSITIONS` is set to `OFF`, as [cohorts can be missed when it is set to ON](https://github.com/statgen/METAL/issues/51).
 
 The meta-analysis was executed with:
 
 ```bash
 $ ./metal <path_to_config_file>.txt
 ```
-The corresponding running logs could be located at `FEMA/logs/`. The hg38 coordinates were later added to the output `METAL_hbf_inv_all_info6_Nscheme_gcOn_PosTrackOff_1.tbl` through looking up the rsIDs on dbSNP build 157 by running `step1b_metal_to_hg38.sh` on SLURM:
+Running logs are in `FEMA/logs/`. hg38 coordinates were added to the output `METAL_hbf_inv_all_info6_Nscheme_gcOn_PosTrackOff_1.tbl` by looking up rsIDs against dbSNP build 157, using `1_metal_to_hg38.sh` on SLURM:
 
 ```bash
 $ metal_output='/path/to/METAL_hbf_inv_all_info6_Nscheme_gcOn_PosTrackOff_1.tbl'
 $ outname='METAL_hbf_inv_ALL_info6_mac40_gcOn_hg38'
 
-$ sbatch --export INPUT=${metal_output},OUTNAME=${outname} step1b_metal_to_hg38.sh
+$ sbatch --export INPUT=${metal_output},OUTNAME=${outname} 1_metal_to_hg38.sh
 ```
 
-The Manhattan plot in Figure 1b was created from `METAL_hbf_inv_ALL_info6_mac40_gcOn_hg38.tsv.gz` through running `FEMA/Fig1B_metal_manhattan.R`. Note that it might take 30--60min for the script to process the file to make sure extreme (<1e-300) p-values don't automatically equate to zero.
+The Manhattan plot in Figure 1b was created from `METAL_hbf_inv_ALL_info6_mac40_gcOn_hg38.tsv.gz` by running `FEMA/Fig1B_metal_manhattan.R`. Note: this may take 30–60 min to handle extreme p-values (<1e-300) without floating-point underflow.
 
-To make the qqplot for this meta GWAS, use the Rscript `SupFig1_QQplot.R`
+To generate the QQ plot for this meta-GWAS, run `SupFig1_QQplot.R`:
 
 ```bash
 # Extended Data Fig 1A - META GWAS
-$ Rscript SupFig1A_QQplot.R \
+$ Rscript SupFig1_QQplot.R \
   /path/to/METAL_hbf_inv_ALL_info6_mac40_gcOn_hg38.tsv.gz \
   SupFig1A_1 
 ```
@@ -114,25 +114,25 @@ $ Rscript SupFig1A_QQplot.R \
 
 <a id="fema-ances"></a>
 
-METAL was also run on subsets of GWAS cohorts that share the same genetic ancestry (AFR or EUR) under inverse-variance scheme without genomic control to serve as input for MAMA (hg38) and MultiSuSiE (hg19). Their inputs are `METAL_hbf_{afr,eur}_SEscheme_gcOff_info6.txt`. The script to annotate hg19 coordinates is `FEMA/step1b_metal_to_hg19.sh`. (PS: Both shell scripts need RefSNP VCF files for GRCh37 [GCF_000001405.25] and 38 [GCF_000001405.40] under dbSNP build 157.)
+METAL was also run on subsets of GWAS cohorts that share the same genetic ancestry (AFR or EUR) under inverse-variance scheme without genomic control to serve as input for MAMA (hg38) and MultiSuSiE (hg19). Their inputs are `METAL_hbf_{afr,eur}_SEscheme_gcOff_info6.txt`. The script to annotate hg19 coordinates is `FEMA/step1b_metal_to_hg19.sh`. Note: both shell scripts require RefSNP VCF files for GRCh37 (GCF_000001405.25) and GRCh38 (GCF_000001405.40) from dbSNP build 157.
 
 ### 1.3 Additional FEMA analyses for QC purposes
 
 <a id="fema-misc"></a>
 
-Several stratified and sensitivity meta-analyses were performed in response to several comments from the reviewers:
+Several stratified and sensitivity meta-analyses were performed in response to reviewer comments:
 
 * **Gene expression-based HbF measurements only** (GTEx + BIOS cohorts: N ≈ 2,588), input `other_inputs/METAL_hbf_eur-hplc_SEscheme_gcOff_info6.txt`. 
 * **Liquid chromatography-based HbF measurements only** (Sardinia, St. Jude, Swedish, Thai, TopMed, Interval, Tanzania: N ≈ 25,448), input `other_inputs/METAL_hbf_eur-rnaseq_SEscheme_gcOff_info6.txt`.
 * **Leave-One-Batch-Out (LOBO) analyses** - excluding each cohort iteratively to assess robustness, input `other_inputs/METAL_hbf_LOBO-{}_{SE,N}scheme_gcOff_info6.txt`
 
-These stratified analyses allowed us to evaluate consistency of genetic effects across different measurement modalities and ancestry groups. The running logs can be found in `FEMA/logs/`
+These analyses assess consistency of genetic effects across measurement modalities and ancestry groups. Running logs are in `FEMA/logs/`.
 
-## 2. Genetic correlation and Heritability across cohorts
+## 2. SNP Heritability and Genetic Correlation across Cohorts
 
 <a id="gencorr-h2"></a>
 
-We used **LDAK (v5.2/v6.1)** to estimate SNP-heritability from summary statistics. Key scripts and result files are in `Heritability_and_GenCorr/`.
+SNP heritability was estimated from summary statistics using **LDAK (v5.2/v6.1)**. Key scripts and result files are in `Heritability_and_GenCorr/`.
 
 ### 2.0 Data munging for LDAK
 
@@ -268,29 +268,23 @@ Trans-ethnic summary statistics from the BCX2 study were obtained from http://ww
 
 BCX2 files are in hg19 with variant IDs in `CHR:POS_REF_ALT` format. They must be (1) lifted over to hg38, (2) annotated with rsIDs from dbSNP for cross-referencing, and (3) reformatted into LDAK's `--summary2` input format (space-delimited, columns: `Predictor A1 A2 n BETA SE P rsID`), where `Predictor = CHR:POS` in hg38 coordinates matching the LDAK tagging files.
 
-This is handled by the stand-alone R script `Heritability_and_GenCorr/bcx2_liftover_addRSID.R`, extracted from the original notebook `BCX2_hg38_liftover_addRSID.ipynb`. The script processes all 15 BCX2 trait files in a single run.
-
-**Dependencies:** `data.table`, `rtracklayer` (Bioconductor), `optparse`
-
-**Usage:**
-
-```bash
-$ Rscript bcx2_liftover_addRSID.R \
-    --input-dir  /path/to/bcx2/ta/ \
-    --output-dir /path/to/bcx2-hg38/ta/ \
-    --chain      /path/to/hg19ToHg38.over.chain.gz \
-    --dbsnp      /path/to/dbSNP/common_all_20180418_first5cols.txt
-```
-
-The chain file can be obtained from UCSC (hg19ToHg38.over.chain.gz). The dbSNP file used here is the "common all" build 150 VCF for GRCh38, subsetted to the first five columns (`#CHROM POS ID REF ALT`). The script prints per-trait statistics on mapping rate and rsID coverage.
-
-**What the script does, step by step:**
+This is handled by the stand-alone R script `Heritability_and_GenCorr/0_bcx2_liftover_addRSID.R`, which processes all 15 BCX2 trait files in a single run. More specifically, this script:
 
 1. **Parse hg19 coordinates** — splits the `CHR:POS_REF_ALT` variant ID to extract chromosome and position.
 2. **Liftover hg19 → hg38** — uses `rtracklayer::liftOver()` with the supplied chain file; variants with no unique mapping (unmapped or multi-mapped) are dropped and reported.
 3. **Annotate rsIDs** — joins on `CHR:POS` (hg38) against the dbSNP reference; unmatched variants retain `NA` in the `rsID` column but are still written to the output.
 4. **Write LDAK-formatted output** — one file per trait, named `BCX2_<TRAIT>_Trans_GWAMA.hg38.forLDAK.txt`, with columns: `Predictor A1 A2 n BETA SE P rsID`.
 
+
+```bash
+$ Rscript 0_bcx2_liftover_addRSID.R \
+    --input-dir  /path/to/bcx2/ta/ \
+    --output-dir /path/to/bcx2-hg38/ta/ \
+    --chain      /path/to/hg19ToHg38.over.chain.gz \
+    --dbsnp      /path/to/dbSNP/common_all_20180418_first5cols.txt
+```
+
+The chain file can be obtained from UCSC (hg19ToHg38.over.chain.gz). The dbSNP file used here is the "common all" build 150 VCF for GRCh38, subsetted to the first five columns (`#CHROM POS ID REF ALT`). The script prints per-trait statistics on mapping rate and rsID coverage. 
 ### 3.1 SNP-heritability of HbF (as used in genetic correlation)
 
 The same BLD-LDAK GBR hapmap tagging model applied to the all-ancestry FEMA summary statistics (see [Sec 2.2.1](#all-ancestry-fema)) was used as Trait 1 in the `--sum-cors` command below. Results for Trait 1 heritability from this run are consistent with those reported in Sec 2.3.1.
@@ -342,10 +336,10 @@ This was repeated for all 15 traits. Results are stored under `Heritability_and_
 | WBC   | 0.115 | 0.043 | 2.68 | 0.007 |
 
 <!-- Positive rg indicates that higher HbF is genetically correlated with higher trait levels. Significant associations (p < 0.05) were found for white blood cell subtypes — BAS, LYM, MON, NEU, and WBC — consistent with a role of fetal haemoglobin in myeloid and lymphoid cell biology. -->
-Run script `SuppFig2b_ldak_genCorr.R` to visualize this table and reproduce E.D. Fig 2a:
+Run `3_SuppFig2b_ldak_genCorr.R` to visualize these results and reproduce Extended Data Fig. 2a:
 
 ```bash
-$ Rscript SuppFig2b_ldak_genCorr.R
+$ Rscript 3_SuppFig2b_ldak_genCorr.R
 ```
 
 
@@ -501,9 +495,9 @@ $ python MAMA/0_compile_bims_to_snpfile.py
 ```
 The file `MAMA/input/snp-ances-file.txt.zst` is the compressed output. One could decompress it using `zstd -d <file>` command in a Unix environment.
 
-Meanwhile, for each chromosome, bedfiles of all three ancestries are merged into one using plink for LD score generation.
+For each chromosome, the bed files from all three ancestries are then merged with PLINK for LD score computation.
 
-### 5.1 Step 1
+### 5.1. LD score computation (Step 1)
 ```bash
 # by each chromosome $CHR
 $ python /path/to/mama/mama_ldscore.py \
@@ -516,9 +510,9 @@ $ python /path/to/mama/mama_ldscore.py \
         --ld-wind-kb 1000
 ```
 
-### 5.2 Step 2
+### 5.2. MAMA analysis (Step 2)
 
-To generate harmonized input for Step 2, run the script `MAMA/2_make_mama_input.py`, which will read the METAL outputs from [Sec 1.2](#fema-ances) for EUR and AFR, as well as the cleaned sumstats for Thai cohort, harmonize variants across the three, and polarize the SNPs according to labels in `snp-ances-file.txt`.
+Run `MAMA/2_make_mama_input.py` to prepare harmonized MAMA input. The script reads the ancestry-stratified METAL outputs ([Sec 1.2](#fema-ances)) for EUR and AFR and the QC-processed Thai summary statistics, harmonizes variants across the three populations, and polarizes SNPs according to `snp-ances-file.txt`.
 
 
 ```bash
@@ -527,7 +521,7 @@ $ INPUT_PREFIX="MAMA/input/thai-eurFema-afrFema_SNPaligned"
 $ MAMA_LDSC="MAMA/by-chr-ldscores-kb/mama_1kg-thai_1000kb_chr*.l2.ldscore.gz"
 $ OUTNAME="MAMA_SNPaligned"
 
-$ python mama.py \
+$ python /path/to/mama/mama.py \
         --sumstats "${INPUT_PREFIX}.EUR.tsv,EUR,HBF" \
         "${INPUT_PREFIX}.AFR.tsv,AFR,HBF" \
         "${INPUT_PREFIX}.THAI.tsv,THAI,HBF" \
@@ -540,8 +534,6 @@ $ python mama.py \
         --freq-bounds 0.0001 0.9999 \
         --verbose
 ```
-
-
 
 ### 5.3. Plotting
 
@@ -596,17 +588,17 @@ $ Rscript 3_Fig1cde_MAMA_manhattan.R \
 To re-create their perspective qqplots, run
 ```bash
 # Extended Data Fig 1B - MAMA AFR
-$ Rscript 4_SupFig1_QQplot.R \
+$ Rscript SupFig1_QQplot.R \
     /path/to/XC_SNPaligned_16865_AFR_HBF.res \
     SupFig1B AFR
 
 # Extended Data Fig 1C - MAMA EUR
-$ Rscript 4_SupFig1_QQplot.R \
+$ Rscript SupFig1_QQplot.R \
     /path/to/XC_SNPaligned_16865_EUR_HBF.res \
     SupFig1C EUR
 
 # Extended Data Fig 1D - MAMA Thai
-$ Rscript 4_SupFig1_QQplot.R \
+$ Rscript SupFig1_QQplot.R \
     /path/to/XC_SNPaligned_16865_THAI_HBF.res \
     SupFig1D THAI
 
