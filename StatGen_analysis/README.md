@@ -124,9 +124,9 @@ Several stratified and sensitivity meta-analyses were performed in response to r
 
 * **Gene expression-based HbF measurements only** (GTEx + BIOS cohorts: N ≈ 2,588), input `other_inputs/METAL_hbf_eur-hplc_SEscheme_gcOff_info6.txt`. 
 * **Liquid chromatography-based HbF measurements only** (Sardinia, St. Jude, Swedish, Thai, TopMed, Interval, Tanzania: N ≈ 25,448), input `other_inputs/METAL_hbf_eur-rnaseq_SEscheme_gcOff_info6.txt`.
-* **Leave-One-Batch-Out (LOBO) analyses** - excluding each cohort iteratively to assess robustness, input `other_inputs/METAL_hbf_LOBO-{}_{SE,N}scheme_gcOff_info6.txt`
+* **Leave-One-Batch-Out (LOBO) analyses** - excluding each cohort iteratively to assess robustness, input `other_inputs/METAL_hbf_LOBO-{cohort}_{SE,N}scheme_gcOff_info6.txt`
 
-These analyses assess consistency of genetic effects across measurement modalities and ancestry groups. Running logs are in `FEMA/logs/`.
+These analyses assess the consistency of genetic effects across measurement modalities and ancestry groups. Running logs are in `FEMA/logs/`.
 
 ## 2. SNP Heritability and Genetic Correlation across Cohorts
 
@@ -136,10 +136,10 @@ SNP heritability was estimated from summary statistics using **LDAK (v5.2/v6.1)*
 
 ### 2.0 Data munging for LDAK
 
-FEMA and ancestry-stratified summary statistics were prepared for LDAK `--sum-hers` using the custom script `prepare_ldak_sumstats.py`, which intersects variants with a tagging file and aligns alleles:
+FEMA and ancestry-stratified summary statistics were prepared for LDAK `--sum-hers` using the custom script `1_prepare_ldak_sumstats.py`, which intersects variants with a tagging file and aligns alleles:
 
 ```bash
-$ python prepare_ldak_sumstats.py \
+$ python 1_prepare_ldak_sumstats.py \
     --sumstats <FEMA_output>.tsv \
     --tagging <tagging_file>.tagging \
     --mode fema-ss \          # or fema-iv for inverse-variance-weighted
@@ -170,7 +170,7 @@ $ ldak --cut-genes gbat_ldak/results  \
 ```
 #### 2.1.2 Tagging files for European ancestry
 
-Pre-computed tagging files were downloaded from the LDAK official website. Three models were used:
+Pre-computed tagging files were downloaded from the [LDAK official website](https://dougspeed.com/pre-computed-tagging-files/). Three models were used:
 
 - `bld.ldak.hapmap.gbr.tagging` — BLD-LDAK model, HapMap3 GBR reference (1,168,975 SNPs)
 - `bld.ldak.lite.alpha.hapmap.gbr.tagging` — BLD-LDAK lite-alpha model, HapMap3 GBR
@@ -197,7 +197,7 @@ BIOS-LLS_660Q.LDSCmunged.sumstats.gz \
 
 The output log is `Heritability_and_GenCorr/logs/cohorts.GenCorr.log`. Per-cohort heritability estimates from this run have large standard errors (e.g., Tanzania h² = −0.204 ± 0.576) due to limited per-cohort sample sizes; the pairwise rg estimates are the primary output of interest. -->
 
-### 2.2 SNP-heritability (LDAK)
+### 2.2 SNP-heritability
 
 #### 2.2.1 All ancestry (FEMA results) <a id="all-ancestry-fema"></a>
 
@@ -363,8 +363,8 @@ For each ancestry (`EUR`, `AFR`, `EAS`, `SAS`) and each autosome (chr1–22), th
 
 ```bash
 # Run on AoU Dataproc cluster (requires PySpark + Hail)
-python COJO/0_process_gcta_panels.py --ancestry EUR
-python COJO/0_process_gcta_panels.py --ancestry AFR
+$ python COJO/0_process_gcta_panels.py --ancestry EUR
+$ python COJO/0_process_gcta_panels.py --ancestry AFR
 ```
 
 The EUR panel contained 51,125 individuals and were randomly downsampled to 10,000. Panels were generated for all 22 autosomes.
@@ -375,21 +375,24 @@ METAL fixed-effect meta-analysis (FEMA) output was converted to GCTA-COJO format
 1. Extracts the original reference allele from the variant ID (`chr:pos:ref:alt` format)
 2. Filters variants with allele frequency < 0.01 or > 0.99 (MAF ≥ 0.01)
 3. Orients alleles to the original reference: if Allele1 matches the reference, keep freq; otherwise flip to `1 − freq`
-4. Computes effect size and standard error from Z-scores and effective sample size (N):
+4. Computes effect size and standard error from Z-scores and effective sample size (N) based on [this post](https://www.biostars.org/p/319584/):
 
-$$\beta = \frac{Z}{\sqrt{2 \cdot f \cdot (1-f) \cdot (N + Z^2)}}, \quad \text{SE} = \frac{1}{\sqrt{2 \cdot f \cdot (1-f) \cdot (N + Z^2)}}$$
+$$\beta = \frac{Z}{\sqrt{2 \cdot f \cdot (1-f) \cdot (N + Z^2)}},$$
+
+$$\text{SE} = \frac{1}{\sqrt{2 \cdot f \cdot (1-f) \cdot (N + Z^2)}}$$
 
 Output columns (tab-delimited): `SNP  A1  A2  freq  b  se  p  N`
 
 ### 4.2. Running GCTA-COJO
 
-GCTA-COJO stepwise selection (`--cojo-slct`) was run using GCTA v1.94.0 Beta with a p-value threshold of 1×10⁻⁶. EUR and AFR panels were analyzed in parallel, looping over all 22 autosomes:
+GCTA-COJO stepwise selection (`--cojo-slct`) was run on an AoU Researcher Workbench Jupyter Notebook using GCTA v1.94.0 Beta with a p-value threshold of $1\times10^{-6}$. EUR and AFR panels were analyzed in parallel, looping over all 22 autosomes:
 
 ```bash
+%%bash
 p_thresh=1e-6
 gcta="./tools/gcta_v1.94.0Beta_linux_kernel_3_x86_64/gcta_v1.94.0Beta_linux_kernel_3_x86_64_static"
 panel_dir="/path/to/eur-plink-AF1pct"   # or afr-plink-AF1pct
-cojo_input="CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv"
+cojo_input="METAL_hbf_inv_a1alt-munged.cojoReady.tsv"
 
 for chr in {1..22}; do
   $gcta \
@@ -425,12 +428,12 @@ Two R scripts filter inflated conditional Z-scores and merge EUR/AFR results:
 
 **`COJO/3_filter_inflated_zJ.R`** — filters loci where the conditional Z-score (`bJ/bJ_se`) is inflated relative to the marginal Z-score (`b/se`). Loci with `|ZJ/Z| > (1 + fold-change cutoff)` are removed. Usage:
 ```bash
-Rscript COJO/3_filter_inflated_zJ.R <cojo_file> <foldchange_cutoff> <output_prefix>
+$ Rscript COJO/3_filter_inflated_zJ.R <cojo_file> <foldchange_cutoff> <output_prefix>
 ```
 
 **`COJO/3_merge_eur-afr_cojos.R`** — merges EUR and AFR COJO results, applies the same fold-change filter to each ancestry, and annotates each locus with the nearest coding gene using a UCSC RefSeq gene reference (`hg38_ncbiRefSeq_AllGenes_2026UCSC.tsv.gz`). Usage:
 ```bash
-Rscript COJO/3_merge_eur-afr_cojos.R \
+$ Rscript COJO/3_merge_eur-afr_cojos.R \
   eur_plink_1e6-eur.jma.cojo \
   afr_plink_1e6-afr.jma.cojo \
   <output_prefix> \
@@ -451,7 +454,7 @@ Section 5.0 Data Munging -->
 
 We assembled a reference LD panel merging variant calls from whole genome sequences of 197 Thai, 660 1000GenomesProject (1KG) EUR, and 891 1KG AFR individuals. Their IDs are recorded in `MAMA/input/ancespath-file.txt`.
 
-We first merged these samples per-chromosome and recorded all SNPs that have high missing rates. These SNPs were recorded in `MAMA/warned_variants_1stmerge/`.
+We first merged these samples per-chromosome and recorded all SNPs that have high missing rates. These SNPs were recorded in `MAMA/0_bad_variants_1stmerge/`.
 
 Then, within samples of each ancestry (EUR, AFR, or THAI), these variants were excluded via `--exclude MAMA/bad_variants_1stmerge/eur_afr_thai_merged_chr*-merge.missnp`. Afterwards, plink2 was deployed to perform per-chromosome variant QC:
 ```bash
@@ -483,10 +486,6 @@ SNP	AFR	EUR	THAI
 1:15616:G:A	0	1	0
 1:17005:A:G	0	0	1
 1:17385:G:A	0	0	1
-1:17398:C:A	0	0	1
-1:17407:G:A	0	0	1
-1:17479:G:A	0	1	0
-1:17556:C:T	0	0	1
 ...
 ```
 Suppose all bedfiles are saved under path `MAMA/PLINK_panel/${ances}/${ances}_chr{1..22}.{bed,bim,fam}`, then this SNP ancestry file could be generated by running
@@ -495,14 +494,16 @@ $ python MAMA/0_compile_bims_to_snpfile.py
 ```
 The file `MAMA/input/snp-ances-file.txt.zst` is the compressed output. One could decompress it using `zstd -d <file>` command in a Unix environment.
 
-For each chromosome, the bed files from all three ancestries are then merged with PLINK for LD score computation.
+For each chromosome, the bed files from all three ancestries are then merged with PLINK (saved as `MAMA/PLINK_panel/merged/1kg-thai_chr{1..22}.{bed,bim,fam}`) for LD score computation.
 
 ### 5.1. LD score computation (Step 1)
+
+Multi-ancestry LD scores were computed using the built-in script from MAMA ([the version following commit #1686586](https://github.com/JonJala/mama/commits/mainline/)) with the following command and parameters:
+
 ```bash
-# by each chromosome $CHR
+# by each chromosome $chr
 $ python /path/to/mama/mama_ldscore.py \
         --out MAMA/by-chr-ldscores-kb/mama_1kg-thai_1000kb_chr${chr} \
-        --stream-stdout  \
         --snp-ances MAMA/input/snp-ances-file.txt \
         --ances-path MAMA/input/ancespath-file.txt \
         --bfile-merged-path MAMA/PLINK_panel/merged/1kg-thai_chr${chr} \
@@ -549,13 +550,13 @@ Optional arguments:
 
 * `figwidth`, `figheight`: figure size in inches. Defaults are `10` and `6`.
 * `annotation_cutoff`: threshold for peak annotation. Accepted values are `sig` / `significant` / `5e-8` for genome-wide significant peaks, or `sugg` / `suggestive` / `sug` / `1e-6` for suggestive peaks. Default is `sig`.
-* `--skip-annotation`: suppress nearest-gene labels.
+* `--skip-annotation`: suppress nearest-gene labeling.
 
 To recreate Figure 1c, d, and e, run (pseudocode):
 ```bash
 # Figure 1C - African ancestry
 $ Rscript 3_Fig1cde_MAMA_manhattan.R \
-        /path/to/XC_SNPaligned_16865_AFR_HBF.res \
+        /path/to/MAMA_SNPaligned_AFR_HBF.res \
         Fig1C-AFR \
         AFR \
         5 \
@@ -563,7 +564,7 @@ $ Rscript 3_Fig1cde_MAMA_manhattan.R \
 
 # Figure 1D - European ancestry
 $ Rscript 3_Fig1cde_MAMA_manhattan.R \
-        /path/to/XC_SNPaligned_16865_EUR_HBF.res \
+        /path/to/MAMA_SNPaligned_EUR_HBF.res \
         Fig1D-EUR \
         EUR \
         5 \
@@ -571,7 +572,7 @@ $ Rscript 3_Fig1cde_MAMA_manhattan.R \
 
 # Figure 1E - Thai ancestry 
 $ Rscript 3_Fig1cde_MAMA_manhattan.R \
-        /path/to/XC_SNPaligned_16865_THAI_HBF.res \
+        /path/to/MAMA_SNPaligned_THAI_HBF.res \
         Fig1E-THAI \
         THAI \
         5 \
@@ -579,7 +580,7 @@ $ Rscript 3_Fig1cde_MAMA_manhattan.R \
 
 # Skip automatic peak annotation
 $ Rscript 3_Fig1cde_MAMA_manhattan.R \
-    /path/to/XC_SNPaligned_16865_EUR_HBF.res \
+    /path/to/MAMA_SNPaligned_EUR_HBF.res \
     Fig1D-EUR-no-labels \
     EUR \
     --skip-annotation
@@ -589,17 +590,17 @@ To re-create their perspective qqplots, run
 ```bash
 # Extended Data Fig 1B - MAMA AFR
 $ Rscript SupFig1_QQplot.R \
-    /path/to/XC_SNPaligned_16865_AFR_HBF.res \
+    /path/to/MAMA_SNPaligned_AFR_HBF.res \
     SupFig1B AFR
 
 # Extended Data Fig 1C - MAMA EUR
 $ Rscript SupFig1_QQplot.R \
-    /path/to/XC_SNPaligned_16865_EUR_HBF.res \
+    /path/to/MAMA_SNPaligned_EUR_HBF.res \
     SupFig1C EUR
 
 # Extended Data Fig 1D - MAMA Thai
 $ Rscript SupFig1_QQplot.R \
-    /path/to/XC_SNPaligned_16865_THAI_HBF.res \
+    /path/to/MAMA_SNPaligned_THAI_HBF.res \
     SupFig1D THAI
 
 ```
@@ -608,18 +609,18 @@ To plot the correlation between their effect sizes:
 
 ```bash
 $ Rscript SupFig1_betaCorr.R \
-    XC_SNPaligned_EUR_HBF.res \
-    XC_SNPaligned_AFR_HBF.res \
+    MAMA_SNPaligned_EUR_HBF.res \
+    MAMA_SNPaligned_AFR_HBF.res \
     SupFig1e EUR AFR --sig-only
 
 $ Rscript SupFig1_betaCorr.R \
-    XC_SNPaligned_EUR_HBF.res \
-    XC_SNPaligned_THAI_HBF.res \
+    MAMA_SNPaligned_EUR_HBF.res \
+    MAMA_SNPaligned_THAI_HBF.res \
     SupFig1f EUR Thai --sig-only
 
 $ Rscript SupFig1_betaCorr.R \
-    XC_SNPaligned_AFR_HBF.res \
-    XC_SNPaligned_THAI_HBF.res \
+    MAMA_SNPaligned_AFR_HBF.res \
+    MAMA_SNPaligned_THAI_HBF.res \
     SupFig1E AFR Thai --sig-only
 ```
 
@@ -660,20 +661,40 @@ Each row in the main output table covers one SNP with columns for `MarkerName`, 
 
 Multi-ancestry statistical fine-mapping of the BACH2 locus was performed using [MultiSuSiE](https://github.com/jordanlab/MultiSuSiE) (RSS formulation), combining EUR, AFR, and Thai GWAS summary statistics with ancestry-matched LD matrices. 
 
-All fine-mapping inputs use **hg19/GRCh37** coordinates. Computing was performed on the **E3** BCH HPC cluster (SLURM). Scripts contain E3- and lab-share–specific paths; adapt these to your own environment.
+All fine-mapping inputs use **hg19/GRCh37** coordinates. Computing was performed on the **E3** BCH HPC cluster (SLURM) with software support from [BioGrids](https://biogrids.org/). Scripts contain E3- and lab-share–specific paths; adapt these to your own environment if you were to replicate our analyses. The intended directory structure is:
+
+```
+MultiSuSiE/
+├── scripts/            # All scripts in this repository
+├── raw/                # Symbolic links to GWAS sumstats
+│   ├── hg38_sumstats/
+│   └── hg19_sumstats/
+├── qc-ed/              # QC-ed sumstats from Sec 0
+├── harmonized/
+├── fema/               # METAL outputs from Sec 1.2
+│   └── hg19_output/
+├── ref_ld/             # LD matrices from PanUKB
+├── finemap_input/      # Parsed inputs for fine-mapping
+├── multisusie/         # MultiSuSiE outputs
+├── single_anc_finemap/ # Outputs of single-ancestry fine-mapping methods
+│   ├── finemap_output/
+│   ├── susie_output/
+│   └── carma_output/
+└── logs/
+```
 
 ### 7.0 Downloading Pan-UKBB LD matrices
 
 Pan-UKBB reference LD sub-matrices for the BACH2 region were extracted from the public S3 release using Hail (`MultiSuSiE/scripts/0_extract_hail_LDs.py`). The script supports region lookup either by explicit coordinates or by gene name (resolved against a local UCSC RefSeq reference):
 
 ```bash
-# By explicit hg19 coordinates
-python MultiSuSiE/scripts/0_extract_hail_LDs.py \
+# By explicit hg19 coordinates (must have PySpark and Hail)
+$ python scripts/0_extract_hail_LDs.py \
     --chrom 6 --start 90000000 --end 92000000 \
     --output-dir /path/to/ld/ref_ld 
 
 # By gene name with a flanking window
-python MultiSuSiE/scripts/0_extract_hail_LDs.py \
+$ python scripts/0_extract_hail_LDs.py \
     --gene BACH2 --flank 1Mb \
     --output-dir /path/to/ld/ref_ld 
 ```
@@ -695,11 +716,11 @@ Thai cohort GWAS summary statistics (hg38) were lifted over to hg19 for fine-map
 **Step 1 — Coordinate liftover** (`MultiSuSiE/scripts/1_liftover_thai_gwas.sh`, SLURM):
 ```bash
 # Prepare a BED file of hg38 positions and run liftOver
-zcat Thai_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz \
+$ zcat raw/Thai_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz \
   | awk 'BEGIN{OFS="\t"} NR>1{print "chr"$2, $3-1, $3}' \
   > raw/hg19_sumstats/Thai_gwas_hg38_info6.bed
 
-liftOver -minMatch=0.98 -multiple \
+$ liftOver -minMatch=0.98 -multiple \
     raw/hg19_sumstats/Thai_gwas_hg38_info6.bed \
     hg38ToHg19.over.chain.gz \
     raw/hg19_sumstats/Thai_gwas_hg19_info6.bed \
@@ -710,7 +731,7 @@ liftOver -minMatch=0.98 -multiple \
 Merges liftover BED coordinates back into the GWAS summary stats, performs sanity checks (non-chromosomal contigs, missing matches), and batch-queries dbSNP build 157 via `bcftools` to validate lifted positions and backfill missing rsIDs. Variants failing coordinate validation are written to a filtered-variants log.
 
 ```bash
-python MultiSuSiE/scripts/1_merge_liftover_coord.py \
+$ python scripts/1_merge_liftover_coord.py \
     --gwas-file  raw/hg38_sumstats/Thai_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz \
     --bed-file   raw/hg19_sumstats/Thai_gwas_hg19_info6.bed \
     --output-file raw/hg19_sumstats/Thai_gwas_hg19_info6_dbsnpValidated.tsv.gz \
@@ -725,13 +746,13 @@ Two analysis configurations were prepared:
 
 **2-way (EUR + AFR)** — uses Pan-UKBB reference LD for both populations:
 ```bash
-python MultiSuSiE/scripts/2_prepare_2way_matrices_n_diagnostics.py \
+$ python scripts/2_prepare_2way_matrices_n_diagnostics.py \
     --gene BACH2 --flank 1Mb \
     --eur-sumstats fema/hg19_output/FEMA_EUR_hg19.tsv.gz \
     --afr-sumstats fema/hg19_output/FEMA_AFR_hg19.tsv.gz \
-    --eur-ld       ld/ref_ld/UKBB.EUR.6_<start>_<end>.ld.npy \
-    --afr-ld       ld/ref_ld/UKBB.AFR.6_<start>_<end>.ld.npy \
-    --output-prefix loci/finemap_input/BACH2_2way
+    --eur-ld       ref_ld/UKBB.EUR.6_<start>_<end>.ld.npy \
+    --afr-ld       ref_ld/UKBB.AFR.6_<start>_<end>.ld.npy \
+    --output-prefix finemap_input/BACH2_2way
 ```
 
 **3-way (EUR + AFR + Thai)** — use EAS LD from PanUKB as a proxy for Thai:
@@ -741,14 +762,14 @@ python MultiSuSiE/scripts/2_prepare_3way_matrices_n_diagnostics.py \
     --eur-sumstats  fema/hg19_output/FEMA_EUR_hg19.tsv.gz \
     --afr-sumstats  fema/hg19_output/FEMA_AFR_hg19.tsv.gz \
     --thai-sumstats raw/hg19_sumstats/Thai_gwas_hg19_info6_dbsnpValidated.tsv.gz \
-    --output-prefix loci/finemap_input/BACH2_3way
+    --output-prefix finemap_input/BACH2_3way
 ```
 
 Both scripts resolve the BACH2 locus from a UCSC RefSeq gene reference, intersect variants across cohorts and LD sources, align alleles, and produce per-population output pairs:
 - `<prefix>.{EUR,AFR,THAI}.z` — tab-delimited Z-score file (`rsid chromosome position allele1 allele2 maf beta se n z`)
 - `<prefix>.{EUR,AFR,THAI}.ld` — LD correlation matrix (`.npy` or space-delimited)
 
-Diagnostic plots (LD heatmaps, Z-score distributions, cross-population Manhattan) are also written.
+Diagnostic plots (LD heatmaps, Z-score distributions, cross-population Manhattan) are also written while generating the output. Cross-ancestry harmonized data will be saved under `harmonized/`.
 
 ### 7.3 Running MultiSuSiE
 
@@ -756,13 +777,13 @@ Multi-ancestry fine-mapping was run using the [MultiSuSiE](https://github.com/jo
 
 ```bash
 # EUR + AFR (2-way)
-python MultiSuSiE/scripts/3a_run_2way_multisusie.py \
-    --prefix loci/finemap_input/BACH2_2way \
+$ python scripts/3a_run_2way_multisusie.py \
+    --prefix finemap_input/BACH2_2way \
     --out    multisusie/BACH2_2way
 
 # EUR + AFR + Thai (3-way)
-python MultiSuSiE/scripts/3a_run_3way_multisusie.py \
-    --prefix loci/finemap_input/BACH2_3way \
+$ python scripts/3a_run_3way_multisusie.py \
+    --prefix finemap_input/BACH2_3way \
     --out    multisusie/BACH2_3way
 ```
 
@@ -772,9 +793,10 @@ Each script loads the `.z` and `.ld` files for all populations, runs `multisusie
 - `*_effects.tsv` (per population) — posterior effect sizes
 
 Optional single-ancestry and alternative fine-mapping runs are provided as SLURM batch scripts:
-- `MultiSuSiE/scripts/3b_run_susie.sbatch` — SuSiE (single-ancestry)
-- `MultiSuSiE/scripts/3b_run_finemap.sbatch` — FINEMAP
-- `MultiSuSiE/scripts/3b_run_carma.sbatch` — CARMA
+- `scripts/3b_run_susie.sbatch` — SuSiE (single-ancestry)
+- `scripts/3b_run_finemap.sbatch` — FINEMAP
+- `scripts/3b_run_carma.sbatch` — CARMA
+Their outputs will be saved under `single_anc_finemap/`.
 
 ### 7.4 Plotting
 
@@ -782,22 +804,22 @@ Manuscript figures for the BACH2 locus were generated by four R scripts in `Mult
 
 | Script | Figure | Description |
 |---|---|---|
-| `4_plot_fig2a.R` | Fig. 2a | Regional fine-mapping plot: −log₁₀p + PIP tracks + ATAC-seq signal per cell type (UCSC hg19 coords) |
-| `4_plot_fig2a_wMAMA.R` | Fig. 2a variant | Same as above but overlaying MAMA p-values alongside FEMA |
-| `4_plot_regional_pval.R` | Regional p-value | −log₁₀p locus plot for EUR/AFR/THAI with optional credible-set and LD coloring |
-| `4_plot_regional_MAMA-pval.R` | MAMA regional | Regional p-value plot using MAMA summary statistics |
-| `4_plot_variant_tiles.R` | Variant tile plot | Per-variant credible-set tile visualization across ancestries |
+| `4_plot_regional_pval.R` | - | Regional $-\log_{10}p$ plot for EUR/AFR/THAI with optional credible-set labeling and LD coloring |
+| `4_plot_regional_MAMA-pval.R` |  Fig.2a & Ext. Data Fig. 3b | Regional p-value plot using MAMA summary statistics |
+| `4_plot_fig2a.R` | - | Regional fine-mapping plot: $-\log_{10}p$ + LD coloring + select ATAC-seq signal per cell type (UCSC hg19 coords) |
+| `4_plot_fig2a_wMAMA.R` | Fig.2a & Ext. Data Fig. 3b with ATAC tracks | Same as above but using MAMA p-values instead of FEMA (MAMA's input) |
+| `4_plot_variant_tiles.R` | Ext. Data Fig. 3c | Per-variant credible-set tile visualization across ancestries |
 
 `4_plot_fig2a.R` and `4_plot_fig2a_wMAMA.R` integrate ATAC-seq tracks from two published data sources (Corces 2016 or Weng 2024), selectable via the `--atac-source` argument. Example usage:
 
 ```bash
-Rscript MultiSuSiE/scripts/4_plot_fig2a.R \
-    loci/finemap_input/BACH2_3way \   # z-file prefix
-    6 90500000 91500000 \              # chrom start end (hg19)
-    multisusie/BACH2_3way \           # SuSiE result prefix
-    BACH2 \                           # gene name for annotation
-    "CD14,CD34,HSC" \                 # cell types to plot (comma-sep, or leave blank for all)
-    "rs12203592,rs72934505" \         # credible-set rsIDs to label
-    rs12203592 \                      # leading SNP for LD coloring
-    Weng2024                          # ATAC source
+$ Rscript scripts/4_plot_fig2a.R \
+    finemap_input/BACH2_3way \         # z-file prefix
+    6 90600000 91100000 \              # chrom start end (hg19) for Ext. Data Fig. 3b
+    multisusie/BACH2_3way \            # SuSiE result prefix
+    BACH2 \                            # gene name for annotation
+    "HSC,MPP_MkEry,MPP_MkLy,MEP" \     # cell types to plot
+    "rs2325259,rs1010473,rs1010474" \  # credible-set rsIDs to label
+    rs2325259 \                        # leading SNP for LD coloring
+    Weng2024                           # ATAC source
 ```
