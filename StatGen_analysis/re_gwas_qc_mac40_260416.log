@@ -1,0 +1,510 @@
+========================= Job Information ========================
+Job ID: 18935161
+Job Array ID: 0
+Job Name: re_gwas_qc_mac40
+Node: compute-5-0-7
+Start Time: Fri Apr 17 00:51:41 EDT 2026
+Working Directory: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap
+Number of CPUs: 1
+Clock Time Limit: 
+Memory per Node: 32768
+===================================================================
+
+Array task 0: processing BIOS_LL_chrALL_INFO6_MAF0p1pct_hg38.tsv
+
+=== Genomic Control Lambda Before QC ===
+Genomic control lambda (before QC): 1.010371
+
+Input variants: 11298757
+Dropped rows with NA/Inf in numeric columns: 0
+Dropped non-SNP sites: 0
+Dropped multiallelic/duplicate-position sites: 200
+Dropped SE-filtered sites: 0
+Dropped p-value-filtered sites: 0
+No Z-inconsistent sites detected
+Dropped extreme-Z sites: 0
+Dropped low-MAF sites (<0.001): 1115158
+Applied per-row MAC cutoff: max(min_maf*2*N, min(40, sqrt(N)), 20) for each row
+  min_maf=0.001
+  MAC cutoff range: 27.17 to 27.17
+Dropped low-MAC sites (per-row cutoff): 5148996
+Dropped low-INFO sites (<0.6): 0
+SE distribution (n=5034403):
+	min=0.04874 p1=0.05166 p5=0.05311 p25=0.06078 median=0.08109 p75=0.1238 p95=0.1866 p99=0.211 max=0.2718
+N distribution (n=5034403):
+	min=738 p1=738 p5=738 p25=738 median=738 p75=738 p95=738 p99=738 max=738
+Retained variants after QC: 5034403
+
+=== Genomic Control Lambda After QC ===
+Genomic control lambda (after QC): 1.013647
+
+Lambda ratio (after/before): 1.0032
+Total runtime (wall): 1139.78 seconds
+Pipeline finished Fri Apr 17 01:10:44 EDT 2026
+
+JobID           JobName  Partition        NodeList               Start                 End    Elapsed      State ExitCode     MaxRSS  MaxVMSize     AveCPU     AveRSS  AveVMSize 
+------------ ---------- ---------- --------------- ------------------- ------------------- ---------- ---------- -------- ---------- ---------- ---------- ---------- ---------- 
+========================= Job Information ========================
+Job ID: 18935160
+Job Array ID: 10
+Job Name: re_gwas_qc_mac40
+Node: compute-5-0-1
+Start Time: Fri Apr 17 00:51:41 EDT 2026
+Working Directory: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap
+Number of CPUs: 1
+Clock Time Limit: 
+Memory per Node: 32768
+===================================================================
+
+Array task 10: processing TOPMed_chrALL_MAF0p1pct_hg38.tsv
+
+=== Genomic Control Lambda Before QC ===
+Genomic control lambda (before QC): 1.012200
+
+Input variants: 16488576
+Dropped rows with NA/Inf in numeric columns: 0
+Dropped non-SNP sites: 0
+Dropped multiallelic/duplicate-position sites: 315
+Dropped SE-filtered sites: 0
+Dropped p-value-filtered sites: 0
+No Z-inconsistent sites detected
+Dropped extreme-Z sites: 0
+Dropped low-MAF sites (<0.001): 0
+Applied per-row MAC cutoff: max(min_maf*2*N, min(40, sqrt(N)), 20) for each row
+  min_maf=0.001
+  MAC cutoff range: 40 to 40
+Dropped low-MAC sites (per-row cutoff): 4804834
+Dropped low-INFO sites (<0.6): 0
+SE distribution (n=11683427):
+	min=0.02323 p1=0.0244 p5=0.02539 p25=0.03555 median=0.05908 p75=0.09062 p95=0.1214 p99=0.1285 max=0.1525
+N distribution (n=11683427):
+	min=2251 p1=2251 p5=2251 p25=2251 median=2251 p75=2251 p95=2251 p99=2251 max=2251
+Retained variants after QC: 11683427
+
+=== Genomic Control Lambda After QC ===
+Genomic control lambda (after QC): 1.011232
+
+Lambda ratio (after/before): 0.9990
+Total runtime (wall): 1300.10 seconds
+Pipeline finished Fri Apr 17 01:13:24 EDT 2026
+
+JobID           JobName  Partition        NodeList               Start                 End    Elapsed      State ExitCode     MaxRSS  MaxVMSize     AveCPU     AveRSS  AveVMSize 
+------------ ---------- ---------- --------------- ------------------- ------------------- ---------- ---------- -------- ---------- ---------- ---------- ---------- ---------- 
+18935160_10  re_gwas_q+ bch-compu+   compute-5-0-1 2026-04-17T00:51:41             Unknown   00:21:43    RUNNING      0:0                                                        
+18935160_10+      batch              compute-5-0-1 2026-04-17T00:51:41             Unknown   00:21:43    RUNNING      0:0                                                        
+18935160_10+     extern              compute-5-0-1 2026-04-17T00:51:41             Unknown   00:21:43    RUNNING      0:0                                                        
+========================= Job Information ========================
+Job ID: 18935162
+Job Array ID: 1
+Job Name: re_gwas_qc_mac40
+Node: compute-5-0-7
+Start Time: Fri Apr 17 00:51:41 EDT 2026
+Working Directory: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap
+Number of CPUs: 1
+Clock Time Limit: 
+Memory per Node: 32768
+===================================================================
+
+Array task 1: processing BIOS_LLS_660Q_chrALL_INFO6_MAF0p1pct_hg38.tsv
+
+=== Genomic Control Lambda Before QC ===
+Genomic control lambda (before QC): 1.001594
+
+Input variants: 11053128
+Dropped rows with NA/Inf in numeric columns: 0
+Dropped non-SNP sites: 0
+Dropped multiallelic/duplicate-position sites: 221
+Dropped SE-filtered sites: 0
+Dropped p-value-filtered sites: 0
+No Z-inconsistent sites detected
+Dropped extreme-Z sites: 0
+Dropped low-MAF sites (<0.001): 132865
+Applied per-row MAC cutoff: max(min_maf*2*N, min(40, sqrt(N)), 20) for each row
+  min_maf=0.001
+  MAC cutoff range: 20 to 20
+Dropped low-MAC sites (per-row cutoff): 6275407
+Dropped low-INFO sites (<0.6): 0
+SE distribution (n=4644635):
+	min=0.06548 p1=0.07048 p5=0.07272 p25=0.08209 median=0.1055 p75=0.1515 p95=0.2169 p99=0.242 max=0.3242
+N distribution (n=4644635):
+	min=392 p1=392 p5=392 p25=392 median=392 p75=392 p95=392 p99=392 max=392
+Retained variants after QC: 4644635
+
+=== Genomic Control Lambda After QC ===
+Genomic control lambda (after QC): 0.997669
+
+Lambda ratio (after/before): 0.9961
+Total runtime (wall): 1104.74 seconds
+Pipeline finished Fri Apr 17 01:10:09 EDT 2026
+
+JobID           JobName  Partition        NodeList               Start                 End    Elapsed      State ExitCode     MaxRSS  MaxVMSize     AveCPU     AveRSS  AveVMSize 
+------------ ---------- ---------- --------------- ------------------- ------------------- ---------- ---------- -------- ---------- ---------- ---------- ---------- ---------- 
+========================= Job Information ========================
+Job ID: 18935163
+Job Array ID: 2
+Job Name: re_gwas_qc_mac40
+Node: compute-5-0-7
+Start Time: Fri Apr 17 00:51:41 EDT 2026
+Working Directory: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap
+Number of CPUs: 1
+Clock Time Limit: 
+Memory per Node: 32768
+===================================================================
+
+Array task 2: processing BIOS_RS_chrALL_INFO6_MAF0p1pct_hg38.tsv
+
+=== Genomic Control Lambda Before QC ===
+Genomic control lambda (before QC): 0.998088
+
+Input variants: 12242653
+Dropped rows with NA/Inf in numeric columns: 0
+Dropped non-SNP sites: 0
+Dropped multiallelic/duplicate-position sites: 331
+Dropped SE-filtered sites: 0
+Dropped p-value-filtered sites: 0
+No Z-inconsistent sites detected
+Dropped extreme-Z sites: 0
+Dropped low-MAF sites (<0.001): 1515709
+Applied per-row MAC cutoff: max(min_maf*2*N, min(40, sqrt(N)), 20) for each row
+  min_maf=0.001
+  MAC cutoff range: 27.24 to 27.24
+Dropped low-MAC sites (per-row cutoff): 5624753
+Dropped low-INFO sites (<0.6): 0
+SE distribution (n=5101860):
+	min=0.04883 p1=0.05165 p5=0.05303 p25=0.06055 median=0.08099 p75=0.1236 p95=0.1859 p99=0.2097 max=0.3107
+N distribution (n=5101860):
+	min=742 p1=742 p5=742 p25=742 median=742 p75=742 p95=742 p99=742 max=742
+Retained variants after QC: 5101860
+
+=== Genomic Control Lambda After QC ===
+Genomic control lambda (after QC): 0.998611
+
+Lambda ratio (after/before): 1.0005
+Total runtime (wall): 1263.80 seconds
+Pipeline finished Fri Apr 17 01:12:48 EDT 2026
+
+JobID           JobName  Partition        NodeList               Start                 End    Elapsed      State ExitCode     MaxRSS  MaxVMSize     AveCPU     AveRSS  AveVMSize 
+------------ ---------- ---------- --------------- ------------------- ------------------- ---------- ---------- -------- ---------- ---------- ---------- ---------- ---------- 
+========================= Job Information ========================
+Job ID: 18935164
+Job Array ID: 3
+Job Name: re_gwas_qc_mac40
+Node: compute-5-0-5
+Start Time: Fri Apr 17 00:51:41 EDT 2026
+Working Directory: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap
+Number of CPUs: 1
+Clock Time Limit: 
+Memory per Node: 32768
+===================================================================
+
+Array task 3: processing GTEx_chrALL_MAF0p1pct_hg38.tsv
+
+=== Genomic Control Lambda Before QC ===
+Genomic control lambda (before QC): 1.007974
+
+Input variants: 4651929
+Dropped rows with NA/Inf in numeric columns: 0
+Dropped non-SNP sites: 0
+Dropped multiallelic/duplicate-position sites: 0
+Dropped SE-filtered sites: 0
+Dropped p-value-filtered sites: 0
+Found 64 Z-inconsistent sites (|Z_wald - Z_reported| > 0.1)
+Z bias statistics for inconsistent sites (Z_wald - Z_reported):
+  mean: 0.1192
+  median: 0.205
+  std: 0.1882
+  min: -0.3321
+  max: 0.3493
+Dropped extreme-Z sites: 0
+Dropped low-MAF sites (<0.001): 0
+SE distribution (n=4651929):
+	min=0.04888 p1=0.05351 p5=0.05477 p25=0.05831 median=0.0678 p75=0.08812 p95=0.1181 p99=0.1285 max=0.1911
+N distribution (n=4651929):
+	min=670 p1=670 p5=670 p25=670 median=670 p75=670 p95=670 p99=670 max=670
+Retained variants after QC: 4651929
+
+=== Genomic Control Lambda After QC ===
+Genomic control lambda (after QC): 1.007974
+
+Lambda ratio (after/before): 1.0000
+
+Generating MAC-stratified Z diagnostics plot...
+Skipping Z diagnostics plot: missing MAC, beta, se, or z column
+Total runtime (wall): 269.27 seconds
+Pipeline finished Fri Apr 17 00:56:14 EDT 2026
+
+JobID           JobName  Partition        NodeList               Start                 End    Elapsed      State ExitCode     MaxRSS  MaxVMSize     AveCPU     AveRSS  AveVMSize 
+------------ ---------- ---------- --------------- ------------------- ------------------- ---------- ---------- -------- ---------- ---------- ---------- ---------- ---------- 
+========================= Job Information ========================
+Job ID: 18935165
+Job Array ID: 4
+Job Name: re_gwas_qc_mac40
+Node: compute-5-0-5
+Start Time: Fri Apr 17 00:51:41 EDT 2026
+Working Directory: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap
+Number of CPUs: 1
+Clock Time Limit: 
+Memory per Node: 32768
+===================================================================
+
+Array task 4: processing Interval_chrALL_MAF0p1pct_hg38.tsv
+Detected Interval file; running with --pass-z-check
+
+=== Genomic Control Lambda Before QC ===
+Genomic control lambda (before QC): 1.047541
+
+Input variants: 7788920
+Dropped rows with NA/Inf in numeric columns: 0
+Dropped non-SNP sites: 260
+Dropped multiallelic/duplicate-position sites: 2
+Dropped SE-filtered sites: 0
+Dropped p-value-filtered sites: 0
+Skipped Z consistency check (--pass-z-check set)
+Dropped extreme-Z sites: 0
+Dropped low-MAF sites (<0.001): 0
+Dropped low-INFO sites (<0.6): 0
+SE distribution (n=7788658):
+	min=0.01271 p1=0.01353 p5=0.01368 p25=0.01499 median=0.02018 p75=0.03575 p95=0.08403 p99=0.1311 max=0.1653
+N distribution (n=7788658):
+	min=1.1e+04 p1=1.1e+04 p5=1.1e+04 p25=1.1e+04 median=1.1e+04 p75=1.1e+04 p95=1.1e+04 p99=1.1e+04 max=1.1e+04
+Retained variants after QC: 7788658
+
+=== Genomic Control Lambda After QC ===
+Genomic control lambda (after QC): 1.047541
+
+Lambda ratio (after/before): 1.0000
+Total runtime (wall): 486.62 seconds
+Pipeline finished Fri Apr 17 00:59:51 EDT 2026
+
+JobID           JobName  Partition        NodeList               Start                 End    Elapsed      State ExitCode     MaxRSS  MaxVMSize     AveCPU     AveRSS  AveVMSize 
+------------ ---------- ---------- --------------- ------------------- ------------------- ---------- ---------- -------- ---------- ---------- ---------- ---------- ---------- 
+========================= Job Information ========================
+Job ID: 18935166
+Job Array ID: 5
+Job Name: re_gwas_qc_mac40
+Node: compute-5-0-2
+Start Time: Fri Apr 17 00:51:41 EDT 2026
+Working Directory: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap
+Number of CPUs: 1
+Clock Time Limit: 
+Memory per Node: 32768
+===================================================================
+
+Array task 5: processing Sardinia_chrALL_MAF0p1pct_hg38.tsv
+
+=== Genomic Control Lambda Before QC ===
+Genomic control lambda (before QC): 0.986437
+
+Input variants: 8776049
+Dropped rows with NA/Inf in numeric columns: 0
+Dropped non-SNP sites: 73
+Dropped multiallelic/duplicate-position sites: 20
+Dropped SE-filtered sites: 0
+Dropped p-value-filtered sites: 0
+No Z-inconsistent sites detected
+Dropped extreme-Z sites: 0
+Dropped low-MAF sites (<0.001): 0
+SE distribution (n=8775956):
+	min=0.01568 p1=0.0163 p5=0.01662 p25=0.01884 median=0.02766 p75=0.05374 p95=0.0979 p99=0.1119 max=0.1498
+N distribution (n=8775956):
+	min=6171 p1=6305 p5=6305 p25=6305 median=6305 p75=6305 p95=6305 p99=6305 max=6305
+Retained variants after QC: 8775956
+
+=== Genomic Control Lambda After QC ===
+Genomic control lambda (after QC): 0.986442
+
+Lambda ratio (after/before): 1.0000
+Total runtime (wall): 541.06 seconds
+Pipeline finished Fri Apr 17 01:00:44 EDT 2026
+
+JobID           JobName  Partition        NodeList               Start                 End    Elapsed      State ExitCode     MaxRSS  MaxVMSize     AveCPU     AveRSS  AveVMSize 
+------------ ---------- ---------- --------------- ------------------- ------------------- ---------- ---------- -------- ---------- ---------- ---------- ---------- ---------- 
+========================= Job Information ========================
+Job ID: 18935167
+Job Array ID: 6
+Job Name: re_gwas_qc_mac40
+Node: compute-5-0-2
+Start Time: Fri Apr 17 00:51:41 EDT 2026
+Working Directory: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap
+Number of CPUs: 1
+Clock Time Limit: 
+Memory per Node: 32768
+===================================================================
+
+Array task 6: processing StJude_chrALL_MAF0p1pct_hg38.tsv
+Detected StJude file; running with SE cap filter
+
+=== Genomic Control Lambda Before QC ===
+Genomic control lambda (before QC): 1.001948
+
+Input variants: 14239010
+Dropped rows with NA/Inf in numeric columns: 0
+Dropped non-SNP sites: 0
+Dropped multiallelic/duplicate-position sites: 103480
+Dropped SE-filtered sites: 0
+Dropped p-value-filtered sites: 0
+Found 27 Z-inconsistent sites (|Z_wald - Z_reported| > 0.1)
+Z bias statistics for inconsistent sites (Z_wald - Z_reported):
+  mean: -0.2075
+  median: -0.2497
+  std: 0.283
+  min: -0.5896
+  max: 0.1795
+Dropped extreme-Z sites: 0
+Dropped low-MAF sites (<0.001): 0
+Applied per-row MAC cutoff: max(min_maf*2*N, min(40, sqrt(N)), 20) for each row
+  min_maf=0.001
+  MAC cutoff range: 20 to 23.81
+Dropped low-MAC sites (per-row cutoff): 4620077
+SE distribution (n=9515453):
+	min=0.02162 p1=0.05493 p5=0.05754 p25=0.07254 median=0.1025 p75=0.1433 p95=0.1849 p99=0.1963 max=0.2463
+N distribution (n=9515453):
+	min=284 p1=550 p5=567 p25=567 median=567 p75=567 p95=567 p99=567 max=567
+Applied SE cap filter: SE <= 10.0
+Dropped SE-cap-filtered sites: 0
+SE distribution after SE cap filter (n=9515453):
+ 	min=0.02162 p1=0.05493 p5=0.05754 p25=0.07254 median=0.1025 p75=0.1433 p95=0.1849 p99=0.1963 max=0.2463
+Retained variants after QC: 9515453
+
+=== Genomic Control Lambda After QC ===
+Genomic control lambda (after QC): 1.000080
+
+Lambda ratio (after/before): 0.9981
+
+Generating MAC-stratified Z diagnostics plot...
+Saved Z diagnostics plot: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/StJude_chrALL_MAF0p1pct_hg38.z_diagnostics.png
+Total runtime (wall): 940.57 seconds
+Pipeline finished Fri Apr 17 01:07:23 EDT 2026
+
+JobID           JobName  Partition        NodeList               Start                 End    Elapsed      State ExitCode     MaxRSS  MaxVMSize     AveCPU     AveRSS  AveVMSize 
+------------ ---------- ---------- --------------- ------------------- ------------------- ---------- ---------- -------- ---------- ---------- ---------- ---------- ---------- 
+========================= Job Information ========================
+Job ID: 18935168
+Job Array ID: 7
+Job Name: re_gwas_qc_mac40
+Node: compute-5-0-2
+Start Time: Fri Apr 17 00:51:41 EDT 2026
+Working Directory: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap
+Number of CPUs: 1
+Clock Time Limit: 
+Memory per Node: 32768
+===================================================================
+
+Array task 7: processing Sweden_chrALL_MAF0p1pct_hg38.tsv
+
+=== Genomic Control Lambda Before QC ===
+Genomic control lambda (before QC): 1.009525
+
+Input variants: 7787483
+Dropped rows with NA/Inf in numeric columns: 0
+Dropped non-SNP sites: 2583
+Dropped multiallelic/duplicate-position sites: 330
+Dropped SE-filtered sites: 0
+Dropped p-value-filtered sites: 0
+No Z-inconsistent sites detected
+Dropped extreme-Z sites: 0
+Dropped low-MAF sites (<0.001): 43
+Applied per-row MAC cutoff: max(min_maf*2*N, min(40, sqrt(N)), 20) for each row
+  min_maf=0.001
+  MAC cutoff range: 40 to 40
+Dropped low-MAC sites (per-row cutoff): 1506901
+Dropped low-INFO sites (<0.6): 0
+SE distribution (n=6277626):
+	min=0.02083 p1=0.02196 p5=0.02232 p25=0.02609 median=0.03769 p75=0.06367 p95=0.0996 p99=0.1085 max=0.1315
+N distribution (n=6277626):
+	min=3031 p1=3031 p5=3031 p25=3031 median=3031 p75=3031 p95=3031 p99=3031 max=3031
+Retained variants after QC: 6277626
+
+=== Genomic Control Lambda After QC ===
+Genomic control lambda (after QC): 1.010418
+
+Lambda ratio (after/before): 1.0009
+Total runtime (wall): 656.05 seconds
+Pipeline finished Fri Apr 17 01:02:39 EDT 2026
+
+JobID           JobName  Partition        NodeList               Start                 End    Elapsed      State ExitCode     MaxRSS  MaxVMSize     AveCPU     AveRSS  AveVMSize 
+------------ ---------- ---------- --------------- ------------------- ------------------- ---------- ---------- -------- ---------- ---------- ---------- ---------- ---------- 
+========================= Job Information ========================
+Job ID: 18935169
+Job Array ID: 8
+Job Name: re_gwas_qc_mac40
+Node: compute-5-0-1
+Start Time: Fri Apr 17 00:51:41 EDT 2026
+Working Directory: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap
+Number of CPUs: 1
+Clock Time Limit: 
+Memory per Node: 32768
+===================================================================
+
+Array task 8: processing Tanzania_chrALL_MAF0p1pct_hg38.tsv
+
+=== Genomic Control Lambda Before QC ===
+Genomic control lambda (before QC): 0.995812
+
+Input variants: 19168288
+Dropped rows with NA/Inf in numeric columns: 16
+Dropped non-SNP sites: 1546949
+Dropped multiallelic/duplicate-position sites: 27257
+Dropped SE-filtered sites: 0
+Dropped p-value-filtered sites: 0
+Detected one-sided Z values; aligned Z sign to beta before consistency check
+No Z-inconsistent sites detected
+Dropped extreme-Z sites: 0
+Dropped low-MAF sites (<0.001): 0
+SE distribution (n=17594066):
+	min=0.03214 p1=0.03469 p5=0.03609 p25=0.0508 median=0.09188 p75=0.1685 p95=0.3245 p99=0.3974 max=1.248
+N distribution (n=17594066):
+	min=1187 p1=1187 p5=1187 p25=1187 median=1187 p75=1187 p95=1187 p99=1187 max=1187
+Retained variants after QC: 17594066
+
+=== Genomic Control Lambda After QC ===
+Genomic control lambda (after QC): 0.995716
+
+Lambda ratio (after/before): 0.9999
+Total runtime (wall): 1414.43 seconds
+Pipeline finished Fri Apr 17 01:15:19 EDT 2026
+
+JobID           JobName  Partition        NodeList               Start                 End    Elapsed      State ExitCode     MaxRSS  MaxVMSize     AveCPU     AveRSS  AveVMSize 
+------------ ---------- ---------- --------------- ------------------- ------------------- ---------- ---------- -------- ---------- ---------- ---------- ---------- ---------- 
+========================= Job Information ========================
+Job ID: 18935170
+Job Array ID: 9
+Job Name: re_gwas_qc_mac40
+Node: compute-5-0-1
+Start Time: Fri Apr 17 00:51:41 EDT 2026
+Working Directory: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap
+Number of CPUs: 1
+Clock Time Limit: 
+Memory per Node: 32768
+===================================================================
+
+Array task 9: processing Thai_chrALL_MAF0p1pct_hg38.tsv
+
+=== Genomic Control Lambda Before QC ===
+Genomic control lambda (before QC): 0.973741
+
+Input variants: 6453314
+Dropped rows with NA/Inf in numeric columns: 0
+Dropped non-SNP sites: 0
+Dropped multiallelic/duplicate-position sites: 0
+Dropped SE-filtered sites: 0
+Dropped p-value-filtered sites: 0
+No Z-inconsistent sites detected
+Dropped extreme-Z sites: 0
+Dropped low-MAF sites (<0.001): 0
+Dropped low-INFO sites (<0.6): 278978
+SE distribution (n=6174336):
+	min=0.02919 p1=0.03133 p5=0.03197 p25=0.0349 median=0.04451 p75=0.07348 p95=0.1417 p99=0.1676 max=0.2567
+N distribution (n=6174336):
+	min=1392 p1=1392 p5=1392 p25=1392 median=1392 p75=1392 p95=1392 p99=1392 max=1392
+Retained variants after QC: 6174336
+
+=== Genomic Control Lambda After QC ===
+Genomic control lambda (after QC): 0.973557
+
+Lambda ratio (after/before): 0.9998
+Total runtime (wall): 448.33 seconds
+Pipeline finished Fri Apr 17 00:59:13 EDT 2026
+
+JobID           JobName  Partition        NodeList               Start                 End    Elapsed      State ExitCode     MaxRSS  MaxVMSize     AveCPU     AveRSS  AveVMSize 
+------------ ---------- ---------- --------------- ------------------- ------------------- ---------- ---------- -------- ---------- ---------- ---------- ---------- ---------- 

@@ -1,0 +1,25 @@
+========================= Job Information ========================
+Job ID: 18935375
+Job Name: hg38metal_all_gc
+Node: compute-5-0-7
+Start Time: Fri Apr 17 03:44:08 EDT 2026
+Working Directory: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap
+Number of CPUs: 4
+Clock Time Limit: 
+Memory per Node: 16384
+===================================================================
+
+Received input: fema/output/METAL_hbf_inv_all_info6_Nscheme_gcOff_PosTrackOff1.tbl
+Output prefix: METAL_hbf_inv_ALL_info6_mac40_SE_gcOff_hg38.tsv.gz
+Using threads: 4
+[Fri Apr 17 03:44:09 EDT 2026] Extracting rsIDs from input
+[Fri Apr 17 03:44:39 EDT 2026] Querying dbSNP with bcftools
+[Fri Apr 17 04:10:14 EDT 2026] Preparing input data
+[Fri Apr 17 04:10:28 EDT 2026] Annotating input with hg38 coordinates (awk left join)
+[Fri Apr 17 04:11:39 EDT 2026] Sorting output by CHR and POS
+[Fri Apr 17 04:14:16 EDT 2026] Wrote output: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/fema/hg38_output/METAL_hbf_inv_ALL_info6_mac40_SE_gcOff_hg38.tsv.gz
+JobID           JobName  Partition        NodeList               Start                 End    Elapsed      State ExitCode     MaxRSS  MaxVMSize     AveCPU     AveRSS  AveVMSize 
+------------ ---------- ---------- --------------- ------------------- ------------------- ---------- ---------- -------- ---------- ---------- ---------- ---------- ---------- 
+18935375     hg38metal+ bch-compu+   compute-5-0-7 2026-04-17T03:43:30             Unknown   00:30:46    RUNNING      0:0                                                        
+18935375.ba+      batch              compute-5-0-7 2026-04-17T03:43:30             Unknown   00:30:46    RUNNING      0:0                                                        
+18935375.ex+     extern              compute-5-0-7 2026-04-17T03:43:30             Unknown   00:30:46    RUNNING      0:0                                                        

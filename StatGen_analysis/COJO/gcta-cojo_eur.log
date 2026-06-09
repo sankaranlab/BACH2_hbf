@@ -1,0 +1,280 @@
+*******************************************************************
+* Genome-wide Complex Trait Analysis (GCTA)
+* version 1.94.0 beta Linux
+* (C) 2010-present, Jian Yang, The University of Queensland
+* Please report bugs to Jian Yang <jian.yang.qt@gmail.com>
+*******************************************************************
+Analysis started at 17:57:06 UTC on Wed May 08 2024.
+Hostname: 8fa49aa7486c
+
+Accepted options:
+--bfile ./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr1_rsids-snpsonly
+--cojo-slct
+--cojo-p 1e-06
+--cojo-wind 10000
+--cojo-collinear 0.9
+--diff-freq 0.6
+--chr 1
+--maf 0.001
+--cojo-file ./HBF_META_GWAS_SS/CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv
+--out ./data/femagctarun/cojo/FEMA_UMA/eur_plink/chr1.1e-6
+
+
+Reading PLINK FAM file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr1_rsids-snpsonly.fam].
+51125 individuals to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr1_rsids-snpsonly.fam].
+Reading PLINK BIM file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr1_rsids-snpsonly.bim].
+1157310 SNPs to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr1_rsids-snpsonly.bim].
+1157310 SNPs on chromosome 1 are included in the analysis.
+Reading PLINK BED file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr1_rsids-snpsonly.bed] in SNP-major format ...
+Genotype data for 51125 individuals and 1157310 SNPs to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr1_rsids-snpsonly.bed].
+Calculating allele frequencies ...
+Filtering SNPs with MAF > 0.001 ...
+After filtering SNPs with MAF > 0.001, there are 1143724 SNPs (13586 SNPs with MAF < 0.001).
+
+Reading GWAS summary-level statistics from [./HBF_META_GWAS_SS/CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv] ...
+GWAS summary statistics of 21377422 SNPs read from [./HBF_META_GWAS_SS/CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv].
+Phenotypic variance estimated from summary statistics of all 21377422 SNPs: 0.000249647 (variance of logit for case-control studies).
+Matching the GWAS meta-analysis results to the genotype data ...
+Warning: can't match the reference alleles of 5 SNPs to those in the genotype data. These SNPs have been saved in [./data/femagctarun/cojo/FEMA_UMA/eur_plink/chr1.1e-6.badsnps].
+508338 SNP(s) have large difference of allele frequency between the GWAS summary data and the reference sample. These SNPs have been saved in [./data/femagctarun/cojo/FEMA_UMA/eur_plink/chr1.1e-6.freq.badsnps].
+207565 SNPs are matched to the genotype data.
+Calculating the variance of SNP genotypes ...
+
+Performing stepwise model selection on 207565 SNPs to select association signals ... (p cutoff = 1e-06; collinearity cutoff = 0.9)
+(Assuming complete linkage equilibrium between SNPs which are more than 10Mb away from each other)
+No SNPs have been selected.
+
+Analysis finished at 18:23:39 UTC on Wed May 08 2024
+Overall computational time: 26 minutes 33 sec.
+*******************************************************************
+* Genome-wide Complex Trait Analysis (GCTA)
+* version 1.94.0 beta Linux
+* (C) 2010-present, Jian Yang, The University of Queensland
+* Please report bugs to Jian Yang <jian.yang.qt@gmail.com>
+*******************************************************************
+Analysis started at 18:23:39 UTC on Wed May 08 2024.
+Hostname: 8fa49aa7486c
+
+Accepted options:
+--bfile ./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr2_rsids-snpsonly
+--cojo-slct
+--cojo-p 1e-06
+--cojo-wind 10000
+--cojo-collinear 0.9
+--diff-freq 0.6
+--chr 2
+--maf 0.001
+--cojo-file ./HBF_META_GWAS_SS/CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv
+--out ./data/femagctarun/cojo/FEMA_UMA/eur_plink/chr2.1e-6
+
+
+Reading PLINK FAM file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr2_rsids-snpsonly.fam].
+51125 individuals to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr2_rsids-snpsonly.fam].
+Reading PLINK BIM file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr2_rsids-snpsonly.bim].
+1237479 SNPs to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr2_rsids-snpsonly.bim].
+1237479 SNPs on chromosome 2 are included in the analysis.
+Reading PLINK BED file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr2_rsids-snpsonly.bed] in SNP-major format ...
+Genotype data for 51125 individuals and 1237479 SNPs to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr2_rsids-snpsonly.bed].
+Calculating allele frequencies ...
+Filtering SNPs with MAF > 0.001 ...
+After filtering SNPs with MAF > 0.001, there are 1223552 SNPs (13927 SNPs with MAF < 0.001).
+
+Reading GWAS summary-level statistics from [./HBF_META_GWAS_SS/CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv] ...
+GWAS summary statistics of 21377422 SNPs read from [./HBF_META_GWAS_SS/CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv].
+Phenotypic variance estimated from summary statistics of all 21377422 SNPs: 0.000249647 (variance of logit for case-control studies).
+Matching the GWAS meta-analysis results to the genotype data ...
+550050 SNP(s) have large difference of allele frequency between the GWAS summary data and the reference sample. These SNPs have been saved in [./data/femagctarun/cojo/FEMA_UMA/eur_plink/chr2.1e-6.freq.badsnps].
+220861 SNPs are matched to the genotype data.
+Calculating the variance of SNP genotypes ...
+
+Performing stepwise model selection on 220861 SNPs to select association signals ... (p cutoff = 1e-06; collinearity cutoff = 0.9)
+(Assuming complete linkage equilibrium between SNPs which are more than 10Mb away from each other)
+5 associated SNPs have been selected.
+10 associated SNPs have been selected.
+15 associated SNPs have been selected.
+20 associated SNPs have been selected.
+25 associated SNPs have been selected.
+30 associated SNPs have been selected.
+35 associated SNPs have been selected.
+40 associated SNPs have been selected.
+Finally, 42 associated SNPs are selected.
+Performing joint analysis on all the 42 selected signals ...
+Saving the 42 independent signals to [./data/femagctarun/cojo/FEMA_UMA/eur_plink/chr2.1e-6.jma.cojo] ...
+Saving the LD structure of 42 independent signals to [./data/femagctarun/cojo/FEMA_UMA/eur_plink/chr2.1e-6.ldr.cojo] ...
+Saving the conditional analysis results of 220335 remaining SNPs to [./data/femagctarun/cojo/FEMA_UMA/eur_plink/chr2.1e-6.cma.cojo] ...
+(3 SNPs eliminated by backward selection and 481 SNPs filtered by collinearity test are not included in the output)
+
+Analysis finished at 20:29:11 UTC on Wed May 08 2024
+Overall computational time: 2 hours 5 minutes 31 sec.
+*******************************************************************
+* Genome-wide Complex Trait Analysis (GCTA)
+* version 1.94.0 beta Linux
+* (C) 2010-present, Jian Yang, The University of Queensland
+* Please report bugs to Jian Yang <jian.yang.qt@gmail.com>
+*******************************************************************
+Analysis started at 20:29:11 UTC on Wed May 08 2024.
+Hostname: 8fa49aa7486c
+
+Accepted options:
+--bfile ./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr3_rsids-snpsonly
+--cojo-slct
+--cojo-p 1e-06
+--cojo-wind 10000
+--cojo-collinear 0.9
+--diff-freq 0.6
+--chr 3
+--maf 0.001
+--cojo-file ./HBF_META_GWAS_SS/CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv
+--out ./data/femagctarun/cojo/FEMA_UMA/eur_plink/chr3.1e-6
+
+
+Reading PLINK FAM file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr3_rsids-snpsonly.fam].
+51125 individuals to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr3_rsids-snpsonly.fam].
+Reading PLINK BIM file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr3_rsids-snpsonly.bim].
+1041319 SNPs to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr3_rsids-snpsonly.bim].
+1041319 SNPs on chromosome 3 are included in the analysis.
+Reading PLINK BED file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr3_rsids-snpsonly.bed] in SNP-major format ...
+Genotype data for 51125 individuals and 1041319 SNPs to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr3_rsids-snpsonly.bed].
+Calculating allele frequencies ...
+Filtering SNPs with MAF > 0.001 ...
+After filtering SNPs with MAF > 0.001, there are 1031802 SNPs (9517 SNPs with MAF < 0.001).
+
+Reading GWAS summary-level statistics from [./HBF_META_GWAS_SS/CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv] ...
+GWAS summary statistics of 21377422 SNPs read from [./HBF_META_GWAS_SS/CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv].
+Phenotypic variance estimated from summary statistics of all 21377422 SNPs: 0.000249647 (variance of logit for case-control studies).
+Matching the GWAS meta-analysis results to the genotype data ...
+Warning: can't match the reference alleles of 3 SNPs to those in the genotype data. These SNPs have been saved in [./data/femagctarun/cojo/FEMA_UMA/eur_plink/chr3.1e-6.badsnps].
+467628 SNP(s) have large difference of allele frequency between the GWAS summary data and the reference sample. These SNPs have been saved in [./data/femagctarun/cojo/FEMA_UMA/eur_plink/chr3.1e-6.freq.badsnps].
+191500 SNPs are matched to the genotype data.
+Calculating the variance of SNP genotypes ...
+
+Performing stepwise model selection on 191500 SNPs to select association signals ... (p cutoff = 1e-06; collinearity cutoff = 0.9)
+(Assuming complete linkage equilibrium between SNPs which are more than 10Mb away from each other)
+No SNPs have been selected.
+
+Analysis finished at 20:53:02 UTC on Wed May 08 2024
+Overall computational time: 23 minutes 51 sec.
+*******************************************************************
+* Genome-wide Complex Trait Analysis (GCTA)
+* version 1.94.0 beta Linux
+* (C) 2010-present, Jian Yang, The University of Queensland
+* Please report bugs to Jian Yang <jian.yang.qt@gmail.com>
+*******************************************************************
+Analysis started at 20:53:02 UTC on Wed May 08 2024.
+Hostname: 8fa49aa7486c
+
+Accepted options:
+--bfile ./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr4_rsids-snpsonly
+--cojo-slct
+--cojo-p 1e-06
+--cojo-wind 10000
+--cojo-collinear 0.9
+--diff-freq 0.6
+--chr 4
+--maf 0.001
+--cojo-file ./HBF_META_GWAS_SS/CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv
+--out ./data/femagctarun/cojo/FEMA_UMA/eur_plink/chr4.1e-6
+
+
+Reading PLINK FAM file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr4_rsids-snpsonly.fam].
+51125 individuals to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr4_rsids-snpsonly.fam].
+Reading PLINK BIM file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr4_rsids-snpsonly.bim].
+1062800 SNPs to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr4_rsids-snpsonly.bim].
+1062800 SNPs on chromosome 4 are included in the analysis.
+Reading PLINK BED file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr4_rsids-snpsonly.bed] in SNP-major format ...
+Genotype data for 51125 individuals and 1062800 SNPs to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr4_rsids-snpsonly.bed].
+Calculating allele frequencies ...
+Filtering SNPs with MAF > 0.001 ...
+After filtering SNPs with MAF > 0.001, there are 1049214 SNPs (13586 SNPs with MAF < 0.001).
+
+Reading GWAS summary-level statistics from [./HBF_META_GWAS_SS/CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv] ...
+GWAS summary statistics of 21377422 SNPs read from [./HBF_META_GWAS_SS/CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv].
+Phenotypic variance estimated from summary statistics of all 21377422 SNPs: 0.000249647 (variance of logit for case-control studies).
+Matching the GWAS meta-analysis results to the genotype data ...
+466150 SNP(s) have large difference of allele frequency between the GWAS summary data and the reference sample. These SNPs have been saved in [./data/femagctarun/cojo/FEMA_UMA/eur_plink/chr4.1e-6.freq.badsnps].
+205740 SNPs are matched to the genotype data.
+Calculating the variance of SNP genotypes ...
+
+Performing stepwise model selection on 205740 SNPs to select association signals ... (p cutoff = 1e-06; collinearity cutoff = 0.9)
+(Assuming complete linkage equilibrium between SNPs which are more than 10Mb away from each other)
+No SNPs have been selected.
+
+Analysis finished at 21:17:22 UTC on Wed May 08 2024
+Overall computational time: 24 minutes 20 sec.
+*******************************************************************
+* Genome-wide Complex Trait Analysis (GCTA)
+* version 1.94.0 beta Linux
+* (C) 2010-present, Jian Yang, The University of Queensland
+* Please report bugs to Jian Yang <jian.yang.qt@gmail.com>
+*******************************************************************
+Analysis started at 21:17:22 UTC on Wed May 08 2024.
+Hostname: 8fa49aa7486c
+
+Accepted options:
+--bfile ./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr5_rsids-snpsonly
+--cojo-slct
+--cojo-p 1e-06
+--cojo-wind 10000
+--cojo-collinear 0.9
+--diff-freq 0.6
+--chr 5
+--maf 0.001
+--cojo-file ./HBF_META_GWAS_SS/CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv
+--out ./data/femagctarun/cojo/FEMA_UMA/eur_plink/chr5.1e-6
+
+
+Reading PLINK FAM file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr5_rsids-snpsonly.fam].
+51125 individuals to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr5_rsids-snpsonly.fam].
+Reading PLINK BIM file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr5_rsids-snpsonly.bim].
+941687 SNPs to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr5_rsids-snpsonly.bim].
+941687 SNPs on chromosome 5 are included in the analysis.
+Reading PLINK BED file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr5_rsids-snpsonly.bed] in SNP-major format ...
+Genotype data for 51125 individuals and 941687 SNPs to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr5_rsids-snpsonly.bed].
+Calculating allele frequencies ...
+Filtering SNPs with MAF > 0.001 ...
+After filtering SNPs with MAF > 0.001, there are 934364 SNPs (7323 SNPs with MAF < 0.001).
+
+Reading GWAS summary-level statistics from [./HBF_META_GWAS_SS/CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv] ...
+GWAS summary statistics of 21377422 SNPs read from [./HBF_META_GWAS_SS/CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv].
+Phenotypic variance estimated from summary statistics of all 21377422 SNPs: 0.000249647 (variance of logit for case-control studies).
+Matching the GWAS meta-analysis results to the genotype data ...
+419095 SNP(s) have large difference of allele frequency between the GWAS summary data and the reference sample. These SNPs have been saved in [./data/femagctarun/cojo/FEMA_UMA/eur_plink/chr5.1e-6.freq.badsnps].
+172142 SNPs are matched to the genotype data.
+Calculating the variance of SNP genotypes ...
+
+Performing stepwise model selection on 172142 SNPs to select association signals ... (p cutoff = 1e-06; collinearity cutoff = 0.9)
+(Assuming complete linkage equilibrium between SNPs which are more than 10Mb away from each other)
+No SNPs have been selected.
+
+Analysis finished at 21:39:35 UTC on Wed May 08 2024
+Overall computational time: 22 minutes 12 sec.
+*******************************************************************
+* Genome-wide Complex Trait Analysis (GCTA)
+* version 1.94.0 beta Linux
+* (C) 2010-present, Jian Yang, The University of Queensland
+* Please report bugs to Jian Yang <jian.yang.qt@gmail.com>
+*******************************************************************
+Analysis started at 21:39:35 UTC on Wed May 08 2024.
+Hostname: 8fa49aa7486c
+
+Accepted options:
+--bfile ./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr6_rsids-snpsonly
+--cojo-slct
+--cojo-p 1e-06
+--cojo-wind 10000
+--cojo-collinear 0.9
+--diff-freq 0.6
+--chr 6
+--maf 0.001
+--cojo-file ./HBF_META_GWAS_SS/CloudTanz_METALOUT_inv_a1alt-munged.cojoReady.tsv
+--out ./data/femagctarun/cojo/FEMA_UMA/eur_plink/chr6.1e-6
+
+
+Reading PLINK FAM file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr6_rsids-snpsonly.fam].
+51125 individuals to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr6_rsids-snpsonly.fam].
+Reading PLINK BIM file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr6_rsids-snpsonly.bim].
+952157 SNPs to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr6_rsids-snpsonly.bim].
+952157 SNPs on chromosome 6 are included in the analysis.
+Reading PLINK BED file from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr6_rsids-snpsonly.bed] in SNP-major format ...
+Genotype data for 51125 individuals and 952157 SNPs to be included from [./data/femagctarun/plink-panel-gctardy/gcta_AoU-EUR_chr6_rsids-snpsonly.bed].
+Calculating allele frequencies ...

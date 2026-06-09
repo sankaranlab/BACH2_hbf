@@ -1,0 +1,337 @@
+2026-04-24 19:02:14,950 
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+<>
+<> MAMA: Multi-Ancestry Meta-Analysis
+<> Version: 1.0.0
+<> (C) 2020 Social Science Genetic Association Consortium (SSGAC)
+<> MIT License
+<>
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+<> Software-related correspondence: jjala.ssgac@gmail.com
+<> All other correspondence: paturley@broadinstitute.org
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+2026-04-24 19:02:14,950 See full log at: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/XC_SNPaligned_16865.log
+
+2026-04-24 19:02:14,950 
+Program executed via:
+/home/ch268464/tools/2024_mama/22jan20_mama_16865/mama.py  \ 
+	--sumstats /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/input/XC_thai-eurFema-afrFema_SNPaligned.EUR.tsv,EUR,HBF /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/input/XC_thai-eurFema-afrFema_SNPaligned.AFR.tsv,AFR,HBF /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/input/XC_thai-eurFema-afrFema_SNPaligned.THAI.tsv,THAI,HBF  \ 
+	--ld-scores /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr*.l2.ldscore.gz  \ 
+	--verbose  \ 
+	--out /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/XC_SNPaligned_16865  \ 
+	--use-standardized-units  \ 
+	--reg-int-zero  \ 
+	--reg-ld-set-corr 1.0  \ 
+	--out-harmonized  \ 
+	--freq-bounds 0.0001 0.9999
+
+2026-04-24 19:02:14,950 Printing Pandas' version summary:
+2026-04-24 19:02:15,723 
+INSTALLED VERSIONS
+------------------
+commit           : 67a3d4241ab84419856b84fc3ebc9abcbe66c6b3
+python           : 3.9.13.final.0
+python-bits      : 64
+OS               : Linux
+OS-release       : 4.18.0-553.109.1.el8_10.x86_64
+Version          : #1 SMP Tue Mar 3 16:05:15 UTC 2026
+machine          : x86_64
+processor        : x86_64
+byteorder        : little
+LC_ALL           : None
+LANG             : en_US.UTF-8
+LOCALE           : en_US.UTF-8
+
+pandas           : 1.1.4
+numpy            : 1.19.5
+pytz             : 2025.2
+dateutil         : 2.9.0.post0
+pip              : 25.2
+setuptools       : 59.8.0
+Cython           : None
+pytest           : None
+hypothesis       : None
+sphinx           : None
+blosc            : None
+feather          : None
+xlsxwriter       : None
+lxml.etree       : None
+html5lib         : None
+pymysql          : None
+psycopg2         : None
+jinja2           : None
+IPython          : None
+pandas_datareader: None
+bs4              : None
+bottleneck       : None
+fsspec           : None
+fastparquet      : None
+gcsfs            : None
+matplotlib       : None
+numexpr          : None
+odfpy            : None
+openpyxl         : None
+pandas_gbq       : None
+pyarrow          : None
+pytables         : None
+pyxlsb           : None
+s3fs             : None
+scipy            : 1.6.3
+sqlalchemy       : None
+tables           : None
+tabulate         : None
+xarray           : None
+xlrd             : None
+xlwt             : None
+numba            : None
+
+
+2026-04-24 19:02:15,723 
+Program was called with the following arguments:
+{'use_standardized_units': True, 'out_harmonized': True, 'reg_int_zero': True, 'out': '/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/XC_SNPaligned_16865', 'reg_ld_set_corr': 1.0, 'ld_scores': ['/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr1.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr10.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr11.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr12.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr13.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr14.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr15.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr16.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr17.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr18.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr19.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr2.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr20.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr21.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr22.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr3.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr4.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr5.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr6.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr7.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr8.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr9.l2.ldscore.gz'], 'freq_bounds': [0.0001, 0.9999], 'verbose': True, 'sumstats': [('/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/input/XC_thai-eurFema-afrFema_SNPaligned.EUR.tsv', 'EUR', 'HBF'), ('/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/input/XC_thai-eurFema-afrFema_SNPaligned.AFR.tsv', 'AFR', 'HBF'), ('/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/input/XC_thai-eurFema-afrFema_SNPaligned.THAI.tsv', 'THAI', 'HBF')]}
+2026-04-24 19:02:15,854 
+Regex map = {'SNP': '.*SNP.*|.*RS.*', 'BP': '.*BP.*|.*POS.*', 'CHR': '.*CHR.*', 'BETA': '.*BETA.*', 'FREQ': '.*FREQ.*|.*FRQ.*|.*AF', 'SE': '.*SE.*', 'A1': '.*A1.*|.*MAJOR.*|.*EFFECT.*ALL.*|REF.*', 'A2': '.*A2.*|.*MINOR.*|.*OTHER.*ALL.*|ALT.*', 'P': 'P|P.*VAL.*', 'INFO': 'INFO', 'N': 'N'}
+2026-04-24 19:02:15,867 
+Filter map = {'NO NAN': (<function <lambda> at 0x7f363d975700>, "Filters out SNPs with any NaN values in required columns {'BP', 'A2', 'FREQ', 'BETA', 'CHR', 'SNP', 'P', 'A1', 'SE'}"), 'FREQ BOUNDS': (<function create_freq_filter.<locals>.<lambda> at 0x7f363b367160>, 'Filters out SNPs with FREQ values outside of [0.0001, 0.9999]'), 'SE BOUNDS': (<function <lambda> at 0x7f363b7ac430>, 'Filters out SNPs with non-positive SE values'), 'CHR VALUES': (<function create_chr_filter.<locals>.<lambda> at 0x7f363b7ac4c0>, "Filters out SNPs with listed chromosomes not in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', 'X', 'Y']"), 'DUPLICATE ALLELE SNPS': (<function <lambda> at 0x7f363b7ac550>, 'Filters out SNPs with major allele = minor allele'), 'PALINDROMIC SNPS': (<function <lambda> at 0x7f363b7ac5e0>, 'Filters out SNPs where major / minor alleles are a base pair'), 'INVALID ALLELES': (<function <lambda> at 0x7f363b7ac670>, "Filters out SNPs with alleles not in {'T', 'C', 'G', 'A'}"), 'NEGATIVE GWAS P': (<function <lambda> at 0x7f363b7ac700>, 'Filters out SNPs with negative GWAS P values')}
+
+2026-04-24 19:02:15,867 Regression coeffient option (LD) = set_corr
+2026-04-24 19:02:15,867 Regression coeffient option (LD Scale) = 1.0
+2026-04-24 19:02:15,867 Regression coeffient option (Intercept) = all_zero
+2026-04-24 19:02:15,867 Regression coeffient option (SE^2) = offdiag_zero
+2026-04-24 19:02:15,867 
+
+Reading in and running QC on LD Scores
+
+2026-04-24 19:02:15,867 
+List of files: ['/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr1.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr10.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr11.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr12.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr13.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr14.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr15.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr16.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr17.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr18.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr19.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr2.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr20.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr21.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr22.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr3.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr4.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr5.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr6.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr7.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr8.l2.ldscore.gz', '/lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr9.l2.ldscore.gz']
+2026-04-24 19:02:15,867 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr1.l2.ldscore.gz
+2026-04-24 19:02:36,022 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr10.l2.ldscore.gz
+2026-04-24 19:02:48,015 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr11.l2.ldscore.gz
+2026-04-24 19:03:03,444 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr12.l2.ldscore.gz
+2026-04-24 19:03:18,676 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr13.l2.ldscore.gz
+2026-04-24 19:03:30,659 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr14.l2.ldscore.gz
+2026-04-24 19:03:41,720 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr15.l2.ldscore.gz
+2026-04-24 19:03:52,621 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr16.l2.ldscore.gz
+2026-04-24 19:04:03,246 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr17.l2.ldscore.gz
+2026-04-24 19:04:13,077 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr18.l2.ldscore.gz
+2026-04-24 19:04:23,129 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr19.l2.ldscore.gz
+2026-04-24 19:04:30,311 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr2.l2.ldscore.gz
+2026-04-24 19:04:56,613 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr20.l2.ldscore.gz
+2026-04-24 19:05:02,247 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr21.l2.ldscore.gz
+2026-04-24 19:05:06,819 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr22.l2.ldscore.gz
+2026-04-24 19:05:11,559 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr3.l2.ldscore.gz
+2026-04-24 19:05:33,546 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr4.l2.ldscore.gz
+2026-04-24 19:05:53,671 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr5.l2.ldscore.gz
+2026-04-24 19:06:15,343 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr6.l2.ldscore.gz
+2026-04-24 19:06:36,670 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr7.l2.ldscore.gz
+2026-04-24 19:06:57,370 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr8.l2.ldscore.gz
+2026-04-24 19:07:15,810 Reading in LD Scores file: /lab-share/Hem-Sankaran-e2/Public/archive/sankaranlab_lcato/hbf/MAMA4/by-chr-ldscores-kb/mama4_gnothai_1000kb_chr9.l2.ldscore.gz
+2026-04-24 19:07:54,651 
+
+Reading in summary statistics.
+2026-04-24 19:07:54,652 
+
+
+2026-04-24 19:07:54,652 Reading in ('EUR', 'HBF') sumstats file: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/input/XC_thai-eurFema-afrFema_SNPaligned.EUR.tsv
+2026-04-24 19:08:55,475 
+Running QC on ('EUR', 'HBF') summary statistics
+2026-04-24 19:08:55,476 	Column mapping = {'SNP': 'SNP', 'CHR': 'CHR', 'BP': 'BP', 'A1': 'A1', 'A2': 'A2', 'FREQ': 'FREQ', 'BETA': 'BETA', 'SE': 'SE', 'P': 'P', 'N': 'N'}
+
+2026-04-24 19:08:55,476 First set of rows from initial reading of summary stats:
+            SNP  CHR      BP A1 A2    FREQ    BETA      SE       P      N
+0  1:817341:A:G    1  817341  G  A  0.1625  0.0036  0.0143  0.7994  17979
+1  1:818802:A:G    1  818802  G  A  0.1420 -0.0012  0.0155  0.9364  17979
+2  1:818812:A:G    1  818812  G  A  0.1413 -0.0010  0.0156  0.9487  17979
+3  1:818954:T:C    1  818954  C  T  0.1388  0.0013  0.0159  0.9347  17309
+4  1:819123:G:A    1  819123  A  G  0.1621  0.0050  0.0145  0.7302  17979
+2026-04-24 19:08:55,492 
+Initial number of SNPs / rows = 4369892
+
+2026-04-24 19:09:21,655 Filtered out 0 SNPs with "NO NAN" (Filters out SNPs with any NaN values in required columns {'BP', 'A2', 'FREQ', 'BETA', 'CHR', 'SNP', 'P', 'A1', 'SE'})
+2026-04-24 19:09:21,655 	RS IDs = []
+2026-04-24 19:09:21,655 Filtered out 0 SNPs with "FREQ BOUNDS" (Filters out SNPs with FREQ values outside of [0.0001, 0.9999])
+2026-04-24 19:09:21,655 	RS IDs = []
+2026-04-24 19:09:21,655 Filtered out 0 SNPs with "SE BOUNDS" (Filters out SNPs with non-positive SE values)
+2026-04-24 19:09:21,655 	RS IDs = []
+2026-04-24 19:09:21,655 Filtered out 0 SNPs with "CHR VALUES" (Filters out SNPs with listed chromosomes not in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', 'X', 'Y'])
+2026-04-24 19:09:21,655 	RS IDs = []
+2026-04-24 19:09:21,655 Filtered out 0 SNPs with "DUPLICATE ALLELE SNPS" (Filters out SNPs with major allele = minor allele)
+2026-04-24 19:09:21,655 	RS IDs = []
+2026-04-24 19:09:21,655 Filtered out 0 SNPs with "PALINDROMIC SNPS" (Filters out SNPs where major / minor alleles are a base pair)
+2026-04-24 19:09:21,655 	RS IDs = []
+2026-04-24 19:09:21,655 Filtered out 0 SNPs with "INVALID ALLELES" (Filters out SNPs with alleles not in {'T', 'C', 'G', 'A'})
+2026-04-24 19:09:21,655 	RS IDs = []
+2026-04-24 19:09:21,655 Filtered out 0 SNPs with "NEGATIVE GWAS P" (Filters out SNPs with negative GWAS P values)
+2026-04-24 19:09:21,655 	RS IDs = []
+2026-04-24 19:09:21,660 
+
+Filtered out 0 SNPs in total (as the union of drops, this may be less than the total of all the per-filter drops)
+2026-04-24 19:09:21,660 Additionally dropped 0 duplicate SNPs
+2026-04-24 19:09:21,660 	RS IDs = []
+2026-04-24 19:09:21,660 
+
+
+2026-04-24 19:09:21,660 Reading in ('AFR', 'HBF') sumstats file: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/input/XC_thai-eurFema-afrFema_SNPaligned.AFR.tsv
+2026-04-24 19:10:12,035 
+Running QC on ('AFR', 'HBF') summary statistics
+2026-04-24 19:10:12,035 	Column mapping = {'SNP': 'SNP', 'CHR': 'CHR', 'BP': 'BP', 'A1': 'A1', 'A2': 'A2', 'FREQ': 'FREQ', 'BETA': 'BETA', 'SE': 'SE', 'P': 'P', 'N': 'N'}
+
+2026-04-24 19:10:12,035 First set of rows from initial reading of summary stats:
+            SNP  CHR      BP A1 A2    FREQ    BETA      SE       P     N
+0  1:817341:A:G    1  817341  G  A  0.4515 -0.0192  0.0236  0.4168  2818
+1  1:818802:A:G    1  818802  G  A  0.4083 -0.0217  0.0579  0.7078   567
+2  1:818812:A:G    1  818812  G  A  0.4083 -0.0217  0.0579  0.7078   567
+3  1:818954:T:C    1  818954  C  T  0.4092 -0.0235  0.0580  0.6852   567
+4  1:819123:G:A    1  819123  A  G  0.3915 -0.0514  0.0575  0.3718   567
+2026-04-24 19:10:12,050 
+Initial number of SNPs / rows = 4369892
+
+2026-04-24 19:10:37,971 Filtered out 0 SNPs with "NO NAN" (Filters out SNPs with any NaN values in required columns {'BP', 'A2', 'FREQ', 'BETA', 'CHR', 'SNP', 'P', 'A1', 'SE'})
+2026-04-24 19:10:37,971 	RS IDs = []
+2026-04-24 19:10:37,971 Filtered out 0 SNPs with "FREQ BOUNDS" (Filters out SNPs with FREQ values outside of [0.0001, 0.9999])
+2026-04-24 19:10:37,971 	RS IDs = []
+2026-04-24 19:10:37,971 Filtered out 0 SNPs with "SE BOUNDS" (Filters out SNPs with non-positive SE values)
+2026-04-24 19:10:37,971 	RS IDs = []
+2026-04-24 19:10:37,971 Filtered out 0 SNPs with "CHR VALUES" (Filters out SNPs with listed chromosomes not in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', 'X', 'Y'])
+2026-04-24 19:10:37,971 	RS IDs = []
+2026-04-24 19:10:37,971 Filtered out 0 SNPs with "DUPLICATE ALLELE SNPS" (Filters out SNPs with major allele = minor allele)
+2026-04-24 19:10:37,971 	RS IDs = []
+2026-04-24 19:10:37,971 Filtered out 0 SNPs with "PALINDROMIC SNPS" (Filters out SNPs where major / minor alleles are a base pair)
+2026-04-24 19:10:37,971 	RS IDs = []
+2026-04-24 19:10:37,971 Filtered out 0 SNPs with "INVALID ALLELES" (Filters out SNPs with alleles not in {'T', 'C', 'G', 'A'})
+2026-04-24 19:10:37,972 	RS IDs = []
+2026-04-24 19:10:37,972 Filtered out 0 SNPs with "NEGATIVE GWAS P" (Filters out SNPs with negative GWAS P values)
+2026-04-24 19:10:37,972 	RS IDs = []
+2026-04-24 19:10:37,977 
+
+Filtered out 0 SNPs in total (as the union of drops, this may be less than the total of all the per-filter drops)
+2026-04-24 19:10:37,977 Additionally dropped 0 duplicate SNPs
+2026-04-24 19:10:37,977 	RS IDs = []
+2026-04-24 19:10:37,977 
+
+
+2026-04-24 19:10:37,977 Reading in ('THAI', 'HBF') sumstats file: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/input/XC_thai-eurFema-afrFema_SNPaligned.THAI.tsv
+2026-04-24 19:11:35,174 
+Running QC on ('THAI', 'HBF') summary statistics
+2026-04-24 19:11:35,174 	Column mapping = {'SNP': 'SNP', 'CHR': 'CHR', 'BP': 'BP', 'A1': 'A1', 'A2': 'A2', 'FREQ': 'FREQ', 'BETA': 'BETA', 'SE': 'SE', 'P': 'P', 'N': 'N'}
+
+2026-04-24 19:11:35,174 First set of rows from initial reading of summary stats:
+            SNP  CHR      BP A1  ...      BETA        SE         P     N
+0  1:817341:A:G    1  817341  G  ... -0.010377  0.042426  0.806780  1392
+1  1:818802:A:G    1  818802  G  ... -0.022305  0.045829  0.626468  1392
+2  1:818812:A:G    1  818812  G  ... -0.022305  0.045829  0.626468  1392
+3  1:818954:T:C    1  818954  C  ... -0.018346  0.046111  0.690727  1392
+4  1:819123:G:A    1  819123  A  ... -0.014856  0.045323  0.743083  1392
+
+[5 rows x 10 columns]
+2026-04-24 19:11:35,190 
+Initial number of SNPs / rows = 4369892
+
+2026-04-24 19:12:00,863 Filtered out 0 SNPs with "NO NAN" (Filters out SNPs with any NaN values in required columns {'BP', 'A2', 'FREQ', 'BETA', 'CHR', 'SNP', 'P', 'A1', 'SE'})
+2026-04-24 19:12:00,864 	RS IDs = []
+2026-04-24 19:12:00,864 Filtered out 0 SNPs with "FREQ BOUNDS" (Filters out SNPs with FREQ values outside of [0.0001, 0.9999])
+2026-04-24 19:12:00,864 	RS IDs = []
+2026-04-24 19:12:00,864 Filtered out 0 SNPs with "SE BOUNDS" (Filters out SNPs with non-positive SE values)
+2026-04-24 19:12:00,864 	RS IDs = []
+2026-04-24 19:12:00,864 Filtered out 0 SNPs with "CHR VALUES" (Filters out SNPs with listed chromosomes not in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', 'X', 'Y'])
+2026-04-24 19:12:00,864 	RS IDs = []
+2026-04-24 19:12:00,864 Filtered out 0 SNPs with "DUPLICATE ALLELE SNPS" (Filters out SNPs with major allele = minor allele)
+2026-04-24 19:12:00,864 	RS IDs = []
+2026-04-24 19:12:00,864 Filtered out 0 SNPs with "PALINDROMIC SNPS" (Filters out SNPs where major / minor alleles are a base pair)
+2026-04-24 19:12:00,864 	RS IDs = []
+2026-04-24 19:12:00,864 Filtered out 0 SNPs with "INVALID ALLELES" (Filters out SNPs with alleles not in {'T', 'C', 'G', 'A'})
+2026-04-24 19:12:00,864 	RS IDs = []
+2026-04-24 19:12:00,864 Filtered out 0 SNPs with "NEGATIVE GWAS P" (Filters out SNPs with negative GWAS P values)
+2026-04-24 19:12:00,864 	RS IDs = []
+2026-04-24 19:12:00,868 
+
+Filtered out 0 SNPs in total (as the union of drops, this may be less than the total of all the per-filter drops)
+2026-04-24 19:12:00,868 Additionally dropped 0 duplicate SNPs
+2026-04-24 19:12:00,868 	RS IDs = []
+2026-04-24 19:12:06,007 
+
+Number of SNPS in initial intersection of all sources: 3762397
+2026-04-24 19:12:33,861 
+Standardizing reference alleles in summary statistics.
+2026-04-24 19:12:53,827 Standardized to population: ('EUR', 'HBF')
+2026-04-24 19:12:53,831 Dropped 0 SNPs during reference allele standardization.
+2026-04-24 19:12:53,831 RS IDs of drops during standardization: []
+2026-04-24 19:13:02,976 
+
+Writing harmonized summary statistics to disk.
+
+2026-04-24 19:13:02,976 	/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/XC_SNPaligned_16865_EUR_HBF.hrm
+2026-04-24 19:13:22,371 	/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/XC_SNPaligned_16865_AFR_HBF.hrm
+2026-04-24 19:13:41,367 	/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/XC_SNPaligned_16865_THAI_HBF.hrm
+2026-04-24 19:14:05,341 
+
+2026-04-24 19:14:05,359 Harmonized EUR HBF mean chi squared: 1.07025551298409
+2026-04-24 19:14:05,376 Harmonized AFR HBF mean chi squared: 1.002756079426592
+2026-04-24 19:14:05,393 Harmonized THAI HBF mean chi squared: 0.9872105057659993
+2026-04-24 19:14:05,393 
+
+2026-04-24 19:14:05,647 Converting ('EUR', 'HBF') to standardized units
+2026-04-24 19:14:05,708 Converting ('AFR', 'HBF') to standardized units
+2026-04-24 19:14:05,767 Converting ('THAI', 'HBF') to standardized units
+2026-04-24 19:14:06,258 
+
+Running LD Score regression.
+2026-04-24 19:14:06,258 	Options = {'ld_fixed_opt': 'set_corr', 'se_fixed_opt': 'offdiag_zero', 'int_fixed_opt': 'all_zero', 'ld_scale_factor': 1.0}
+2026-04-24 19:14:08,361 Regression coefficients (LD):
+[[1.23963402e-08 2.13354454e-08 4.96622597e-08]
+ [2.13354454e-08 3.67206145e-08 8.54741329e-08]
+ [4.96622597e-08 8.54741329e-08 1.98957112e-07]]
+2026-04-24 19:14:08,362 Regression coefficients (Intercept):
+[[0. 0. 0.]
+ [0. 0. 0.]
+ [0. 0. 0.]]
+2026-04-24 19:14:08,362 Regression coefficients (SE^2):
+[[1.03189887 0.         0.        ]
+ [0.         0.98975701 0.        ]
+ [0.         0.         0.9428917 ]]
+2026-04-24 19:14:08,362 
+
+Creating omega and sigma matrices.
+2026-04-24 19:15:03,346 Average Omega (including dropped slices) =
+[[1.68766074e-06 1.27753936e-06 4.41882418e-06]
+ [1.27753936e-06 3.45951501e-06 4.53749772e-06]
+ [4.41882418e-06 4.53749772e-06 2.33827739e-05]]
+2026-04-24 19:15:03,416 Average Sigma (including dropped slices) =
+[[5.26519604e-05 0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 3.08288882e-04 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 4.95116741e-04]]
+2026-04-24 19:15:03,421 
+Adjusted 7080 SNPs to make omega positive semi-definite.
+2026-04-24 19:15:03,429 	RS IDs = ['10:10042603:t:c', '10:10042687:c:a', '10:100603004:c:a', '10:100605297:g:a', '10:106921156:t:g', '10:106928204:g:a', '10:106930165:c:t', '10:106930261:g:a', '10:110832903:t:c', '10:112366052:g:a', '10:112381345:g:a', '10:112382346:g:a', '10:112393441:c:t', '10:112395828:c:t', '10:11240303:a:g', '10:112403562:a:g', '10:112407458:g:a', '10:112426399:c:t', '10:112428328:t:c', '10:11243338:g:a', '10:112436462:c:t', '10:112446925:c:t', '10:11248331:c:t', '10:11248352:c:t', '10:11340217:g:a', '10:11340415:c:t', '10:11341300:c:t', '10:11341746:g:a', '10:114331796:t:c', '10:114366348:g:a', '10:114379270:t:c', '10:116121362:t:c', '10:117655383:t:c', '10:117760358:a:g', '10:117785735:c:t', '10:117851619:c:t', '10:117851693:g:a', '10:117854518:t:c', '10:117854534:t:c', '10:118386208:g:t', '10:118668979:t:c', '10:119216921:c:t', '10:120628225:g:t', '10:120640220:c:t', '10:120645464:c:a', '10:120721576:c:t', '10:122085696:g:a', '10:122088873:c:a', '10:122096363:c:t', '10:122139992:c:t', '...']
+2026-04-24 19:15:03,433 
+Dropped 1870 SNPs due to non-positive-semi-definiteness of omega.
+2026-04-24 19:15:03,436 	RS IDs = ['10:104167346:t:c', '10:10616593:t:c', '10:106967594:t:c', '10:110787448:g:a', '10:110802584:g:a', '10:112837283:c:t', '10:113164669:c:t', '10:113830418:g:t', '10:114384243:t:g', '10:117410693:a:g', '10:117763524:a:g', '10:117854747:c:t', '10:118352868:c:t', '10:118353356:c:t', '10:120723715:c:t', '10:121376246:c:t', '10:122103674:g:a', '10:122150728:c:t', '10:123515585:c:t', '10:12445740:a:c', '10:124484338:g:a', '10:12448787:c:t', '10:125198852:c:t', '10:12551842:c:t', '10:126172032:g:a', '10:126456289:a:g', '10:126456317:g:a', '10:126636602:c:t', '10:128519988:a:g', '10:128682157:c:a', '10:128686964:g:a', '10:129835199:c:a', '10:129921215:t:g', '10:129941282:g:a', '10:131497452:g:a', '10:131530524:g:a', '10:132422995:c:t', '10:13488694:g:a', '10:18193115:t:g', '10:23871369:a:c', '10:24429940:t:c', '10:24429987:a:c', '10:26533210:g:t', '10:26561769:a:g', '10:27495168:a:c', '10:28785612:g:a', '10:29810797:c:t', '10:29811321:g:a', '10:30540376:g:a', '10:3186413:a:c', '...']
+2026-04-24 19:15:03,440 Dropped 0 SNPs due to non-positive-definiteness of sigma.
+2026-04-24 19:15:03,440 	RS IDs = []
+2026-04-24 19:15:03,444 Dropped 1870 total SNPs due to non-positive-(semi)-definiteness of omega / sigma.
+2026-04-24 19:15:03,446 	RS IDs = ['10:104167346:t:c', '10:10616593:t:c', '10:106967594:t:c', '10:110787448:g:a', '10:110802584:g:a', '10:112837283:c:t', '10:113164669:c:t', '10:113830418:g:t', '10:114384243:t:g', '10:117410693:a:g', '10:117763524:a:g', '10:117854747:c:t', '10:118352868:c:t', '10:118353356:c:t', '10:120723715:c:t', '10:121376246:c:t', '10:122103674:g:a', '10:122150728:c:t', '10:123515585:c:t', '10:12445740:a:c', '10:124484338:g:a', '10:12448787:c:t', '10:125198852:c:t', '10:12551842:c:t', '10:126172032:g:a', '10:126456289:a:g', '10:126456317:g:a', '10:126636602:c:t', '10:128519988:a:g', '10:128682157:c:a', '10:128686964:g:a', '10:129835199:c:a', '10:129921215:t:g', '10:129941282:g:a', '10:131497452:g:a', '10:131530524:g:a', '10:132422995:c:t', '10:13488694:g:a', '10:18193115:t:g', '10:23871369:a:c', '10:24429940:t:c', '10:24429987:a:c', '10:26533210:g:t', '10:26561769:a:g', '10:27495168:a:c', '10:28785612:g:a', '10:29810797:c:t', '10:29811321:g:a', '10:30540376:g:a', '10:3186413:a:c', '...']
+2026-04-24 19:15:03,446 
+
+Running main MAMA method.
+2026-04-24 19:15:24,529 
+Preparing results for output.
+
+2026-04-24 19:15:24,529 	Population 0: ('EUR', 'HBF')
+2026-04-24 19:15:38,706 		Mean Chi^2 for ('EUR', 'HBF') = 1.0400684175827104
+2026-04-24 19:15:38,706 		Converting ('EUR', 'HBF') from standardized units
+2026-04-24 19:15:38,775 	Population 1: ('AFR', 'HBF')
+2026-04-24 19:15:53,004 		Mean Chi^2 for ('AFR', 'HBF') = 1.0168898505370014
+2026-04-24 19:15:53,004 		Converting ('AFR', 'HBF') from standardized units
+2026-04-24 19:15:53,231 	Population 2: ('THAI', 'HBF')
+2026-04-24 19:16:07,597 		Mean Chi^2 for ('THAI', 'HBF') = 1.0475610957270582
+2026-04-24 19:16:07,597 		Converting ('THAI', 'HBF') from standardized units
+2026-04-24 19:16:07,656 
+Final SNP count = 3760527
+2026-04-24 19:16:07,928 Writing results to disk.
+2026-04-24 19:16:07,928 	/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/XC_SNPaligned_16865_EUR_HBF.res
+2026-04-24 19:16:40,378 	/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/XC_SNPaligned_16865_AFR_HBF.res
+2026-04-24 19:17:11,535 	/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis/MAMA/XC_SNPaligned_16865_THAI_HBF.res
+2026-04-24 19:17:43,403 
+Execution complete.
+

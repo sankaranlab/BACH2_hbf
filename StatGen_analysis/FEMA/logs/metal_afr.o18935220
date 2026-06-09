@@ -1,0 +1,178 @@
+========================= Job Information ========================
+Job ID: 18935220
+Job Name: metal_afr
+Node: compute-5-0-7
+Start Time: Fri Apr 17 01:52:28 EDT 2026
+Working Directory: /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap
+Number of CPUs: 1
+Clock Time Limit: 
+Memory per Node: 16384
+===================================================================
+
+Received input: fema/input/METAL_hbf_afr_SEscheme_gcOff_info6.txt
+MetaAnalysis Helper - (c) 2007 - 2009 Goncalo Abecasis
+This version released on 2020-05-05
+
+# This program faciliates meta-analysis of genome-wide association studies.
+# Commonly used commands are listed below:
+#
+# Options for describing input files ...
+#   SEPARATOR        [WHITESPACE|COMMA|BOTH|TAB] (default = WHITESPACE)
+#   COLUMNCOUNTING   [STRICT|LENIENT]            (default = 'STRICT')
+#   MARKERLABEL      [LABEL]                     (default = 'MARKER')
+#   ALLELELABELS     [LABEL1 LABEL2]             (default = 'ALLELE1','ALLELE2')
+#   EFFECTLABEL      [LABEL|log(LABEL)]          (default = 'EFFECT')
+#   FLIP
+#
+# Options for filtering input files ...
+#   ADDFILTER        [LABEL CONDITION VALUE]     (example = ADDFILTER N > 10)
+#                    (available conditions are <, >, <=, >=, =, !=, IN)
+#   REMOVEFILTERS
+#
+# Options for sample size weighted meta-analysis ...
+#   WEIGHTLABEL      [LABEL]                     (default = 'N')
+#   PVALUELABEL      [LABEL]                     (default = 'PVALUE')
+#   DEFAULTWEIGHT    [NUMBER]                    (default = 1.0)
+#   MINWEIGHT        [NUMBER]                    (default = 1.0)
+#
+# Options for inverse variance weighted meta-analysis ...
+#   STDERRLABEL      [LABEL]                     (default = 'STDERR')
+#   SCHEME           [SAMPLESIZE|STDERR]         (default = SAMPLESIZE)
+#
+# Options to enable tracking of allele frequencies ...
+#   AVERAGEFREQ      [ON|OFF]                    (default = OFF)
+#   MINMAXFREQ       [ON|OFF]                    (default = OFF)
+#   FREQLABEL        [LABEL]                     (default = 'FREQ')
+#
+# Options to enable tracking of user defined variables ...
+#   CUSTOMVARIABLE   [VARNAME]
+#   LABEL            [VARNAME] AS [HEADER]
+#
+# Options to enable tracking of chromosomes and positions ...
+#   TRACKPOSITIONS   [ON|OFF]                    (default = OFF
+#   CHROMOSOMELABEL  [LABEL]                     (default = 'CHROMOSOME')
+#   POSITIONLABEL    [LABEL]                     (default = 'POSITION')
+#
+# Options to enable explicit strand information ...
+#   USESTRAND        [ON|OFF]                    (default = OFF)
+#   STRANDLABEL      [LABEL]                     (default = 'STRAND')
+#
+# Automatic genomic control correction of input statistics ...
+#   GENOMICCONTROL   [ON|OFF|VALUE|LIST snps.txt](default = OFF)
+#
+# Options to account for samples overlap ...
+#   OVERLAP          [ON|OFF]                    (default = OFF)
+#   ZCUTOFF          [NUMBER]                    (default = 1.0)
+#
+# Options for general analysis control ...
+#   PROCESSFILE            [FILENAME]
+#   OUTFILE                [PREFIX SUFFIX]       (default = 'METAANALYSIS','.TBL')
+#   MAXWARNINGS            [NUMBER]              (default = 20)
+#   VERBOSE                [ON|OFF]              (default = 'OFF')
+#   LOGPVALUE              [ON|OFF]              (default = 'OFF')
+#   EFFECT_PRINT_PRECISION [NUMBER]              (default = '4')
+#   STDERR_PRINT_PRECISION [NUMBER]              (default = '4')
+#   ANALYZE                [HETEROGENEITY]
+#   CLEAR
+
+# Options for general run control ...
+#   SOURCE           [SCRIPTFILE]
+#   RETURN
+#   QUIT
+
+# Processing commands in fema/input/METAL_hbf_afr_SEscheme_gcOff_info6.txt ...
+## Meta-analysis will be based on effect sizes and their standard errors ...
+## Set standard error header to se ...
+## Set column separator to TAB ...
+## Averaging of allele frequencies enabled
+## Tracking of extreme allele frequencies enabled
+## Genomic control correction of input statistics disabled
+## Tracking of chromosomes and positions is disabled
+## Set chromosome header to chr ...
+## Set position header to pos ...
+## Untransformed p-value will be output
+## Set marker header to snp ...
+## Set allele headers to a2 and a1 ...
+## Set p-value header to p ...
+## Set frequency header to maf ...
+## Set weight header to n ...
+## Set effect header to beta ...
+## Created custom variable 'TotalN'
+## Set header for 'TotalN' to 'N'
+###########################################################################
+## Processing file '/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/StJude_chrALL_MAF0p1pct_hg38_info6_se-cap-10.clean.tsv.gz'
+## Processed 9515453 markers ...
+
+###########################################################################
+## Processing file '/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/TOPMed_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz'
+## WARNING: Bad alleles for marker 'rs554135033', expecting 'a/g' found 'a/c'
+## WARNING: Bad alleles for marker 'rs530186481', expecting 'a/g' found 'a/t'
+## WARNING: Bad alleles for marker 'rs543491249', expecting 'a/c' found 'c/g'
+## WARNING: Bad alleles for marker 'rs370692181', expecting 'a/c' found 'a/g'
+## WARNING: Bad alleles for marker 'rs577029481', expecting 'c/g' found 'a/g'
+## WARNING: Bad alleles for marker 'rs561145791', expecting 'a/c' found 'a/g'
+## WARNING: Bad alleles for marker 'rs199939188', expecting 'a/c' found 'a/t'
+## WARNING: Bad alleles for marker 'rs527572072', expecting 'a/t' found 'a/g'
+## WARNING: Bad alleles for marker 'rs3052347', expecting 'a/g' found 'a/c'
+## WARNING: Bad alleles for marker 'rs61800686', expecting 'a/g' found 'a/t'
+## WARNING: Bad alleles for marker 'rs544798806', expecting 'a/c' found 'a/t'
+## WARNING: Bad alleles for marker 'rs530476961', expecting 'a/g' found 'a/c'
+## WARNING: Bad alleles for marker 'rs571925888', expecting 'c/g' found 'a/c'
+## WARNING: Bad alleles for marker 'rs114791024', expecting 'a/g' found 'c/g'
+## WARNING: Bad alleles for marker 'rs199965699', expecting 'a/c' found 'a/t'
+## WARNING: Bad alleles for marker 'rs550294652', expecting 'a/g' found 'a/c'
+## WARNING: Bad alleles for marker 'rs61291402', expecting 'a/g' found 'a/c'
+## WARNING: Bad alleles for marker 'rs61016161', expecting 'a/t' found 'a/g'
+## WARNING: Bad alleles for marker 'rs550333807', expecting 'a/c' found 'a/g'
+## WARNING: Bad alleles for marker 'rs59824021', expecting 'a/c' found 'a/t'
+## WARNING: Allele names don't match previous occurences at 408 additional markers
+## Processed 11682999 markers ...
+
+###########################################################################
+## Processing file '/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/Tanzania_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz'
+## WARNING: Bad alleles for marker 'rs369247934', expecting 'a/g' found 'a/c'
+## WARNING: Bad alleles for marker 'rs554135033', expecting 'a/g' found 'a/c'
+## WARNING: Bad alleles for marker 'rs115559500', expecting 'c/g' found 'a/c'
+## WARNING: Bad alleles for marker 'rs12138891', expecting 'a/g' found 'c/g'
+## WARNING: Bad alleles for marker 'rs114137920', expecting 'a/g' found 'a/c'
+## WARNING: Bad alleles for marker 'rs12126476', expecting 'a/c' found 'a/g'
+## WARNING: Bad alleles for marker 'rs530186481', expecting 'a/g' found 'a/t'
+## WARNING: Bad alleles for marker 'rs181738101', expecting 'a/c' found 'a/g'
+## WARNING: Bad alleles for marker 'rs192024432', expecting 'a/g' found 'a/c'
+## WARNING: Bad alleles for marker 'rs11121125', expecting 'a/g' found 'c/g'
+## WARNING: Bad alleles for marker 'rs545809685', expecting 'a/c' found 'a/g'
+## WARNING: Bad alleles for marker 'rs111584078', expecting 'c/g' found 'a/g'
+## WARNING: Bad alleles for marker 'rs146120332', expecting 'a/g' found 'a/c'
+## WARNING: Bad alleles for marker 'rs80194238', expecting 'c/g' found 'a/g'
+## WARNING: Bad alleles for marker 'rs541126320', expecting 'a/g' found 'a/c'
+## WARNING: Bad alleles for marker 'rs115932861', expecting 'c/g' found 'a/c'
+## WARNING: Bad alleles for marker 'rs11578213', expecting 'a/g' found 'c/g'
+## WARNING: Bad alleles for marker 'rs75970166', expecting 'a/g' found 'a/c'
+## WARNING: Bad alleles for marker 'rs116720424', expecting 'c/g' found 'a/g'
+## WARNING: Bad alleles for marker 'rs188527520', expecting 'a/g' found 'a/c'
+## WARNING: Allele names don't match previous occurences at 1628 additional markers
+## Processed 17592418 markers ...
+
+## Set output file prefix and suffix to /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/fema/output/METAL_hbf_inv_AFR_info6_SEscheme_gcOff_PosTrackOff and .tbl ...
+###########################################################################
+## Running second pass analysis to evaluate heterogeneity...
+## Processing file '/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/Tanzania_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz'
+## Processing file '/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/TOPMed_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz'
+## Processing file '/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/StJude_chrALL_MAF0p1pct_hg38_info6_se-cap-10.clean.tsv.gz'
+
+###########################################################################
+## Executing meta-analysis ...
+## Complete results will be stored in file '/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/fema/output/METAL_hbf_inv_AFR_info6_SEscheme_gcOff_PosTrackOff1.tbl'
+## Column descriptions will be stored in file '/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/fema/output/METAL_hbf_inv_AFR_info6_SEscheme_gcOff_PosTrackOff1.tbl.info'
+## Completed meta-analysis for 18809357 markers!
+## Smallest p-value is 3.842e-37 at marker 'rs7606173'
+
+## Clearing all stored statistics ...
+# Clearing user defined filters ...
+Fri Apr 17 02:01:00 EDT 2026 Finished running METAL
+
+JobID                               JobName  Partition    Account  AllocCPUS      State ExitCode    Elapsed     MaxRSS 
+------------ ------------------------------ ---------- ---------- ---------- ---------- -------- ---------- ---------- 
+18935220                          metal_afr bch-compu+        bch          2    RUNNING      0:0   00:09:02            
+18935220.ba+                          batch                   bch          2    RUNNING      0:0   00:09:02            
+18935220.ex+                         extern                   bch          2    RUNNING      0:0   00:09:02            

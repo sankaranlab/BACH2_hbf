@@ -1,0 +1,38 @@
+SCHEME STDERR
+STDERR se
+SEPARATOR TAB
+
+AVERAGEFREQ ON
+MINMAXFREQ ON
+
+GENOMICCONTROL OFF
+TRACKPOSITIONS OFF
+CHROMOSOMELABEL chr
+POSITIONLABEL pos
+
+LOGPVALUE OFF
+
+MARKER snp
+ALLELE a2 a1
+PVALUE p
+FREQLABEL maf
+WEIGHT n
+EFFECT beta
+CUSTOMVARIABLE TotalN
+LABEL TotalN as N
+
+PROCESS /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/GTEx_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+PROCESS /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/BIOS_RS_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+PROCESS /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/BIOS_LL_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+PROCESS /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/Sardinia_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+PROCESS /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/Sweden_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+PROCESS /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/Interval_chrALL_MAF0p1pct_hg38_info6_pass-z-check.clean.tsv.gz
+PROCESS /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/TOPMed_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+PROCESS /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/StJude_chrALL_MAF0p1pct_hg38_info6_se-cap-10.clean.tsv.gz
+PROCESS /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/Tanzania_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+PROCESS /lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/qc/sumstats/Thai_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+
+OUTFILE output/METAL_hbf_LOBO-BIOS_LLS_660Q_info6_SEscheme_gcOff_PosTrackOff .tbl
+
+ANALYZE HETEROGENEITY
+QUIT

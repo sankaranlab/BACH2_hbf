@@ -1,0 +1,43 @@
+# METAL configuration for the all-cohort fixed-effect meta-analysis (FEMA),
+# sample-size weighted scheme with genomic control ON.
+# NOTE: the PROCESS/OUTFILE paths below are environment-specific; adapt
+# <WORKDIR> to your own system before running.
+SCHEME SAMPLESIZE
+STDERR se
+SEPARATOR TAB
+
+AVERAGEFREQ ON
+MINMAXFREQ ON
+
+GENOMICCONTROL ON
+TRACKPOSITIONS OFF
+CHROMOSOMELABEL chr
+POSITIONLABEL pos
+
+LOGPVALUE OFF
+
+MARKER snp
+ALLELE a2 a1
+PVALUE p
+FREQLABEL maf
+WEIGHT n
+EFFECT beta
+# CUSTOMVARIABLE TotalN
+# LABEL TotalN as N
+
+PROCESS <WORKDIR>/qc/sumstats/GTEx_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+PROCESS <WORKDIR>/qc/sumstats/BIOS_RS_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+PROCESS <WORKDIR>/qc/sumstats/BIOS_LL_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+PROCESS <WORKDIR>/qc/sumstats/BIOS_LLS_660Q_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+PROCESS <WORKDIR>/qc/sumstats/Sardinia_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+PROCESS <WORKDIR>/qc/sumstats/Sweden_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+PROCESS <WORKDIR>/qc/sumstats/Interval_chrALL_MAF0p1pct_hg38_info6_pass-z-check.clean.tsv.gz
+PROCESS <WORKDIR>/qc/sumstats/TOPMed_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+PROCESS <WORKDIR>/qc/sumstats/StJude_chrALL_MAF0p1pct_hg38_info6_se-cap-10.clean.tsv.gz
+PROCESS <WORKDIR>/qc/sumstats/Tanzania_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+PROCESS <WORKDIR>/qc/sumstats/Thai_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
+
+OUTFILE <WORKDIR>/fema/output/METAL_hbf_inv_all_info6_Nscheme_gcOn_PosTrackOff .tbl
+
+ANALYZE HETEROGENEITY
+QUIT

@@ -1,0 +1,299 @@
+PLINK v1.90b6.21 64-bit (19 Oct 2020)
+Options in effect:
+  --keep-allele-order
+  --make-bed
+  --merge-list /broad/sankaranlab/lcato/hbf/MAMA4/mergelists/merge_chr7
+  --out /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr7
+
+Hostname: uger-r7-c011.broadinstitute.org
+Working directory: /broad/sankaranlab/lcato/hbf/MAMA4
+Start time: Mon Apr 11 22:00:14 2022
+
+Random number seed: 1649714414
+386012 MB RAM detected; reserving 193006 MB for main workspace.
+Warning: Variants '7:67370:G:C' and '7:67370:G:A' have the same position.
+Warning: Variants '7:1276138:C:T' and '7:1276138:C:G' have the same position.
+Warning: Variants '7:2463280:G:T' and '7:2463280:G:C' have the same position.
+Warning: Variants '7:2570156:C:T' and '7:2570156:C:G' have the same position.
+Warning: Variants '7:3023730:C:T' and '7:3023730:C:A' have the same position.
+Warning: Variants '7:3048509:T:C' and '7:3048509:T:A' have the same position.
+Warning: Variants '7:3128785:C:T' and '7:3128785:C:A' have the same position.
+Warning: Variants '7:3575702:T:C' and '7:3575702:T:A' have the same position.
+Warning: Variants '7:3840378:A:G' and '7:3840378:A:C' have the same position.
+Warning: Variants '7:3871389:G:T' and '7:3871389:G:A' have the same position.
+Warning: Variants '7:3947628:A:T' and '7:3947628:A:C' have the same position.
+Warning: Variants '7:4248715:C:T' and '7:4248715:C:A' have the same position.
+Warning: Variants '7:4611599:C:T' and '7:4611599:C:G' have the same position.
+Warning: Variants '7:4713736:C:T' and '7:4713736:C:A' have the same position.
+Warning: Variants '7:4893024:G:C' and '7:4893024:G:A' have the same position.
+Warning: Variants '7:6455592:G:T' and '7:6455592:G:A' have the same position.
+Warning: Variants '7:8082806:C:T' and '7:8082806:C:G' have the same position.
+Warning: Variants '7:8894413:T:G' and '7:8894413:T:C' have the same position.
+Warning: Variants '7:9077291:G:C' and '7:9077291:G:A' have the same position.
+Warning: Variants '7:9685374:G:T' and '7:9685374:G:A' have the same position.
+Warning: Variants '7:10108007:A:T' and '7:10108007:A:C' have the same position.
+Warning: Variants '7:10349572:T:C' and '7:10349572:T:A' have the same position.
+Warning: Variants '7:11304439:A:T' and '7:11304439:A:G' have the same position.
+Warning: Variants '7:11581868:T:C' and '7:11581868:T:A' have the same position.
+Warning: Variants '7:12154121:C:T' and '7:12154121:C:A' have the same position.
+Warning: Variants '7:12353013:C:T' and '7:12353013:C:A' have the same position.
+Warning: Variants '7:12792875:G:T' and '7:12792875:G:A' have the same position.
+Warning: Variants '7:13030816:A:T' and '7:13030816:A:G' have the same position.
+Warning: Variants '7:14412032:T:G' and '7:14412032:T:C' have the same position.
+Warning: Variants '7:14465882:T:C' and '7:14465882:T:A' have the same position.
+Warning: Variants '7:14826224:G:T' and '7:14826224:G:C' have the same position.
+Warning: Variants '7:15335534:C:T' and '7:15335534:C:A' have the same position.
+Warning: Variants '7:15455650:T:G' and '7:15455650:T:A' have the same position.
+Warning: Variants '7:15597380:G:T' and '7:15597380:G:A' have the same position.
+Warning: Variants '7:15826941:C:T' and '7:15826941:C:A' have the same position.
+Warning: Variants '7:16749889:T:G' and '7:16749889:T:C' have the same position.
+Warning: Variants '7:17533648:G:C' and '7:17533648:G:A' have the same position.
+Warning: Variants '7:19861408:C:T' and '7:19861408:C:A' have the same position.
+Warning: Variants '7:19901506:G:T' and '7:19901506:G:A' have the same position.
+Warning: Variants '7:20146138:A:T' and '7:20146138:A:G' have the same position.
+Warning: Variants '7:21499640:A:T' and '7:21499640:A:C' have the same position.
+Warning: Variants '7:21759321:G:T' and '7:21759321:G:C' have the same position.
+Warning: Variants '7:23398906:T:G' and '7:23398906:T:A' have the same position.
+Warning: Variants '7:24167120:C:T' and '7:24167120:C:G' have the same position.
+Warning: Variants '7:24640869:T:G' and '7:24640869:T:A' have the same position.
+Warning: Variants '7:25391430:A:G' and '7:25391430:A:C' have the same position.
+Warning: Variants '7:25405392:C:T' and '7:25405392:C:G' have the same position.
+Warning: Variants '7:29131660:A:G' and '7:29131660:A:C' have the same position.
+Warning: Variants '7:29696796:G:C' and '7:29696796:G:A' have the same position.
+Warning: Variants '7:30126733:G:T' and '7:30126733:G:A' have the same position.
+Warning: Variants '7:30847187:A:T' and '7:30847187:A:G' have the same position.
+Warning: Variants '7:31158357:T:C' and '7:31158357:T:A' have the same position.
+Warning: Variants '7:32035891:C:T' and '7:32035891:C:G' have the same position.
+Warning: Variants '7:32123833:G:T' and '7:32123833:G:A' have the same position.
+Warning: Variants '7:33795964:C:T' and '7:33795964:C:G' have the same position.
+Warning: Variants '7:35338135:G:C' and '7:35338135:G:A' have the same position.
+Warning: Variants '7:36065347:T:G' and '7:36065347:T:C' have the same position.
+Warning: Variants '7:37331294:C:T' and '7:37331294:C:G' have the same position.
+Warning: Variants '7:38973606:A:T' and '7:38973606:A:G' have the same position.
+Warning: Variants '7:39040900:C:T' and '7:39040900:C:A' have the same position.
+Warning: Variants '7:39341053:T:G' and '7:39341053:T:C' have the same position.
+Warning: Variants '7:40111015:G:C' and '7:40111015:G:A' have the same position.
+Warning: Variants '7:41225614:G:T' and '7:41225614:G:A' have the same position.
+Warning: Variants '7:41664664:C:T' and '7:41664664:C:G' have the same position.
+Warning: Variants '7:42455919:C:G' and '7:42455919:C:A' have the same position.
+Warning: Variants '7:42584871:C:G' and '7:42584871:C:A' have the same position.
+Warning: Variants '7:42890585:C:T' and '7:42890585:C:G' have the same position.
+Warning: Variants '7:44157901:G:T' and '7:44157901:G:A' have the same position.
+Warning: Variants '7:44169464:C:T' and '7:44169464:C:A' have the same position.
+Warning: Variants '7:45526826:G:C' and '7:45526826:G:A' have the same position.
+Warning: Variants '7:47272135:C:T' and '7:47272135:C:G' have the same position.
+Warning: Variants '7:47933780:C:T' and '7:47933780:C:G' have the same position.
+Warning: Variants '7:47990209:C:T' and '7:47990209:C:A' have the same position.
+Warning: Variants '7:48196168:G:C' and '7:48196168:G:A' have the same position.
+Warning: Variants '7:48413485:T:G' and '7:48413485:T:C' have the same position.
+Warning: Variants '7:48831696:C:T' and '7:48831696:C:G' have the same position.
+Warning: Variants '7:49239264:C:T' and '7:49239264:C:G' have the same position.
+Warning: Variants '7:49269511:T:C' and '7:49269511:T:A' have the same position.
+Warning: Variants '7:50799621:G:T' and '7:50799621:G:C' have the same position.
+Warning: Variants '7:51599106:G:T' and '7:51599106:G:C' have the same position.
+Warning: Variants '7:51772113:G:T' and '7:51772113:G:A' have the same position.
+Warning: Variants '7:52614232:C:T' and '7:52614232:C:A' have the same position.
+Warning: Variants '7:52646521:T:G' and '7:52646521:T:A' have the same position.
+Warning: Variants '7:53669722:C:T' and '7:53669722:C:A' have the same position.
+Warning: Variants '7:53750290:A:T' and '7:53750290:A:G' have the same position.
+Warning: Variants '7:54964097:C:T' and '7:54964097:C:G' have the same position.
+Warning: Variants '7:55038177:G:T' and '7:55038177:G:A' have the same position.
+Warning: Variants '7:55649347:G:C' and '7:55649347:G:A' have the same position.
+Warning: Variants '7:55713025:C:T' and '7:55713025:C:G' have the same position.
+Warning: Variants '7:55729721:G:T' and '7:55729721:G:A' have the same position.
+Warning: Variants '7:56216662:C:G' and '7:56216662:C:A' have the same position.
+Warning: Variants '7:56225879:C:T' and '7:56225879:C:G' have the same position.
+Warning: Variants '7:56406081:T:C' and '7:56406081:T:A' have the same position.
+Warning: Variants '7:56534009:T:C' and '7:56534009:T:A' have the same position.
+Warning: Variants '7:57273442:T:C' and '7:57273442:T:A' have the same position.
+Warning: Variants '7:57498101:A:T' and '7:57498101:A:C' have the same position.
+Warning: Variants '7:58091739:A:T' and '7:58091739:A:G' have the same position.
+Warning: Variants '7:61882568:G:T' and '7:61882568:G:A' have the same position.
+Warning: Variants '7:61898446:G:T' and '7:61898446:G:A' have the same position.
+Warning: Variants '7:61912439:A:T' and '7:61912439:A:C' have the same position.
+Warning: Variants '7:61963117:T:C' and '7:61963117:T:A' have the same position.
+Warning: Variants '7:62404904:G:C' and '7:62404904:G:A' have the same position.
+Warning: Variants '7:62452415:C:T' and '7:62452415:C:A' have the same position.
+Warning: Variants '7:62455937:A:G' and '7:62455937:A:C' have the same position.
+Warning: Variants '7:62761703:G:T' and '7:62761703:G:A' have the same position.
+Warning: Variants '7:62862931:T:G' and '7:62862931:T:C' have the same position.
+Warning: Variants '7:62925551:C:T' and '7:62925551:C:G' have the same position.
+Warning: Variants '7:62986779:G:C' and '7:62986779:G:A' have the same position.
+Warning: Variants '7:63070037:C:T' and '7:63070037:C:G' have the same position.
+Warning: Variants '7:63833044:C:T' and '7:63833044:C:G' have the same position.
+Warning: Variants '7:64286674:C:T' and '7:64286674:C:G' have the same position.
+Warning: Variants '7:64784159:G:T' and '7:64784159:G:C' have the same position.
+Warning: Variants '7:64947871:G:C' and '7:64947871:G:A' have the same position.
+Warning: Variants '7:66109416:C:T' and '7:66109416:C:A' have the same position.
+Warning: Variants '7:68043299:G:T' and '7:68043299:G:A' have the same position.
+Warning: Variants '7:68726165:G:T' and '7:68726165:G:A' have the same position.
+Warning: Variants '7:70307189:A:G' and '7:70307189:A:C' have the same position.
+Warning: Variants '7:70566582:G:C' and '7:70566582:G:A' have the same position.
+Warning: Variants '7:70764609:T:G' and '7:70764609:T:C' have the same position.
+Warning: Variants '7:72279535:C:T' and '7:72279535:C:G' have the same position.
+Warning: Variants '7:73376918:C:T' and '7:73376918:C:G' have the same position.
+Warning: Variants '7:75620578:C:T' and '7:75620578:C:G' have the same position.
+Warning: Variants '7:75926562:G:C' and '7:75926562:G:A' have the same position.
+Warning: Variants '7:75990444:G:T' and '7:75990444:G:A' have the same position.
+Warning: Variants '7:79061524:C:G' and '7:79061524:C:A' have the same position.
+Warning: Variants '7:79735472:C:T' and '7:79735472:C:G' have the same position.
+Warning: Variants '7:80820113:T:G' and '7:80820113:T:A' have the same position.
+Warning: Variants '7:81356232:A:T' and '7:81356232:A:G' have the same position.
+Warning: Variants '7:83470531:T:G' and '7:83470531:T:C' have the same position.
+Warning: Variants '7:85843819:A:T' and '7:85843819:A:C' have the same position.
+Warning: Variants '7:87040241:G:T' and '7:87040241:G:A' have the same position.
+Warning: Variants '7:87043563:C:T' and '7:87043563:C:G' have the same position.
+Warning: Variants '7:87237295:C:T' and '7:87237295:C:G' have the same position.
+Warning: Variants '7:87242225:T:G' and '7:87242225:T:C' have the same position.
+Warning: Variants '7:87483475:C:G' and '7:87483475:C:A' have the same position.
+Warning: Variants '7:88723269:A:T' and '7:88723269:A:G' have the same position.
+Warning: Variants '7:89812929:T:G' and '7:89812929:T:C' have the same position.
+Warning: Variants '7:89956223:G:T' and '7:89956223:G:A' have the same position.
+Warning: Variants '7:89991653:T:G' and '7:89991653:T:C' have the same position.
+Warning: Variants '7:90395268:G:C' and '7:90395268:G:A' have the same position.
+Warning: Variants '7:92512342:T:G' and '7:92512342:T:A' have the same position.
+Warning: Variants '7:95685933:A:G' and '7:95685933:A:C' have the same position.
+Warning: Variants '7:97002391:C:T' and '7:97002391:C:G' have the same position.
+Warning: Variants '7:97841570:G:T' and '7:97841570:G:A' have the same position.
+Warning: Variants '7:97978338:G:T' and '7:97978338:G:A' have the same position.
+Warning: Variants '7:98684398:A:T' and '7:98684398:A:C' have the same position.
+Warning: Variants '7:98856909:T:C' and '7:98856909:T:A' have the same position.
+Warning: Variants '7:99153733:C:T' and '7:99153733:C:G' have the same position.
+Warning: Variants '7:101206729:C:T' and '7:101206729:C:A' have the same
+position.
+Warning: Variants '7:101553629:G:T' and '7:101553629:G:A' have the same
+position.
+Warning: Variants '7:103617730:C:T' and '7:103617730:C:A' have the same
+position.
+Warning: Variants '7:103887400:G:C' and '7:103887400:G:A' have the same
+position.
+Warning: Variants '7:107539129:T:G' and '7:107539129:T:A' have the same
+position.
+Warning: Variants '7:107791855:G:T' and '7:107791855:G:A' have the same
+position.
+Warning: Variants '7:109470310:C:T' and '7:109470310:C:A' have the same
+position.
+Warning: Variants '7:109575767:T:G' and '7:109575767:T:C' have the same
+position.
+Warning: Variants '7:109922045:G:C' and '7:109922045:G:A' have the same
+position.
+Warning: Variants '7:110160303:C:T' and '7:110160303:C:G' have the same
+position.
+Warning: Variants '7:111581405:G:C' and '7:111581405:G:A' have the same
+position.
+Warning: Variants '7:114526926:C:T' and '7:114526926:C:A' have the same
+position.
+Warning: Variants '7:115242401:G:T' and '7:115242401:G:A' have the same
+position.
+Warning: Variants '7:115711688:G:T' and '7:115711688:G:A' have the same
+position.
+Warning: Variants '7:115889184:G:T' and '7:115889184:G:A' have the same
+position.
+Warning: Variants '7:115889531:G:T' and '7:115889531:G:A' have the same
+position.
+Warning: Variants '7:118639202:C:T' and '7:118639202:C:A' have the same
+position.
+Warning: Variants '7:119418040:C:T' and '7:119418040:C:A' have the same
+position.
+Warning: Variants '7:119837483:T:C' and '7:119837483:T:A' have the same
+position.
+Warning: Variants '7:119995324:C:T' and '7:119995324:C:A' have the same
+position.
+Warning: Variants '7:120467414:A:G' and '7:120467414:A:C' have the same
+position.
+Warning: Variants '7:122103200:A:G' and '7:122103200:A:C' have the same
+position.
+Warning: Variants '7:123798406:A:T' and '7:123798406:A:G' have the same
+position.
+Warning: Variants '7:125181487:C:T' and '7:125181487:C:G' have the same
+position.
+Warning: Variants '7:125720603:C:T' and '7:125720603:C:A' have the same
+position.
+Warning: Variants '7:126175387:G:T' and '7:126175387:G:A' have the same
+position.
+Warning: Variants '7:126368254:A:G' and '7:126368254:A:C' have the same
+position.
+Warning: Variants '7:129099871:G:C' and '7:129099871:G:A' have the same
+position.
+Warning: Variants '7:130126168:A:T' and '7:130126168:A:C' have the same
+position.
+Warning: Variants '7:130871160:T:C' and '7:130871160:T:A' have the same
+position.
+Warning: Variants '7:131728546:G:C' and '7:131728546:G:A' have the same
+position.
+Warning: Variants '7:138278718:C:T' and '7:138278718:C:A' have the same
+position.
+Warning: Variants '7:138454502:T:G' and '7:138454502:T:A' have the same
+position.
+Warning: Variants '7:139626066:C:T' and '7:139626066:C:G' have the same
+position.
+Warning: Variants '7:140414366:C:T' and '7:140414366:C:A' have the same
+position.
+Warning: Variants '7:140427828:G:T' and '7:140427828:G:A' have the same
+position.
+Warning: Variants '7:141583810:C:T' and '7:141583810:C:G' have the same
+position.
+Warning: Variants '7:142125645:G:T' and '7:142125645:G:A' have the same
+position.
+Warning: Variants '7:145416393:G:C' and '7:145416393:G:A' have the same
+position.
+Warning: Variants '7:146432858:G:T' and '7:146432858:G:A' have the same
+position.
+Warning: Variants '7:146687001:G:T' and '7:146687001:G:A' have the same
+position.
+Warning: Variants '7:147504203:T:G' and '7:147504203:T:C' have the same
+position.
+Warning: Variants '7:147601545:C:G' and '7:147601545:C:A' have the same
+position.
+Warning: Variants '7:148481405:G:T' and '7:148481405:G:A' have the same
+position.
+Warning: Variants '7:148768067:A:G' and '7:148768067:A:C' have the same
+position.
+Warning: Variants '7:149370049:T:G' and '7:149370049:T:A' have the same
+position.
+Warning: Variants '7:149384955:A:T' and '7:149384955:A:C' have the same
+position.
+Warning: Variants '7:150149411:G:T' and '7:150149411:G:A' have the same
+position.
+Warning: Variants '7:150668281:G:C' and '7:150668281:G:A' have the same
+position.
+Warning: Variants '7:151885763:G:T' and '7:151885763:G:A' have the same
+position.
+Warning: Variants '7:152677308:T:C' and '7:152677308:T:A' have the same
+position.
+Warning: Variants '7:154028559:G:T' and '7:154028559:G:A' have the same
+position.
+Warning: Variants '7:154102728:G:C' and '7:154102728:G:A' have the same
+position.
+Warning: Variants '7:155369845:C:T' and '7:155369845:C:G' have the same
+position.
+Warning: Variants '7:155897591:C:T' and '7:155897591:C:A' have the same
+position.
+Warning: Variants '7:157132198:G:C' and '7:157132198:G:A' have the same
+position.
+Warning: Variants '7:157443249:G:T' and '7:157443249:G:C' have the same
+position.
+Warning: Variants '7:158267285:G:C' and '7:158267285:G:A' have the same
+position.
+Warning: Variants '7:158401975:G:C' and '7:158401975:G:A' have the same
+position.
+Performing single-pass merge (1748 people, 1391063 variants).
+Merged fileset written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr7-merge.bed +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr7-merge.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr7-merge.fam .
+1391063 variants loaded from .bim file.
+1748 people (0 males, 0 females, 1748 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr7.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 1748 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.589129.
+1391063 variants and 1748 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr7.bed +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr7.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr7.fam ... done.
+
+End time: Mon Apr 11 22:00:31 2022

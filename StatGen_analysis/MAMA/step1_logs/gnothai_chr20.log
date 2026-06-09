@@ -1,0 +1,185 @@
+PLINK v1.90b6.21 64-bit (19 Oct 2020)
+Options in effect:
+  --keep-allele-order
+  --make-bed
+  --merge-list /broad/sankaranlab/lcato/hbf/MAMA4/mergelists/merge_chr20
+  --out /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr20
+
+Hostname: uger-r7-c011.broadinstitute.org
+Working directory: /broad/sankaranlab/lcato/hbf/MAMA4
+Start time: Mon Apr 11 22:01:14 2022
+
+Random number seed: 1649714474
+386012 MB RAM detected; reserving 193006 MB for main workspace.
+Warning: Variants '20:172789:G:T' and '20:172789:G:A' have the same position.
+Warning: Variants '20:292207:G:T' and '20:292207:G:A' have the same position.
+Warning: Variants '20:303231:G:C' and '20:303231:G:A' have the same position.
+Warning: Variants '20:506149:T:G' and '20:506149:T:C' have the same position.
+Warning: Variants '20:552219:C:T' and '20:552219:C:G' have the same position.
+Warning: Variants '20:881101:G:T' and '20:881101:G:A' have the same position.
+Warning: Variants '20:2021577:C:T' and '20:2021577:C:G' have the same position.
+Warning: Variants '20:4729341:G:T' and '20:4729341:G:A' have the same position.
+Warning: Variants '20:4759051:G:T' and '20:4759051:G:C' have the same position.
+Warning: Variants '20:5639662:G:T' and '20:5639662:G:C' have the same position.
+Warning: Variants '20:6461742:G:T' and '20:6461742:G:A' have the same position.
+Warning: Variants '20:7622664:T:C' and '20:7622664:T:A' have the same position.
+Warning: Variants '20:9620650:C:T' and '20:9620650:C:G' have the same position.
+Warning: Variants '20:9828086:C:T' and '20:9828086:C:A' have the same position.
+Warning: Variants '20:10703827:T:C' and '20:10703827:T:A' have the same
+position.
+Warning: Variants '20:10987352:T:G' and '20:10987352:T:C' have the same
+position.
+Warning: Variants '20:11162336:A:G' and '20:11162336:A:C' have the same
+position.
+Warning: Variants '20:12127450:T:C' and '20:12127450:T:A' have the same
+position.
+Warning: Variants '20:12162140:G:C' and '20:12162140:G:A' have the same
+position.
+Warning: Variants '20:12445590:G:T' and '20:12445590:G:A' have the same
+position.
+Warning: Variants '20:12784749:G:C' and '20:12784749:G:A' have the same
+position.
+Warning: Variants '20:14592484:C:T' and '20:14592484:C:G' have the same
+position.
+Warning: Variants '20:15759956:C:T' and '20:15759956:C:A' have the same
+position.
+Warning: Variants '20:17097817:C:T' and '20:17097817:C:A' have the same
+position.
+Warning: Variants '20:18259259:C:T' and '20:18259259:C:A' have the same
+position.
+Warning: Variants '20:19479762:C:T' and '20:19479762:C:A' have the same
+position.
+Warning: Variants '20:21215552:A:T' and '20:21215552:A:C' have the same
+position.
+Warning: Variants '20:22685887:C:T' and '20:22685887:C:G' have the same
+position.
+Warning: Variants '20:22844439:C:T' and '20:22844439:C:A' have the same
+position.
+Warning: Variants '20:23042479:G:T' and '20:23042479:G:A' have the same
+position.
+Warning: Variants '20:25606897:C:T' and '20:25606897:C:G' have the same
+position.
+Warning: Variants '20:30685365:C:T' and '20:30685365:C:G' have the same
+position.
+Warning: Variants '20:30914680:G:C' and '20:30914680:G:A' have the same
+position.
+Warning: Variants '20:31236401:C:T' and '20:31236401:C:A' have the same
+position.
+Warning: Variants '20:32073188:G:T' and '20:32073188:G:A' have the same
+position.
+Warning: Variants '20:33911421:G:C' and '20:33911421:G:A' have the same
+position.
+Warning: Variants '20:34639804:G:T' and '20:34639804:G:A' have the same
+position.
+Warning: Variants '20:37263240:C:T' and '20:37263240:C:G' have the same
+position.
+Warning: Variants '20:37399285:C:T' and '20:37399285:C:G' have the same
+position.
+Warning: Variants '20:37722153:G:T' and '20:37722153:G:A' have the same
+position.
+Warning: Variants '20:38232057:A:T' and '20:38232057:A:G' have the same
+position.
+Warning: Variants '20:38335285:C:T' and '20:38335285:C:A' have the same
+position.
+Warning: Variants '20:38754737:C:T' and '20:38754737:C:A' have the same
+position.
+Warning: Variants '20:39663586:G:C' and '20:39663586:G:A' have the same
+position.
+Warning: Variants '20:40566993:C:G' and '20:40566993:C:A' have the same
+position.
+Warning: Variants '20:40566994:C:T' and '20:40566994:C:A' have the same
+position.
+Warning: Variants '20:42154068:T:C' and '20:42154068:T:A' have the same
+position.
+Warning: Variants '20:43350361:G:T' and '20:43350361:G:C' have the same
+position.
+Warning: Variants '20:45662771:A:G' and '20:45662771:A:C' have the same
+position.
+Warning: Variants '20:45710830:C:T' and '20:45710830:C:G' have the same
+position.
+Warning: Variants '20:46180435:C:T' and '20:46180435:C:G' have the same
+position.
+Warning: Variants '20:46598803:C:G' and '20:46598803:C:A' have the same
+position.
+Warning: Variants '20:47130426:C:T' and '20:47130426:C:G' have the same
+position.
+Warning: Variants '20:47338247:C:T' and '20:47338247:C:A' have the same
+position.
+Warning: Variants '20:50128205:G:T' and '20:50128205:G:C' have the same
+position.
+Warning: Variants '20:50412857:C:G' and '20:50412857:C:A' have the same
+position.
+Warning: Variants '20:50897952:G:T' and '20:50897952:G:C' have the same
+position.
+Warning: Variants '20:51724053:C:T' and '20:51724053:C:A' have the same
+position.
+Warning: Variants '20:52024198:A:G' and '20:52024198:A:C' have the same
+position.
+Warning: Variants '20:52727767:A:G' and '20:52727767:A:C' have the same
+position.
+Warning: Variants '20:53183860:G:C' and '20:53183860:G:A' have the same
+position.
+Warning: Variants '20:54354979:C:T' and '20:54354979:C:G' have the same
+position.
+Warning: Variants '20:54540488:G:T' and '20:54540488:G:A' have the same
+position.
+Warning: Variants '20:54748068:G:C' and '20:54748068:G:A' have the same
+position.
+Warning: Variants '20:56368683:A:T' and '20:56368683:A:C' have the same
+position.
+Warning: Variants '20:56707367:C:T' and '20:56707367:C:A' have the same
+position.
+Warning: Variants '20:58747446:G:C' and '20:58747446:G:A' have the same
+position.
+Warning: Variants '20:58764076:C:T' and '20:58764076:C:A' have the same
+position.
+Warning: Variants '20:58824060:G:C' and '20:58824060:G:A' have the same
+position.
+Warning: Variants '20:59496273:C:T' and '20:59496273:C:A' have the same
+position.
+Warning: Variants '20:59852630:C:T' and '20:59852630:C:A' have the same
+position.
+Warning: Variants '20:60007946:C:T' and '20:60007946:C:A' have the same
+position.
+Warning: Variants '20:60070124:A:T' and '20:60070124:A:G' have the same
+position.
+Warning: Variants '20:61072134:G:T' and '20:61072134:G:A' have the same
+position.
+Warning: Variants '20:61132592:G:C' and '20:61132592:G:A' have the same
+position.
+Warning: Variants '20:61402088:T:G' and '20:61402088:T:A' have the same
+position.
+Warning: Variants '20:61444287:G:T' and '20:61444287:G:A' have the same
+position.
+Warning: Variants '20:61526175:C:T' and '20:61526175:C:G' have the same
+position.
+Warning: Variants '20:61830745:G:C' and '20:61830745:G:A' have the same
+position.
+Warning: Variants '20:62184154:A:T' and '20:62184154:A:C' have the same
+position.
+Warning: Variants '20:62502002:T:C' and '20:62502002:T:A' have the same
+position.
+Warning: Variants '20:62623270:G:T' and '20:62623270:G:C' have the same
+position.
+Warning: Variants '20:63525687:C:T' and '20:63525687:C:G' have the same
+position.
+Performing single-pass merge (1748 people, 535070 variants).
+Merged fileset written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr20-merge.bed +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr20-merge.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr20-merge.fam .
+535070 variants loaded from .bim file.
+1748 people (0 males, 0 females, 1748 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr20.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 1748 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.583912.
+535070 variants and 1748 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr20.bed
++ /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr20.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr20.fam ... done.
+
+End time: Mon Apr 11 22:01:20 2022

@@ -1,0 +1,287 @@
+PLINK v1.90b6.21 64-bit (19 Oct 2020)
+Options in effect:
+  --keep-allele-order
+  --make-bed
+  --merge-list /broad/sankaranlab/lcato/hbf/MAMA4/mergelists/merge_chr16
+  --out /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr16
+
+Hostname: uger-r7-c011.broadinstitute.org
+Working directory: /broad/sankaranlab/lcato/hbf/MAMA4
+Start time: Mon Apr 11 22:00:57 2022
+
+Random number seed: 1649714457
+386012 MB RAM detected; reserving 193006 MB for main workspace.
+Warning: Variants '16:370592:C:T' and '16:370592:C:G' have the same position.
+Warning: Variants '16:827291:C:T' and '16:827291:C:G' have the same position.
+Warning: Variants '16:881378:C:T' and '16:881378:C:G' have the same position.
+Warning: Variants '16:1284542:C:T' and '16:1284542:C:A' have the same position.
+Warning: Variants '16:1323083:T:G' and '16:1323083:T:C' have the same position.
+Warning: Variants '16:2608225:G:T' and '16:2608225:G:C' have the same position.
+Warning: Variants '16:2901048:C:T' and '16:2901048:C:A' have the same position.
+Warning: Variants '16:3130407:G:T' and '16:3130407:G:A' have the same position.
+Warning: Variants '16:4366140:C:T' and '16:4366140:C:G' have the same position.
+Warning: Variants '16:4417236:G:T' and '16:4417236:G:A' have the same position.
+Warning: Variants '16:4664138:C:T' and '16:4664138:C:G' have the same position.
+Warning: Variants '16:5020023:C:T' and '16:5020023:C:A' have the same position.
+Warning: Variants '16:5952730:C:G' and '16:5952730:C:A' have the same position.
+Warning: Variants '16:5961817:C:T' and '16:5961817:C:A' have the same position.
+Warning: Variants '16:6173398:C:T' and '16:6173398:C:A' have the same position.
+Warning: Variants '16:6191794:A:G' and '16:6191794:A:C' have the same position.
+Warning: Variants '16:6203950:G:T' and '16:6203950:G:C' have the same position.
+Warning: Variants '16:6315201:G:T' and '16:6315201:G:C' have the same position.
+Warning: Variants '16:6801296:A:G' and '16:6801296:A:C' have the same position.
+Warning: Variants '16:6843424:T:G' and '16:6843424:T:C' have the same position.
+Warning: Variants '16:6966030:C:T' and '16:6966030:C:G' have the same position.
+Warning: Variants '16:6970283:C:T' and '16:6970283:C:G' have the same position.
+Warning: Variants '16:6994405:G:T' and '16:6994405:G:C' have the same position.
+Warning: Variants '16:7052610:C:T' and '16:7052610:C:G' have the same position.
+Warning: Variants '16:7083156:T:G' and '16:7083156:T:C' have the same position.
+Warning: Variants '16:7375154:T:G' and '16:7375154:T:C' have the same position.
+Warning: Variants '16:7472066:G:C' and '16:7472066:G:A' have the same position.
+Warning: Variants '16:7815168:G:T' and '16:7815168:G:C' have the same position.
+Warning: Variants '16:7974779:G:T' and '16:7974779:G:A' have the same position.
+Warning: Variants '16:8380072:G:C' and '16:8380072:G:A' have the same position.
+Warning: Variants '16:9502549:C:T' and '16:9502549:C:A' have the same position.
+Warning: Variants '16:9532046:C:T' and '16:9532046:C:G' have the same position.
+Warning: Variants '16:9658378:C:T' and '16:9658378:C:A' have the same position.
+Warning: Variants '16:9828714:T:C' and '16:9828714:T:A' have the same position.
+Warning: Variants '16:10071796:G:C' and '16:10071796:G:A' have the same
+position.
+Warning: Variants '16:10802206:C:T' and '16:10802206:C:G' have the same
+position.
+Warning: Variants '16:11923046:C:T' and '16:11923046:C:A' have the same
+position.
+Warning: Variants '16:12144503:C:T' and '16:12144503:C:G' have the same
+position.
+Warning: Variants '16:12219069:T:C' and '16:12219069:T:A' have the same
+position.
+Warning: Variants '16:12297103:T:C' and '16:12297103:T:A' have the same
+position.
+Warning: Variants '16:13586826:T:C' and '16:13586826:T:A' have the same
+position.
+Warning: Variants '16:14028666:C:G' and '16:14028666:C:A' have the same
+position.
+Warning: Variants '16:15150462:C:T' and '16:15150462:C:G' have the same
+position.
+Warning: Variants '16:15645012:C:T' and '16:15645012:C:G' have the same
+position.
+Warning: Variants '16:17786418:A:G' and '16:17786418:A:C' have the same
+position.
+Warning: Variants '16:18999953:C:T' and '16:18999953:C:G' have the same
+position.
+Warning: Variants '16:19032849:G:C' and '16:19032849:G:A' have the same
+position.
+Warning: Variants '16:19307275:C:T' and '16:19307275:C:A' have the same
+position.
+Warning: Variants '16:19757716:A:G' and '16:19757716:A:C' have the same
+position.
+Warning: Variants '16:20480099:C:T' and '16:20480099:C:G' have the same
+position.
+Warning: Variants '16:22409605:C:T' and '16:22409605:C:G' have the same
+position.
+Warning: Variants '16:22748546:G:T' and '16:22748546:G:A' have the same
+position.
+Warning: Variants '16:23130835:G:T' and '16:23130835:G:C' have the same
+position.
+Warning: Variants '16:23448257:C:G' and '16:23448257:C:A' have the same
+position.
+Warning: Variants '16:24071991:T:C' and '16:24071991:T:A' have the same
+position.
+Warning: Variants '16:25141193:C:T' and '16:25141193:C:A' have the same
+position.
+Warning: Variants '16:26128669:G:T' and '16:26128669:G:A' have the same
+position.
+Warning: Variants '16:26389269:A:T' and '16:26389269:A:G' have the same
+position.
+Warning: Variants '16:27152520:A:G' and '16:27152520:A:C' have the same
+position.
+Warning: Variants '16:27857964:C:T' and '16:27857964:C:G' have the same
+position.
+Warning: Variants '16:28036584:C:G' and '16:28036584:C:A' have the same
+position.
+Warning: Variants '16:28267236:G:T' and '16:28267236:G:A' have the same
+position.
+Warning: Variants '16:29174925:G:T' and '16:29174925:G:A' have the same
+position.
+Warning: Variants '16:34022424:T:C' and '16:34022424:T:A' have the same
+position.
+Warning: Variants '16:34185111:C:T' and '16:34185111:C:G' have the same
+position.
+Warning: Variants '16:36223611:T:C' and '16:36223611:T:A' have the same
+position.
+Warning: Variants '16:48076079:A:T' and '16:48076079:A:G' have the same
+position.
+Warning: Variants '16:48278147:G:T' and '16:48278147:G:A' have the same
+position.
+Warning: Variants '16:48366983:C:T' and '16:48366983:C:G' have the same
+position.
+Warning: Variants '16:48989148:C:T' and '16:48989148:C:G' have the same
+position.
+Warning: Variants '16:50498558:C:T' and '16:50498558:C:A' have the same
+position.
+Warning: Variants '16:51068590:G:T' and '16:51068590:G:A' have the same
+position.
+Warning: Variants '16:51214010:G:T' and '16:51214010:G:C' have the same
+position.
+Warning: Variants '16:51767783:C:T' and '16:51767783:C:G' have the same
+position.
+Warning: Variants '16:52413744:A:T' and '16:52413744:A:G' have the same
+position.
+Warning: Variants '16:55842615:G:T' and '16:55842615:G:A' have the same
+position.
+Warning: Variants '16:56279896:G:C' and '16:56279896:G:A' have the same
+position.
+Warning: Variants '16:57101708:C:T' and '16:57101708:C:A' have the same
+position.
+Warning: Variants '16:57198046:T:G' and '16:57198046:T:A' have the same
+position.
+Warning: Variants '16:57277698:C:G' and '16:57277698:C:A' have the same
+position.
+Warning: Variants '16:57923235:C:T' and '16:57923235:C:G' have the same
+position.
+Warning: Variants '16:58578073:C:T' and '16:58578073:C:A' have the same
+position.
+Warning: Variants '16:58867033:C:T' and '16:58867033:C:G' have the same
+position.
+Warning: Variants '16:59565268:G:T' and '16:59565268:G:A' have the same
+position.
+Warning: Variants '16:61517822:G:T' and '16:61517822:G:A' have the same
+position.
+Warning: Variants '16:62217691:A:G' and '16:62217691:A:C' have the same
+position.
+Warning: Variants '16:64240178:C:T' and '16:64240178:C:A' have the same
+position.
+Warning: Variants '16:65853794:T:C' and '16:65853794:T:A' have the same
+position.
+Warning: Variants '16:67177887:C:T' and '16:67177887:C:A' have the same
+position.
+Warning: Variants '16:67252458:A:G' and '16:67252458:A:C' have the same
+position.
+Warning: Variants '16:70293929:A:G' and '16:70293929:A:C' have the same
+position.
+Warning: Variants '16:71019394:G:T' and '16:71019394:G:A' have the same
+position.
+Warning: Variants '16:71337224:G:T' and '16:71337224:G:A' have the same
+position.
+Warning: Variants '16:71811944:G:C' and '16:71811944:G:A' have the same
+position.
+Warning: Variants '16:71994640:T:C' and '16:71994640:T:A' have the same
+position.
+Warning: Variants '16:71997422:C:G' and '16:71997422:C:A' have the same
+position.
+Warning: Variants '16:72839816:G:C' and '16:72839816:G:A' have the same
+position.
+Warning: Variants '16:74331045:G:C' and '16:74331045:G:A' have the same
+position.
+Warning: Variants '16:74985373:G:C' and '16:74985373:G:A' have the same
+position.
+Warning: Variants '16:75427523:A:T' and '16:75427523:A:C' have the same
+position.
+Warning: Variants '16:76938661:G:T' and '16:76938661:G:A' have the same
+position.
+Warning: Variants '16:76954256:C:T' and '16:76954256:C:G' have the same
+position.
+Warning: Variants '16:77410865:C:T' and '16:77410865:C:A' have the same
+position.
+Warning: Variants '16:77822830:C:T' and '16:77822830:C:A' have the same
+position.
+Warning: Variants '16:77855295:G:C' and '16:77855295:G:A' have the same
+position.
+Warning: Variants '16:77979651:G:C' and '16:77979651:G:A' have the same
+position.
+Warning: Variants '16:78379077:C:T' and '16:78379077:C:A' have the same
+position.
+Warning: Variants '16:78512539:G:C' and '16:78512539:G:A' have the same
+position.
+Warning: Variants '16:78993198:T:G' and '16:78993198:T:C' have the same
+position.
+Warning: Variants '16:79211829:G:C' and '16:79211829:G:A' have the same
+position.
+Warning: Variants '16:79289382:G:T' and '16:79289382:G:C' have the same
+position.
+Warning: Variants '16:79293162:C:T' and '16:79293162:C:G' have the same
+position.
+Warning: Variants '16:79467966:C:T' and '16:79467966:C:A' have the same
+position.
+Warning: Variants '16:79520906:G:T' and '16:79520906:G:A' have the same
+position.
+Warning: Variants '16:80566741:A:T' and '16:80566741:A:G' have the same
+position.
+Warning: Variants '16:80633844:T:C' and '16:80633844:T:A' have the same
+position.
+Warning: Variants '16:80730981:G:C' and '16:80730981:G:A' have the same
+position.
+Warning: Variants '16:80745967:C:T' and '16:80745967:C:G' have the same
+position.
+Warning: Variants '16:81512301:G:C' and '16:81512301:G:A' have the same
+position.
+Warning: Variants '16:81551805:C:T' and '16:81551805:C:G' have the same
+position.
+Warning: Variants '16:81965751:G:T' and '16:81965751:G:A' have the same
+position.
+Warning: Variants '16:82772695:C:T' and '16:82772695:C:G' have the same
+position.
+Warning: Variants '16:83141217:C:T' and '16:83141217:C:G' have the same
+position.
+Warning: Variants '16:83154853:C:T' and '16:83154853:C:A' have the same
+position.
+Warning: Variants '16:83466502:G:T' and '16:83466502:G:C' have the same
+position.
+Warning: Variants '16:83677934:C:T' and '16:83677934:C:G' have the same
+position.
+Warning: Variants '16:83733789:G:C' and '16:83733789:G:A' have the same
+position.
+Warning: Variants '16:83841608:C:T' and '16:83841608:C:A' have the same
+position.
+Warning: Variants '16:83874201:T:G' and '16:83874201:T:A' have the same
+position.
+Warning: Variants '16:83976761:G:T' and '16:83976761:G:A' have the same
+position.
+Warning: Variants '16:84165135:G:C' and '16:84165135:G:A' have the same
+position.
+Warning: Variants '16:84450780:C:T' and '16:84450780:C:A' have the same
+position.
+Warning: Variants '16:84704157:G:T' and '16:84704157:G:A' have the same
+position.
+Warning: Variants '16:85413669:C:G' and '16:85413669:C:A' have the same
+position.
+Warning: Variants '16:85527226:G:T' and '16:85527226:G:A' have the same
+position.
+Warning: Variants '16:85587176:C:T' and '16:85587176:C:A' have the same
+position.
+Warning: Variants '16:85593623:C:T' and '16:85593623:C:A' have the same
+position.
+Warning: Variants '16:86140187:C:T' and '16:86140187:C:G' have the same
+position.
+Warning: Variants '16:86223324:G:C' and '16:86223324:G:A' have the same
+position.
+Warning: Variants '16:86808286:G:C' and '16:86808286:G:A' have the same
+position.
+Warning: Variants '16:87911623:C:T' and '16:87911623:C:G' have the same
+position.
+Warning: Variants '16:88134333:C:T' and '16:88134333:C:A' have the same
+position.
+Warning: Variants '16:89273566:G:C' and '16:89273566:G:A' have the same
+position.
+Warning: Variants '16:89629809:C:T' and '16:89629809:C:G' have the same
+position.
+Performing single-pass merge (1748 people, 763756 variants).
+Merged fileset written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr16-merge.bed +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr16-merge.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr16-merge.fam .
+763756 variants loaded from .bim file.
+1748 people (0 males, 0 females, 1748 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr16.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 1748 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.57759.
+763756 variants and 1748 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr16.bed
++ /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr16.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr16.fam ... done.
+
+End time: Mon Apr 11 22:01:06 2022

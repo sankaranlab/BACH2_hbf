@@ -1,0 +1,421 @@
+PLINK v1.90b6.21 64-bit (19 Oct 2020)
+Options in effect:
+  --keep-allele-order
+  --make-bed
+  --merge-list /broad/sankaranlab/lcato/hbf/MAMA4/mergelists/merge_chr4
+  --out /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr4
+
+Hostname: uger-r7-c011.broadinstitute.org
+Working directory: /broad/sankaranlab/lcato/hbf/MAMA4
+Start time: Mon Apr 11 21:59:46 2022
+
+Random number seed: 1649714386
+386012 MB RAM detected; reserving 193006 MB for main workspace.
+Warning: Variants '4:105505:G:T' and '4:105505:G:A' have the same position.
+Warning: Variants '4:429590:C:T' and '4:429590:C:A' have the same position.
+Warning: Variants '4:1185973:G:T' and '4:1185973:G:A' have the same position.
+Warning: Variants '4:1782046:G:C' and '4:1782046:G:A' have the same position.
+Warning: Variants '4:2019596:C:G' and '4:2019596:C:A' have the same position.
+Warning: Variants '4:3385333:C:T' and '4:3385333:C:G' have the same position.
+Warning: Variants '4:3528940:C:G' and '4:3528940:C:A' have the same position.
+Warning: Variants '4:3800548:C:T' and '4:3800548:C:A' have the same position.
+Warning: Variants '4:3810732:T:G' and '4:3810732:T:C' have the same position.
+Warning: Variants '4:3811551:C:T' and '4:3811551:C:G' have the same position.
+Warning: Variants '4:3830076:C:T' and '4:3830076:C:A' have the same position.
+Warning: Variants '4:3836301:C:G' and '4:3836301:C:A' have the same position.
+Warning: Variants '4:4161126:G:C' and '4:4161126:G:A' have the same position.
+Warning: Variants '4:4501368:T:G' and '4:4501368:T:C' have the same position.
+Warning: Variants '4:5189160:C:T' and '4:5189160:C:G' have the same position.
+Warning: Variants '4:5241346:G:T' and '4:5241346:G:A' have the same position.
+Warning: Variants '4:5439631:G:T' and '4:5439631:G:C' have the same position.
+Warning: Variants '4:5444144:G:C' and '4:5444144:G:A' have the same position.
+Warning: Variants '4:7369203:C:T' and '4:7369203:C:A' have the same position.
+Warning: Variants '4:7402929:G:C' and '4:7402929:G:A' have the same position.
+Warning: Variants '4:7841501:G:T' and '4:7841501:G:A' have the same position.
+Warning: Variants '4:7849698:G:C' and '4:7849698:G:A' have the same position.
+Warning: Variants '4:8096451:C:T' and '4:8096451:C:A' have the same position.
+Warning: Variants '4:8382618:A:G' and '4:8382618:A:C' have the same position.
+Warning: Variants '4:8644224:G:T' and '4:8644224:G:A' have the same position.
+Warning: Variants '4:8956565:A:T' and '4:8956565:A:G' have the same position.
+Warning: Variants '4:9053954:G:T' and '4:9053954:G:C' have the same position.
+Warning: Variants '4:9107334:G:T' and '4:9107334:G:A' have the same position.
+Warning: Variants '4:9127251:A:T' and '4:9127251:A:C' have the same position.
+Warning: Variants '4:9133887:C:T' and '4:9133887:C:A' have the same position.
+Warning: Variants '4:9145138:A:G' and '4:9145138:A:C' have the same position.
+Warning: Variants '4:10116092:C:T' and '4:10116092:C:A' have the same position.
+Warning: Variants '4:11101012:C:T' and '4:11101012:C:G' have the same position.
+Warning: Variants '4:11235996:G:T' and '4:11235996:G:A' have the same position.
+Warning: Variants '4:11499325:G:T' and '4:11499325:G:A' have the same position.
+Warning: Variants '4:11930957:C:T' and '4:11930957:C:G' have the same position.
+Warning: Variants '4:11950924:C:T' and '4:11950924:C:A' have the same position.
+Warning: Variants '4:12089533:C:G' and '4:12089533:C:A' have the same position.
+Warning: Variants '4:12346498:C:T' and '4:12346498:C:G' have the same position.
+Warning: Variants '4:12843906:G:C' and '4:12843906:G:A' have the same position.
+Warning: Variants '4:13772301:G:T' and '4:13772301:G:A' have the same position.
+Warning: Variants '4:14815091:A:G' and '4:14815091:A:C' have the same position.
+Warning: Variants '4:15174488:G:C' and '4:15174488:G:A' have the same position.
+Warning: Variants '4:15977859:A:T' and '4:15977859:A:G' have the same position.
+Warning: Variants '4:16013115:G:C' and '4:16013115:G:A' have the same position.
+Warning: Variants '4:16214296:A:G' and '4:16214296:A:C' have the same position.
+Warning: Variants '4:17108077:T:C' and '4:17108077:T:A' have the same position.
+Warning: Variants '4:18928615:G:T' and '4:18928615:G:A' have the same position.
+Warning: Variants '4:18986542:C:T' and '4:18986542:C:A' have the same position.
+Warning: Variants '4:19016003:A:G' and '4:19016003:A:C' have the same position.
+Warning: Variants '4:19637107:A:T' and '4:19637107:A:G' have the same position.
+Warning: Variants '4:19751571:C:G' and '4:19751571:C:A' have the same position.
+Warning: Variants '4:20402140:C:T' and '4:20402140:C:A' have the same position.
+Warning: Variants '4:21642050:G:C' and '4:21642050:G:A' have the same position.
+Warning: Variants '4:21836695:T:C' and '4:21836695:T:A' have the same position.
+Warning: Variants '4:22024552:A:T' and '4:22024552:A:G' have the same position.
+Warning: Variants '4:22056482:G:T' and '4:22056482:G:A' have the same position.
+Warning: Variants '4:22470993:G:C' and '4:22470993:G:A' have the same position.
+Warning: Variants '4:23467858:C:T' and '4:23467858:C:A' have the same position.
+Warning: Variants '4:23629895:C:T' and '4:23629895:C:A' have the same position.
+Warning: Variants '4:24140439:C:G' and '4:24140439:C:A' have the same position.
+Warning: Variants '4:24223947:C:T' and '4:24223947:C:G' have the same position.
+Warning: Variants '4:24265659:T:C' and '4:24265659:T:A' have the same position.
+Warning: Variants '4:25470246:T:G' and '4:25470246:T:C' have the same position.
+Warning: Variants '4:25582646:C:T' and '4:25582646:C:G' have the same position.
+Warning: Variants '4:27229909:T:G' and '4:27229909:T:A' have the same position.
+Warning: Variants '4:27978320:C:T' and '4:27978320:C:A' have the same position.
+Warning: Variants '4:28240184:C:T' and '4:28240184:C:A' have the same position.
+Warning: Variants '4:28813624:T:C' and '4:28813624:T:A' have the same position.
+Warning: Variants '4:28880866:C:T' and '4:28880866:C:G' have the same position.
+Warning: Variants '4:30825758:G:T' and '4:30825758:G:A' have the same position.
+Warning: Variants '4:31365482:C:T' and '4:31365482:C:G' have the same position.
+Warning: Variants '4:32958987:G:T' and '4:32958987:G:A' have the same position.
+Warning: Variants '4:33493208:G:T' and '4:33493208:G:A' have the same position.
+Warning: Variants '4:35103894:G:T' and '4:35103894:G:A' have the same position.
+Warning: Variants '4:35271092:G:C' and '4:35271092:G:A' have the same position.
+Warning: Variants '4:35696706:G:T' and '4:35696706:G:A' have the same position.
+Warning: Variants '4:36728984:C:T' and '4:36728984:C:A' have the same position.
+Warning: Variants '4:36944652:A:T' and '4:36944652:A:C' have the same position.
+Warning: Variants '4:37294135:T:G' and '4:37294135:T:C' have the same position.
+Warning: Variants '4:40333646:T:G' and '4:40333646:T:C' have the same position.
+Warning: Variants '4:40843535:G:C' and '4:40843535:G:A' have the same position.
+Warning: Variants '4:40929306:A:T' and '4:40929306:A:G' have the same position.
+Warning: Variants '4:41018981:G:C' and '4:41018981:G:A' have the same position.
+Warning: Variants '4:41538171:A:T' and '4:41538171:A:C' have the same position.
+Warning: Variants '4:42400480:A:T' and '4:42400480:A:G' have the same position.
+Warning: Variants '4:42490211:T:C' and '4:42490211:T:A' have the same position.
+Warning: Variants '4:45293417:G:T' and '4:45293417:G:A' have the same position.
+Warning: Variants '4:46614488:C:T' and '4:46614488:C:G' have the same position.
+Warning: Variants '4:47001364:A:G' and '4:47001364:A:C' have the same position.
+Warning: Variants '4:48118185:T:G' and '4:48118185:T:C' have the same position.
+Warning: Variants '4:48982208:G:C' and '4:48982208:G:A' have the same position.
+Warning: Variants '4:52177422:C:T' and '4:52177422:C:G' have the same position.
+Warning: Variants '4:52253642:G:C' and '4:52253642:G:A' have the same position.
+Warning: Variants '4:52402285:C:T' and '4:52402285:C:A' have the same position.
+Warning: Variants '4:52503936:A:G' and '4:52503936:A:C' have the same position.
+Warning: Variants '4:52838687:A:T' and '4:52838687:A:C' have the same position.
+Warning: Variants '4:53581673:G:T' and '4:53581673:G:A' have the same position.
+Warning: Variants '4:54041070:C:G' and '4:54041070:C:A' have the same position.
+Warning: Variants '4:54322298:G:T' and '4:54322298:G:A' have the same position.
+Warning: Variants '4:54530648:G:T' and '4:54530648:G:A' have the same position.
+Warning: Variants '4:54693580:A:T' and '4:54693580:A:G' have the same position.
+Warning: Variants '4:57663882:T:G' and '4:57663882:T:C' have the same position.
+Warning: Variants '4:57979718:C:T' and '4:57979718:C:G' have the same position.
+Warning: Variants '4:59354293:C:T' and '4:59354293:C:A' have the same position.
+Warning: Variants '4:59983073:C:T' and '4:59983073:C:G' have the same position.
+Warning: Variants '4:60115461:A:T' and '4:60115461:A:C' have the same position.
+Warning: Variants '4:60574877:C:T' and '4:60574877:C:A' have the same position.
+Warning: Variants '4:61481944:G:T' and '4:61481944:G:A' have the same position.
+Warning: Variants '4:62843451:G:C' and '4:62843451:G:A' have the same position.
+Warning: Variants '4:63314695:G:C' and '4:63314695:G:A' have the same position.
+Warning: Variants '4:66099437:T:G' and '4:66099437:T:C' have the same position.
+Warning: Variants '4:68259678:C:T' and '4:68259678:C:A' have the same position.
+Warning: Variants '4:68407119:C:T' and '4:68407119:C:A' have the same position.
+Warning: Variants '4:68962634:G:C' and '4:68962634:G:A' have the same position.
+Warning: Variants '4:68975724:C:T' and '4:68975724:C:A' have the same position.
+Warning: Variants '4:69003508:A:G' and '4:69003508:A:C' have the same position.
+Warning: Variants '4:69214043:G:T' and '4:69214043:G:C' have the same position.
+Warning: Variants '4:70491273:G:T' and '4:70491273:G:A' have the same position.
+Warning: Variants '4:71608972:C:T' and '4:71608972:C:G' have the same position.
+Warning: Variants '4:72186680:T:G' and '4:72186680:T:C' have the same position.
+Warning: Variants '4:72466218:G:C' and '4:72466218:G:A' have the same position.
+Warning: Variants '4:72633398:C:T' and '4:72633398:C:G' have the same position.
+Warning: Variants '4:74002632:T:G' and '4:74002632:T:C' have the same position.
+Warning: Variants '4:74119558:C:T' and '4:74119558:C:A' have the same position.
+Warning: Variants '4:74592794:C:T' and '4:74592794:C:G' have the same position.
+Warning: Variants '4:74614853:C:T' and '4:74614853:C:G' have the same position.
+Warning: Variants '4:75232865:G:T' and '4:75232865:G:A' have the same position.
+Warning: Variants '4:75371211:T:G' and '4:75371211:T:A' have the same position.
+Warning: Variants '4:76624337:T:G' and '4:76624337:T:A' have the same position.
+Warning: Variants '4:78158267:G:T' and '4:78158267:G:A' have the same position.
+Warning: Variants '4:78307219:A:G' and '4:78307219:A:C' have the same position.
+Warning: Variants '4:79143439:A:T' and '4:79143439:A:C' have the same position.
+Warning: Variants '4:79270430:G:C' and '4:79270430:G:A' have the same position.
+Warning: Variants '4:80122622:G:T' and '4:80122622:G:A' have the same position.
+Warning: Variants '4:80276648:C:T' and '4:80276648:C:A' have the same position.
+Warning: Variants '4:81850476:T:C' and '4:81850476:T:A' have the same position.
+Warning: Variants '4:82361390:A:T' and '4:82361390:A:C' have the same position.
+Warning: Variants '4:83290439:T:C' and '4:83290439:T:A' have the same position.
+Warning: Variants '4:85733725:G:C' and '4:85733725:G:A' have the same position.
+Warning: Variants '4:87065809:C:T' and '4:87065809:C:G' have the same position.
+Warning: Variants '4:89298159:A:G' and '4:89298159:A:C' have the same position.
+Warning: Variants '4:91377084:A:G' and '4:91377084:A:C' have the same position.
+Warning: Variants '4:92492838:A:T' and '4:92492838:A:G' have the same position.
+Warning: Variants '4:93461888:T:C' and '4:93461888:T:A' have the same position.
+Warning: Variants '4:94376568:G:C' and '4:94376568:G:A' have the same position.
+Warning: Variants '4:95557676:G:C' and '4:95557676:G:A' have the same position.
+Warning: Variants '4:96778350:C:T' and '4:96778350:C:A' have the same position.
+Warning: Variants '4:97242697:C:G' and '4:97242697:C:A' have the same position.
+Warning: Variants '4:98233435:C:T' and '4:98233435:C:G' have the same position.
+Warning: Variants '4:102210475:C:G' and '4:102210475:C:A' have the same
+position.
+Warning: Variants '4:102673466:C:T' and '4:102673466:C:G' have the same
+position.
+Warning: Variants '4:103825829:G:C' and '4:103825829:G:A' have the same
+position.
+Warning: Variants '4:104262060:T:G' and '4:104262060:T:C' have the same
+position.
+Warning: Variants '4:104420299:A:T' and '4:104420299:A:C' have the same
+position.
+Warning: Variants '4:105313855:C:T' and '4:105313855:C:A' have the same
+position.
+Warning: Variants '4:106192101:C:T' and '4:106192101:C:A' have the same
+position.
+Warning: Variants '4:106520877:T:G' and '4:106520877:T:C' have the same
+position.
+Warning: Variants '4:106537245:G:C' and '4:106537245:G:A' have the same
+position.
+Warning: Variants '4:107055206:T:G' and '4:107055206:T:A' have the same
+position.
+Warning: Variants '4:107932953:G:C' and '4:107932953:G:A' have the same
+position.
+Warning: Variants '4:109603744:C:G' and '4:109603744:C:A' have the same
+position.
+Warning: Variants '4:110424211:G:T' and '4:110424211:G:C' have the same
+position.
+Warning: Variants '4:110764892:C:T' and '4:110764892:C:A' have the same
+position.
+Warning: Variants '4:114367376:G:T' and '4:114367376:G:A' have the same
+position.
+Warning: Variants '4:115679584:T:C' and '4:115679584:T:A' have the same
+position.
+Warning: Variants '4:116024738:A:G' and '4:116024738:A:C' have the same
+position.
+Warning: Variants '4:116389490:G:T' and '4:116389490:G:A' have the same
+position.
+Warning: Variants '4:116406049:C:T' and '4:116406049:C:G' have the same
+position.
+Warning: Variants '4:116910196:G:T' and '4:116910196:G:C' have the same
+position.
+Warning: Variants '4:117861556:G:C' and '4:117861556:G:A' have the same
+position.
+Warning: Variants '4:118719758:C:T' and '4:118719758:C:A' have the same
+position.
+Warning: Variants '4:120806841:T:G' and '4:120806841:T:A' have the same
+position.
+Warning: Variants '4:123460449:G:C' and '4:123460449:G:A' have the same
+position.
+Warning: Variants '4:125851933:G:T' and '4:125851933:G:A' have the same
+position.
+Warning: Variants '4:126109439:G:T' and '4:126109439:G:A' have the same
+position.
+Warning: Variants '4:126329551:C:T' and '4:126329551:C:G' have the same
+position.
+Warning: Variants '4:126623460:C:T' and '4:126623460:C:G' have the same
+position.
+Warning: Variants '4:127020444:T:G' and '4:127020444:T:C' have the same
+position.
+Warning: Variants '4:128288295:C:T' and '4:128288295:C:A' have the same
+position.
+Warning: Variants '4:131868333:A:T' and '4:131868333:A:G' have the same
+position.
+Warning: Variants '4:133438231:G:C' and '4:133438231:G:A' have the same
+position.
+Warning: Variants '4:133444392:G:T' and '4:133444392:G:C' have the same
+position.
+Warning: Variants '4:133684239:G:T' and '4:133684239:G:A' have the same
+position.
+Warning: Variants '4:134528697:T:G' and '4:134528697:T:A' have the same
+position.
+Warning: Variants '4:135087839:A:T' and '4:135087839:A:G' have the same
+position.
+Warning: Variants '4:135209935:G:T' and '4:135209935:G:C' have the same
+position.
+Warning: Variants '4:135857474:G:T' and '4:135857474:G:A' have the same
+position.
+Warning: Variants '4:137827097:T:C' and '4:137827097:T:A' have the same
+position.
+Warning: Variants '4:138810682:A:G' and '4:138810682:A:C' have the same
+position.
+Warning: Variants '4:139023341:C:T' and '4:139023341:C:G' have the same
+position.
+Warning: Variants '4:139833117:C:T' and '4:139833117:C:G' have the same
+position.
+Warning: Variants '4:140918987:C:T' and '4:140918987:C:G' have the same
+position.
+Warning: Variants '4:141529774:G:C' and '4:141529774:G:A' have the same
+position.
+Warning: Variants '4:142246703:C:T' and '4:142246703:C:G' have the same
+position.
+Warning: Variants '4:143293976:G:C' and '4:143293976:G:A' have the same
+position.
+Warning: Variants '4:143660800:G:C' and '4:143660800:G:A' have the same
+position.
+Warning: Variants '4:145410684:A:G' and '4:145410684:A:C' have the same
+position.
+Warning: Variants '4:146769086:C:T' and '4:146769086:C:A' have the same
+position.
+Warning: Variants '4:149172654:G:T' and '4:149172654:G:C' have the same
+position.
+Warning: Variants '4:149399545:G:T' and '4:149399545:G:C' have the same
+position.
+Warning: Variants '4:149848476:A:G' and '4:149848476:A:C' have the same
+position.
+Warning: Variants '4:149888534:G:C' and '4:149888534:G:A' have the same
+position.
+Warning: Variants '4:149920079:C:T' and '4:149920079:C:A' have the same
+position.
+Warning: Variants '4:150158611:C:T' and '4:150158611:C:G' have the same
+position.
+Warning: Variants '4:151564103:A:T' and '4:151564103:A:C' have the same
+position.
+Warning: Variants '4:151685529:G:T' and '4:151685529:G:A' have the same
+position.
+Warning: Variants '4:152606805:C:T' and '4:152606805:C:G' have the same
+position.
+Warning: Variants '4:153556127:G:T' and '4:153556127:G:A' have the same
+position.
+Warning: Variants '4:153595411:G:T' and '4:153595411:G:A' have the same
+position.
+Warning: Variants '4:154307521:G:C' and '4:154307521:G:A' have the same
+position.
+Warning: Variants '4:154581531:C:T' and '4:154581531:C:A' have the same
+position.
+Warning: Variants '4:155466213:C:T' and '4:155466213:C:G' have the same
+position.
+Warning: Variants '4:156029897:G:C' and '4:156029897:G:A' have the same
+position.
+Warning: Variants '4:156339023:G:T' and '4:156339023:G:A' have the same
+position.
+Warning: Variants '4:156467397:G:C' and '4:156467397:G:A' have the same
+position.
+Warning: Variants '4:157252886:A:G' and '4:157252886:A:C' have the same
+position.
+Warning: Variants '4:157382119:G:C' and '4:157382119:G:A' have the same
+position.
+Warning: Variants '4:157644097:G:C' and '4:157644097:G:A' have the same
+position.
+Warning: Variants '4:161119624:C:T' and '4:161119624:C:A' have the same
+position.
+Warning: Variants '4:162857415:C:T' and '4:162857415:C:G' have the same
+position.
+Warning: Variants '4:163547215:G:T' and '4:163547215:G:A' have the same
+position.
+Warning: Variants '4:163658396:A:G' and '4:163658396:A:C' have the same
+position.
+Warning: Variants '4:164101170:G:T' and '4:164101170:G:A' have the same
+position.
+Warning: Variants '4:165981161:C:T' and '4:165981161:C:G' have the same
+position.
+Warning: Variants '4:167281839:C:T' and '4:167281839:C:A' have the same
+position.
+Warning: Variants '4:170395377:C:G' and '4:170395377:C:A' have the same
+position.
+Warning: Variants '4:171635096:T:C' and '4:171635096:T:A' have the same
+position.
+Warning: Variants '4:172482196:G:C' and '4:172482196:G:A' have the same
+position.
+Warning: Variants '4:174586701:C:T' and '4:174586701:C:G' have the same
+position.
+Warning: Variants '4:174604775:G:T' and '4:174604775:G:A' have the same
+position.
+Warning: Variants '4:175461585:G:C' and '4:175461585:G:A' have the same
+position.
+Warning: Variants '4:177692435:G:T' and '4:177692435:G:A' have the same
+position.
+Warning: Variants '4:177741860:G:C' and '4:177741860:G:A' have the same
+position.
+Warning: Variants '4:177958899:C:T' and '4:177958899:C:A' have the same
+position.
+Warning: Variants '4:178514387:G:T' and '4:178514387:G:A' have the same
+position.
+Warning: Variants '4:178639842:G:T' and '4:178639842:G:A' have the same
+position.
+Warning: Variants '4:179107947:G:T' and '4:179107947:G:A' have the same
+position.
+Warning: Variants '4:179988791:C:T' and '4:179988791:C:A' have the same
+position.
+Warning: Variants '4:180158733:C:T' and '4:180158733:C:A' have the same
+position.
+Warning: Variants '4:180944566:C:T' and '4:180944566:C:A' have the same
+position.
+Warning: Variants '4:181413969:G:T' and '4:181413969:G:A' have the same
+position.
+Warning: Variants '4:182615763:A:T' and '4:182615763:A:C' have the same
+position.
+Warning: Variants '4:183593094:G:C' and '4:183593094:G:A' have the same
+position.
+Warning: Variants '4:183745854:G:C' and '4:183745854:G:A' have the same
+position.
+Warning: Variants '4:183766959:C:T' and '4:183766959:C:G' have the same
+position.
+Warning: Variants '4:184096773:C:T' and '4:184096773:C:A' have the same
+position.
+Warning: Variants '4:184160955:T:C' and '4:184160955:T:A' have the same
+position.
+Warning: Variants '4:184494705:G:T' and '4:184494705:G:A' have the same
+position.
+Warning: Variants '4:184827861:G:T' and '4:184827861:G:A' have the same
+position.
+Warning: Variants '4:185429854:G:C' and '4:185429854:G:A' have the same
+position.
+Warning: Variants '4:185894044:G:T' and '4:185894044:G:C' have the same
+position.
+Warning: Variants '4:185987085:G:T' and '4:185987085:G:A' have the same
+position.
+Warning: Variants '4:186324440:G:C' and '4:186324440:G:A' have the same
+position.
+Warning: Variants '4:186865943:C:G' and '4:186865943:C:A' have the same
+position.
+Warning: Variants '4:187083693:G:T' and '4:187083693:G:A' have the same
+position.
+Warning: Variants '4:187594280:C:T' and '4:187594280:C:G' have the same
+position.
+Warning: Variants '4:188413122:G:C' and '4:188413122:G:A' have the same
+position.
+Warning: Variants '4:188421742:A:T' and '4:188421742:A:G' have the same
+position.
+Warning: Variants '4:188636928:A:T' and '4:188636928:A:G' have the same
+position.
+Warning: Variants '4:188807593:C:T' and '4:188807593:C:A' have the same
+position.
+Warning: Variants '4:189023705:G:T' and '4:189023705:G:A' have the same
+position.
+Warning: Variants '4:189239054:A:G' and '4:189239054:A:C' have the same
+position.
+Warning: Variants '4:189406886:G:T' and '4:189406886:G:A' have the same
+position.
+Warning: Variants '4:189640541:A:T' and '4:189640541:A:C' have the same
+position.
+Warning: Variants '4:189703724:T:G' and '4:189703724:T:C' have the same
+position.
+Warning: Variants '4:189729367:C:T' and '4:189729367:C:G' have the same
+position.
+Warning: Variants '4:189953739:G:T' and '4:189953739:G:A' have the same
+position.
+Warning: Variants '4:189986715:C:T' and '4:189986715:C:A' have the same
+position.
+Performing single-pass merge (1747 people, 1703601 variants).
+Merged fileset written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr4-merge.bed +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr4-merge.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr4-merge.fam .
+1703601 variants loaded from .bim file.
+1747 people (0 males, 0 females, 1747 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr4.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 1747 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.594579.
+1703601 variants and 1747 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr4.bed +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr4.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr4.fam ... done.
+
+End time: Mon Apr 11 22:00:06 2022

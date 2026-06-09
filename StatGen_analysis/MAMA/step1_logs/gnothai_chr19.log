@@ -1,0 +1,188 @@
+PLINK v1.90b6.21 64-bit (19 Oct 2020)
+Options in effect:
+  --keep-allele-order
+  --make-bed
+  --merge-list /broad/sankaranlab/lcato/hbf/MAMA4/mergelists/merge_chr19
+  --out /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr19
+
+Hostname: uger-r7-c011.broadinstitute.org
+Working directory: /broad/sankaranlab/lcato/hbf/MAMA4
+Start time: Mon Apr 11 22:01:13 2022
+
+Random number seed: 1649714473
+386012 MB RAM detected; reserving 193006 MB for main workspace.
+Warning: Variants '19:422625:G:C' and '19:422625:G:A' have the same position.
+Warning: Variants '19:776398:C:T' and '19:776398:C:G' have the same position.
+Warning: Variants '19:792963:C:T' and '19:792963:C:G' have the same position.
+Warning: Variants '19:806107:C:T' and '19:806107:C:A' have the same position.
+Warning: Variants '19:1480378:T:G' and '19:1480378:T:C' have the same position.
+Warning: Variants '19:1710013:C:T' and '19:1710013:C:G' have the same position.
+Warning: Variants '19:2492082:C:T' and '19:2492082:C:G' have the same position.
+Warning: Variants '19:2605881:G:T' and '19:2605881:G:A' have the same position.
+Warning: Variants '19:2697484:G:T' and '19:2697484:G:A' have the same position.
+Warning: Variants '19:3440871:G:T' and '19:3440871:G:A' have the same position.
+Warning: Variants '19:3617497:C:T' and '19:3617497:C:A' have the same position.
+Warning: Variants '19:4556039:C:G' and '19:4556039:C:A' have the same position.
+Warning: Variants '19:4643010:G:T' and '19:4643010:G:C' have the same position.
+Warning: Variants '19:5853467:C:T' and '19:5853467:C:A' have the same position.
+Warning: Variants '19:6245477:G:C' and '19:6245477:G:A' have the same position.
+Warning: Variants '19:6333429:C:T' and '19:6333429:C:A' have the same position.
+Warning: Variants '19:6339003:G:T' and '19:6339003:G:A' have the same position.
+Warning: Variants '19:6341732:G:T' and '19:6341732:G:A' have the same position.
+Warning: Variants '19:7554761:G:C' and '19:7554761:G:A' have the same position.
+Warning: Variants '19:9059950:G:C' and '19:9059950:G:A' have the same position.
+Warning: Variants '19:9634515:C:T' and '19:9634515:C:A' have the same position.
+Warning: Variants '19:10511892:T:G' and '19:10511892:T:A' have the same
+position.
+Warning: Variants '19:11173400:C:T' and '19:11173400:C:G' have the same
+position.
+Warning: Variants '19:11231004:G:C' and '19:11231004:G:A' have the same
+position.
+Warning: Variants '19:11659284:A:T' and '19:11659284:A:G' have the same
+position.
+Warning: Variants '19:13338172:A:G' and '19:13338172:A:C' have the same
+position.
+Warning: Variants '19:14271465:G:T' and '19:14271465:G:A' have the same
+position.
+Warning: Variants '19:14712618:G:T' and '19:14712618:G:C' have the same
+position.
+Warning: Variants '19:15036758:G:T' and '19:15036758:G:A' have the same
+position.
+Warning: Variants '19:15607718:G:C' and '19:15607718:G:A' have the same
+position.
+Warning: Variants '19:18928060:G:T' and '19:18928060:G:A' have the same
+position.
+Warning: Variants '19:18945243:T:G' and '19:18945243:T:C' have the same
+position.
+Warning: Variants '19:19943147:G:T' and '19:19943147:G:A' have the same
+position.
+Warning: Variants '19:20083161:C:T' and '19:20083161:C:G' have the same
+position.
+Warning: Variants '19:20096226:G:T' and '19:20096226:G:A' have the same
+position.
+Warning: Variants '19:20170510:T:C' and '19:20170510:T:A' have the same
+position.
+Warning: Variants '19:21510870:T:G' and '19:21510870:T:A' have the same
+position.
+Warning: Variants '19:22524264:T:G' and '19:22524264:T:C' have the same
+position.
+Warning: Variants '19:22673753:G:T' and '19:22673753:G:A' have the same
+position.
+Warning: Variants '19:22737659:C:T' and '19:22737659:C:A' have the same
+position.
+Warning: Variants '19:23564432:C:T' and '19:23564432:C:A' have the same
+position.
+Warning: Variants '19:23724309:C:T' and '19:23724309:C:G' have the same
+position.
+Warning: Variants '19:23971179:C:T' and '19:23971179:C:A' have the same
+position.
+Warning: Variants '19:24310085:G:C' and '19:24310085:G:A' have the same
+position.
+Warning: Variants '19:27373241:G:C' and '19:27373241:G:A' have the same
+position.
+Warning: Variants '19:28221297:A:T' and '19:28221297:A:G' have the same
+position.
+Warning: Variants '19:28485205:C:T' and '19:28485205:C:G' have the same
+position.
+Warning: Variants '19:29022851:G:T' and '19:29022851:G:A' have the same
+position.
+Warning: Variants '19:29501192:G:C' and '19:29501192:G:A' have the same
+position.
+Warning: Variants '19:29711776:C:T' and '19:29711776:C:A' have the same
+position.
+Warning: Variants '19:29757867:C:T' and '19:29757867:C:G' have the same
+position.
+Warning: Variants '19:29951410:A:G' and '19:29951410:A:C' have the same
+position.
+Warning: Variants '19:31223749:G:T' and '19:31223749:G:C' have the same
+position.
+Warning: Variants '19:31991980:T:G' and '19:31991980:T:C' have the same
+position.
+Warning: Variants '19:33872017:G:T' and '19:33872017:G:A' have the same
+position.
+Warning: Variants '19:34092299:A:T' and '19:34092299:A:C' have the same
+position.
+Warning: Variants '19:34630355:A:T' and '19:34630355:A:G' have the same
+position.
+Warning: Variants '19:35448842:C:T' and '19:35448842:C:G' have the same
+position.
+Warning: Variants '19:36807031:T:C' and '19:36807031:T:A' have the same
+position.
+Warning: Variants '19:37540031:C:T' and '19:37540031:C:A' have the same
+position.
+Warning: Variants '19:38608094:G:T' and '19:38608094:G:A' have the same
+position.
+Warning: Variants '19:39539919:G:C' and '19:39539919:G:A' have the same
+position.
+Warning: Variants '19:39635031:A:G' and '19:39635031:A:C' have the same
+position.
+Warning: Variants '19:41307108:C:T' and '19:41307108:C:G' have the same
+position.
+Warning: Variants '19:42755233:T:C' and '19:42755233:T:A' have the same
+position.
+Warning: Variants '19:42919455:C:G' and '19:42919455:C:A' have the same
+position.
+Warning: Variants '19:43152147:G:T' and '19:43152147:G:A' have the same
+position.
+Warning: Variants '19:44650057:G:T' and '19:44650057:G:A' have the same
+position.
+Warning: Variants '19:47421064:G:T' and '19:47421064:G:A' have the same
+position.
+Warning: Variants '19:49053656:C:T' and '19:49053656:C:A' have the same
+position.
+Warning: Variants '19:49169837:C:T' and '19:49169837:C:G' have the same
+position.
+Warning: Variants '19:49243842:G:T' and '19:49243842:G:A' have the same
+position.
+Warning: Variants '19:49730877:T:C' and '19:49730877:T:A' have the same
+position.
+Warning: Variants '19:51664161:C:T' and '19:51664161:C:G' have the same
+position.
+Warning: Variants '19:52554672:C:T' and '19:52554672:C:A' have the same
+position.
+Warning: Variants '19:52561355:T:C' and '19:52561355:T:A' have the same
+position.
+Warning: Variants '19:52746725:C:T' and '19:52746725:C:G' have the same
+position.
+Warning: Variants '19:53184736:G:C' and '19:53184736:G:A' have the same
+position.
+Warning: Variants '19:53495808:A:G' and '19:53495808:A:C' have the same
+position.
+Warning: Variants '19:53507322:T:C' and '19:53507322:T:A' have the same
+position.
+Warning: Variants '19:54295370:T:C' and '19:54295370:T:A' have the same
+position.
+Warning: Variants '19:55122950:G:T' and '19:55122950:G:A' have the same
+position.
+Warning: Variants '19:55649755:G:T' and '19:55649755:G:A' have the same
+position.
+Warning: Variants '19:55889978:C:T' and '19:55889978:C:G' have the same
+position.
+Warning: Variants '19:55934874:G:C' and '19:55934874:G:A' have the same
+position.
+Warning: Variants '19:56086177:C:T' and '19:56086177:C:G' have the same
+position.
+Warning: Variants '19:56309775:C:T' and '19:56309775:C:G' have the same
+position.
+Warning: Variants '19:56756475:G:T' and '19:56756475:G:A' have the same
+position.
+Performing single-pass merge (1748 people, 530035 variants).
+Merged fileset written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr19-merge.bed +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr19-merge.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr19-merge.fam .
+530035 variants loaded from .bim file.
+1748 people (0 males, 0 females, 1748 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr19.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 1748 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.58232.
+530035 variants and 1748 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr19.bed
++ /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr19.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr19.fam ... done.
+
+End time: Mon Apr 11 22:01:20 2022

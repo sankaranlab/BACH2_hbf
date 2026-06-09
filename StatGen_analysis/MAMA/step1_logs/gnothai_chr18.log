@@ -1,0 +1,203 @@
+PLINK v1.90b6.21 64-bit (19 Oct 2020)
+Options in effect:
+  --keep-allele-order
+  --make-bed
+  --merge-list /broad/sankaranlab/lcato/hbf/MAMA4/mergelists/merge_chr18
+  --out /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr18
+
+Hostname: ugertmp-c024.broadinstitute.org
+Working directory: /broad/sankaranlab/lcato/hbf/MAMA4
+Start time: Mon Apr 11 22:01:01 2022
+
+Random number seed: 1649714461
+515437 MB RAM detected; reserving 257718 MB for main workspace.
+Warning: Variants '18:127817:C:G' and '18:127817:C:A' have the same position.
+Warning: Variants '18:173313:A:G' and '18:173313:A:C' have the same position.
+Warning: Variants '18:406240:T:G' and '18:406240:T:C' have the same position.
+Warning: Variants '18:1277760:A:T' and '18:1277760:A:G' have the same position.
+Warning: Variants '18:2023812:A:G' and '18:2023812:A:C' have the same position.
+Warning: Variants '18:2416874:T:G' and '18:2416874:T:C' have the same position.
+Warning: Variants '18:2434504:T:G' and '18:2434504:T:C' have the same position.
+Warning: Variants '18:2899284:G:T' and '18:2899284:G:A' have the same position.
+Warning: Variants '18:3496667:G:C' and '18:3496667:G:A' have the same position.
+Warning: Variants '18:3576096:C:T' and '18:3576096:C:A' have the same position.
+Warning: Variants '18:5608338:G:C' and '18:5608338:G:A' have the same position.
+Warning: Variants '18:6837809:G:T' and '18:6837809:G:A' have the same position.
+Warning: Variants '18:7085640:G:T' and '18:7085640:G:A' have the same position.
+Warning: Variants '18:9475250:G:T' and '18:9475250:G:A' have the same position.
+Warning: Variants '18:9597544:G:T' and '18:9597544:G:A' have the same position.
+Warning: Variants '18:9707105:T:C' and '18:9707105:T:A' have the same position.
+Warning: Variants '18:11492622:C:T' and '18:11492622:C:A' have the same
+position.
+Warning: Variants '18:12396763:T:G' and '18:12396763:T:A' have the same
+position.
+Warning: Variants '18:12582758:C:T' and '18:12582758:C:A' have the same
+position.
+Warning: Variants '18:12883715:G:C' and '18:12883715:G:A' have the same
+position.
+Warning: Variants '18:13539625:T:C' and '18:13539625:T:A' have the same
+position.
+Warning: Variants '18:13597409:T:C' and '18:13597409:T:A' have the same
+position.
+Warning: Variants '18:14221721:C:T' and '18:14221721:C:A' have the same
+position.
+Warning: Variants '18:14342775:G:T' and '18:14342775:G:A' have the same
+position.
+Warning: Variants '18:14792924:C:T' and '18:14792924:C:A' have the same
+position.
+Warning: Variants '18:15074151:G:T' and '18:15074151:G:A' have the same
+position.
+Warning: Variants '18:15369115:G:T' and '18:15369115:G:C' have the same
+position.
+Warning: Variants '18:21735688:G:T' and '18:21735688:G:A' have the same
+position.
+Warning: Variants '18:23128106:C:T' and '18:23128106:C:A' have the same
+position.
+Warning: Variants '18:23156150:G:T' and '18:23156150:G:C' have the same
+position.
+Warning: Variants '18:23205928:C:T' and '18:23205928:C:G' have the same
+position.
+Warning: Variants '18:25133439:G:C' and '18:25133439:G:A' have the same
+position.
+Warning: Variants '18:25393949:G:T' and '18:25393949:G:A' have the same
+position.
+Warning: Variants '18:25874901:T:C' and '18:25874901:T:A' have the same
+position.
+Warning: Variants '18:26032017:C:T' and '18:26032017:C:A' have the same
+position.
+Warning: Variants '18:29318747:G:C' and '18:29318747:G:A' have the same
+position.
+Warning: Variants '18:29431036:C:T' and '18:29431036:C:A' have the same
+position.
+Warning: Variants '18:29591946:G:T' and '18:29591946:G:A' have the same
+position.
+Warning: Variants '18:31007523:G:T' and '18:31007523:G:A' have the same
+position.
+Warning: Variants '18:31846019:C:T' and '18:31846019:C:A' have the same
+position.
+Warning: Variants '18:33820656:G:T' and '18:33820656:G:A' have the same
+position.
+Warning: Variants '18:35902778:A:G' and '18:35902778:A:C' have the same
+position.
+Warning: Variants '18:36316597:G:T' and '18:36316597:G:A' have the same
+position.
+Warning: Variants '18:37039357:T:C' and '18:37039357:T:A' have the same
+position.
+Warning: Variants '18:37829291:C:T' and '18:37829291:C:G' have the same
+position.
+Warning: Variants '18:40256308:G:T' and '18:40256308:G:A' have the same
+position.
+Warning: Variants '18:41332874:G:C' and '18:41332874:G:A' have the same
+position.
+Warning: Variants '18:42631884:A:G' and '18:42631884:A:C' have the same
+position.
+Warning: Variants '18:42664241:C:G' and '18:42664241:C:A' have the same
+position.
+Warning: Variants '18:43872244:G:T' and '18:43872244:G:C' have the same
+position.
+Warning: Variants '18:45838753:A:G' and '18:45838753:A:C' have the same
+position.
+Warning: Variants '18:47960902:C:T' and '18:47960902:C:G' have the same
+position.
+Warning: Variants '18:48166897:C:T' and '18:48166897:C:A' have the same
+position.
+Warning: Variants '18:48761996:T:C' and '18:48761996:T:A' have the same
+position.
+Warning: Variants '18:49797233:C:T' and '18:49797233:C:A' have the same
+position.
+Warning: Variants '18:50137976:T:G' and '18:50137976:T:C' have the same
+position.
+Warning: Variants '18:50592435:T:G' and '18:50592435:T:A' have the same
+position.
+Warning: Variants '18:50868380:G:C' and '18:50868380:G:A' have the same
+position.
+Warning: Variants '18:50914474:G:T' and '18:50914474:G:A' have the same
+position.
+Warning: Variants '18:51613243:C:T' and '18:51613243:C:G' have the same
+position.
+Warning: Variants '18:52716169:C:T' and '18:52716169:C:G' have the same
+position.
+Warning: Variants '18:53978386:G:T' and '18:53978386:G:A' have the same
+position.
+Warning: Variants '18:54202081:G:C' and '18:54202081:G:A' have the same
+position.
+Warning: Variants '18:54905475:T:G' and '18:54905475:T:A' have the same
+position.
+Warning: Variants '18:57104590:A:T' and '18:57104590:A:G' have the same
+position.
+Warning: Variants '18:57292425:G:T' and '18:57292425:G:A' have the same
+position.
+Warning: Variants '18:57447376:T:G' and '18:57447376:T:C' have the same
+position.
+Warning: Variants '18:58749806:T:G' and '18:58749806:T:C' have the same
+position.
+Warning: Variants '18:60799041:C:T' and '18:60799041:C:A' have the same
+position.
+Warning: Variants '18:61211021:G:T' and '18:61211021:G:A' have the same
+position.
+Warning: Variants '18:62143089:G:C' and '18:62143089:G:A' have the same
+position.
+Warning: Variants '18:63462909:G:C' and '18:63462909:G:A' have the same
+position.
+Warning: Variants '18:64847862:T:C' and '18:64847862:T:A' have the same
+position.
+Warning: Variants '18:65229213:C:T' and '18:65229213:C:G' have the same
+position.
+Warning: Variants '18:65467778:G:C' and '18:65467778:G:A' have the same
+position.
+Warning: Variants '18:66446821:A:G' and '18:66446821:A:C' have the same
+position.
+Warning: Variants '18:68023828:G:T' and '18:68023828:G:A' have the same
+position.
+Warning: Variants '18:68247021:C:T' and '18:68247021:C:A' have the same
+position.
+Warning: Variants '18:69328982:C:T' and '18:69328982:C:G' have the same
+position.
+Warning: Variants '18:72352043:C:T' and '18:72352043:C:A' have the same
+position.
+Warning: Variants '18:72853569:C:T' and '18:72853569:C:G' have the same
+position.
+Warning: Variants '18:73434314:C:T' and '18:73434314:C:A' have the same
+position.
+Warning: Variants '18:75083743:C:T' and '18:75083743:C:A' have the same
+position.
+Warning: Variants '18:75241304:A:G' and '18:75241304:A:C' have the same
+position.
+Warning: Variants '18:75245989:G:T' and '18:75245989:G:C' have the same
+position.
+Warning: Variants '18:75794660:C:T' and '18:75794660:C:G' have the same
+position.
+Warning: Variants '18:75936567:G:C' and '18:75936567:G:A' have the same
+position.
+Warning: Variants '18:76380940:G:C' and '18:76380940:G:A' have the same
+position.
+Warning: Variants '18:77227048:C:T' and '18:77227048:C:G' have the same
+position.
+Warning: Variants '18:78335085:C:G' and '18:78335085:C:A' have the same
+position.
+Warning: Variants '18:78374004:C:G' and '18:78374004:C:A' have the same
+position.
+Warning: Variants '18:79201052:T:G' and '18:79201052:T:A' have the same
+position.
+Warning: Variants '18:79653729:C:T' and '18:79653729:C:G' have the same
+position.
+Performing single-pass merge (1726 people, 669522 variants).
+Merged fileset written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr18-merge.bed +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr18-merge.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr18-merge.fam .
+669522 variants loaded from .bim file.
+1726 people (0 males, 0 females, 1726 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr18.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 1726 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.594289.
+669522 variants and 1726 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr18.bed
++ /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr18.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr18.fam ... done.
+
+End time: Mon Apr 11 22:01:09 2022

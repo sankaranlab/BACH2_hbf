@@ -1,0 +1,1301 @@
+PLINK v1.90b6.21 64-bit (19 Oct 2020)
+Options in effect:
+  --keep-allele-order
+  --make-bed
+  --merge-list /broad/sankaranlab/lcato/hbf/MAMA4/mergelists/merge_chr21
+  --out /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr21
+
+Hostname: ugertmp-c011.broadinstitute.org
+Working directory: /broad/sankaranlab/lcato/hbf/MAMA4
+Start time: Mon Apr 11 22:01:13 2022
+
+Random number seed: 1649714473
+515437 MB RAM detected; reserving 257718 MB for main workspace.
+Warning: Variants '21:5297145:G:T' and '21:5297145:G:A' have the same position.
+Warning: Variants '21:5297299:C:T' and '21:5297299:C:G' have the same position.
+Warning: Variants '21:7234580:T:G' and '21:7234580:T:A' have the same position.
+Warning: Variants '21:7281063:C:T' and '21:7281063:C:A' have the same position.
+Warning: Variants '21:7306584:G:T' and '21:7306584:G:A' have the same position.
+Warning: Variants '21:7306712:C:T' and '21:7306712:C:A' have the same position.
+Warning: Variants '21:8683200:C:T' and '21:8683200:C:A' have the same position.
+Warning: Variants '21:8685474:G:T' and '21:8685474:G:A' have the same position.
+Warning: Variants '21:8686465:T:C' and '21:8686465:T:A' have the same position.
+Warning: Variants '21:8702991:G:C' and '21:8702991:G:A' have the same position.
+Warning: Variants '21:8771813:A:T' and '21:8771813:A:G' have the same position.
+Warning: Variants '21:8775088:T:G' and '21:8775088:T:A' have the same position.
+Warning: Variants '21:8788466:G:T' and '21:8788466:G:A' have the same position.
+Warning: Variants '21:9676045:G:T' and '21:9676045:G:A' have the same position.
+Warning: Variants '21:10044498:G:C' and '21:10044498:G:A' have the same
+position.
+Warning: Variants '21:10093428:G:T' and '21:10093428:G:A' have the same
+position.
+Warning: Variants '21:10106015:T:G' and '21:10106015:T:C' have the same
+position.
+Warning: Variants '21:10155595:G:T' and '21:10155595:G:C' have the same
+position.
+Warning: Variants '21:10414425:G:T' and '21:10414425:G:A' have the same
+position.
+Warning: Variants '21:10483871:C:T' and '21:10483871:C:G' have the same
+position.
+Warning: Variants '21:10533216:G:T' and '21:10533216:G:A' have the same
+position.
+Warning: Variants '21:10549252:T:C' and '21:10549252:T:A' have the same
+position.
+Warning: Variants '21:10653194:C:G' and '21:10653194:C:A' have the same
+position.
+Warning: Variants '21:12968473:C:T' and '21:12968473:C:A' have the same
+position.
+Warning: Variants '21:12993738:C:T' and '21:12993738:C:A' have the same
+position.
+Warning: Variants '21:13036286:C:T' and '21:13036286:C:G' have the same
+position.
+Warning: Variants '21:13313723:G:T' and '21:13313723:G:A' have the same
+position.
+Warning: Variants '21:13382305:T:G' and '21:13382305:T:C' have the same
+position.
+Warning: Variants '21:13403626:C:T' and '21:13403626:C:A' have the same
+position.
+Warning: Variants '21:13414991:C:T' and '21:13414991:C:A' have the same
+position.
+Warning: Variants '21:13455076:C:T' and '21:13455076:C:A' have the same
+position.
+Warning: Variants '21:13491286:T:G' and '21:13491286:T:A' have the same
+position.
+Warning: Variants '21:13495792:G:T' and '21:13495792:G:C' have the same
+position.
+Warning: Variants '21:13831715:G:C' and '21:13831715:G:A' have the same
+position.
+Warning: Variants '21:13833210:G:C' and '21:13833210:G:A' have the same
+position.
+Warning: Variants '21:13838797:C:T' and '21:13838797:C:G' have the same
+position.
+Warning: Variants '21:13867908:C:T' and '21:13867908:C:G' have the same
+position.
+Warning: Variants '21:13895473:C:T' and '21:13895473:C:A' have the same
+position.
+Warning: Variants '21:13983646:G:C' and '21:13983646:G:A' have the same
+position.
+Warning: Variants '21:13995484:G:T' and '21:13995484:G:C' have the same
+position.
+Warning: Variants '21:14015398:C:T' and '21:14015398:C:A' have the same
+position.
+Warning: Variants '21:14051307:G:T' and '21:14051307:G:A' have the same
+position.
+Warning: Variants '21:14058133:G:T' and '21:14058133:G:A' have the same
+position.
+Warning: Variants '21:14103819:G:T' and '21:14103819:G:A' have the same
+position.
+Warning: Variants '21:14135319:C:T' and '21:14135319:C:A' have the same
+position.
+Warning: Variants '21:14136012:C:T' and '21:14136012:C:G' have the same
+position.
+Warning: Variants '21:14172730:G:T' and '21:14172730:G:A' have the same
+position.
+Warning: Variants '21:14181085:G:T' and '21:14181085:G:A' have the same
+position.
+Warning: Variants '21:14183232:C:T' and '21:14183232:C:A' have the same
+position.
+Warning: Variants '21:14207685:T:C' and '21:14207685:T:A' have the same
+position.
+Warning: Variants '21:14236772:G:T' and '21:14236772:G:A' have the same
+position.
+Warning: Variants '21:14302632:G:T' and '21:14302632:G:A' have the same
+position.
+Warning: Variants '21:14303473:C:T' and '21:14303473:C:A' have the same
+position.
+Warning: Variants '21:14311676:T:C' and '21:14311676:T:A' have the same
+position.
+Warning: Variants '21:14366419:G:T' and '21:14366419:G:A' have the same
+position.
+Warning: Variants '21:14406823:G:T' and '21:14406823:G:C' have the same
+position.
+Warning: Variants '21:14427478:C:T' and '21:14427478:C:G' have the same
+position.
+Warning: Variants '21:14497506:C:T' and '21:14497506:C:A' have the same
+position.
+Warning: Variants '21:14510535:G:C' and '21:14510535:G:A' have the same
+position.
+Warning: Variants '21:14589892:C:T' and '21:14589892:C:A' have the same
+position.
+Warning: Variants '21:14613320:T:C' and '21:14613320:T:A' have the same
+position.
+Warning: Variants '21:14697706:T:G' and '21:14697706:T:C' have the same
+position.
+Warning: Variants '21:14742590:G:T' and '21:14742590:G:A' have the same
+position.
+Warning: Variants '21:14766650:G:T' and '21:14766650:G:A' have the same
+position.
+Warning: Variants '21:14805110:G:T' and '21:14805110:G:A' have the same
+position.
+Warning: Variants '21:14806341:G:T' and '21:14806341:G:A' have the same
+position.
+Warning: Variants '21:14917867:T:G' and '21:14917867:T:C' have the same
+position.
+Warning: Variants '21:15016130:C:T' and '21:15016130:C:G' have the same
+position.
+Warning: Variants '21:15037363:A:T' and '21:15037363:A:G' have the same
+position.
+Warning: Variants '21:15065766:C:T' and '21:15065766:C:G' have the same
+position.
+Warning: Variants '21:15114626:A:G' and '21:15114626:A:C' have the same
+position.
+Warning: Variants '21:15130143:C:T' and '21:15130143:C:A' have the same
+position.
+Warning: Variants '21:15152019:C:T' and '21:15152019:C:A' have the same
+position.
+Warning: Variants '21:15403960:G:C' and '21:15403960:G:A' have the same
+position.
+Warning: Variants '21:15422665:A:T' and '21:15422665:A:G' have the same
+position.
+Warning: Variants '21:15434507:C:T' and '21:15434507:C:A' have the same
+position.
+Warning: Variants '21:15507521:G:C' and '21:15507521:G:A' have the same
+position.
+Warning: Variants '21:15578282:C:T' and '21:15578282:C:G' have the same
+position.
+Warning: Variants '21:15635514:A:G' and '21:15635514:A:C' have the same
+position.
+Warning: Variants '21:15654712:G:T' and '21:15654712:G:A' have the same
+position.
+Warning: Variants '21:15697855:A:T' and '21:15697855:A:G' have the same
+position.
+Warning: Variants '21:15903478:G:T' and '21:15903478:G:A' have the same
+position.
+Warning: Variants '21:15957033:T:G' and '21:15957033:T:A' have the same
+position.
+Warning: Variants '21:16019269:G:T' and '21:16019269:G:A' have the same
+position.
+Warning: Variants '21:16076938:C:T' and '21:16076938:C:G' have the same
+position.
+Warning: Variants '21:16099353:C:T' and '21:16099353:C:G' have the same
+position.
+Warning: Variants '21:16249977:C:T' and '21:16249977:C:A' have the same
+position.
+Warning: Variants '21:16298012:C:T' and '21:16298012:C:G' have the same
+position.
+Warning: Variants '21:16378954:C:T' and '21:16378954:C:A' have the same
+position.
+Warning: Variants '21:16446108:G:T' and '21:16446108:G:A' have the same
+position.
+Warning: Variants '21:16477958:G:C' and '21:16477958:G:A' have the same
+position.
+Warning: Variants '21:16654712:T:C' and '21:16654712:T:A' have the same
+position.
+Warning: Variants '21:16695964:G:T' and '21:16695964:G:A' have the same
+position.
+Warning: Variants '21:16702876:A:G' and '21:16702876:A:C' have the same
+position.
+Warning: Variants '21:16724080:C:T' and '21:16724080:C:G' have the same
+position.
+Warning: Variants '21:16806738:C:T' and '21:16806738:C:G' have the same
+position.
+Warning: Variants '21:16813147:C:G' and '21:16813147:C:A' have the same
+position.
+Warning: Variants '21:16879927:G:C' and '21:16879927:G:A' have the same
+position.
+Warning: Variants '21:16880914:G:T' and '21:16880914:G:A' have the same
+position.
+Warning: Variants '21:16883324:G:T' and '21:16883324:G:C' have the same
+position.
+Warning: Variants '21:16886313:G:T' and '21:16886313:G:A' have the same
+position.
+Warning: Variants '21:16886936:C:T' and '21:16886936:C:G' have the same
+position.
+Warning: Variants '21:16887483:C:T' and '21:16887483:C:A' have the same
+position.
+Warning: Variants '21:16893925:T:C' and '21:16893925:T:A' have the same
+position.
+Warning: Variants '21:16907440:G:T' and '21:16907440:G:A' have the same
+position.
+Warning: Variants '21:16907863:T:G' and '21:16907863:T:C' have the same
+position.
+Warning: Variants '21:16914522:C:T' and '21:16914522:C:A' have the same
+position.
+Warning: Variants '21:16926451:C:T' and '21:16926451:C:A' have the same
+position.
+Warning: Variants '21:16932264:G:C' and '21:16932264:G:A' have the same
+position.
+Warning: Variants '21:17094201:C:T' and '21:17094201:C:G' have the same
+position.
+Warning: Variants '21:17095053:G:T' and '21:17095053:G:A' have the same
+position.
+Warning: Variants '21:17106466:T:G' and '21:17106466:T:A' have the same
+position.
+Warning: Variants '21:17110486:G:C' and '21:17110486:G:A' have the same
+position.
+Warning: Variants '21:17145164:G:C' and '21:17145164:G:A' have the same
+position.
+Warning: Variants '21:17153640:T:C' and '21:17153640:T:A' have the same
+position.
+Warning: Variants '21:17162119:C:T' and '21:17162119:C:A' have the same
+position.
+Warning: Variants '21:17168149:G:T' and '21:17168149:G:C' have the same
+position.
+Warning: Variants '21:17169931:C:T' and '21:17169931:C:A' have the same
+position.
+Warning: Variants '21:17229375:T:C' and '21:17229375:T:A' have the same
+position.
+Warning: Variants '21:17277721:C:T' and '21:17277721:C:A' have the same
+position.
+Warning: Variants '21:17303810:A:T' and '21:17303810:A:C' have the same
+position.
+Warning: Variants '21:17328971:C:T' and '21:17328971:C:A' have the same
+position.
+Warning: Variants '21:17360338:G:T' and '21:17360338:G:A' have the same
+position.
+Warning: Variants '21:17421877:C:T' and '21:17421877:C:A' have the same
+position.
+Warning: Variants '21:17513072:T:G' and '21:17513072:T:C' have the same
+position.
+Warning: Variants '21:17691504:C:T' and '21:17691504:C:G' have the same
+position.
+Warning: Variants '21:17735700:G:T' and '21:17735700:G:A' have the same
+position.
+Warning: Variants '21:17786559:G:T' and '21:17786559:G:A' have the same
+position.
+Warning: Variants '21:17832881:C:T' and '21:17832881:C:A' have the same
+position.
+Warning: Variants '21:17945106:G:T' and '21:17945106:G:C' have the same
+position.
+Warning: Variants '21:18068865:A:T' and '21:18068865:A:G' have the same
+position.
+Warning: Variants '21:18098318:G:T' and '21:18098318:G:A' have the same
+position.
+Warning: Variants '21:18100076:C:T' and '21:18100076:C:A' have the same
+position.
+Warning: Variants '21:18263324:T:G' and '21:18263324:T:C' have the same
+position.
+Warning: Variants '21:18318390:A:T' and '21:18318390:A:G' have the same
+position.
+Warning: Variants '21:18341504:C:T' and '21:18341504:C:A' have the same
+position.
+Warning: Variants '21:18375796:A:G' and '21:18375796:A:C' have the same
+position.
+Warning: Variants '21:18399725:C:T' and '21:18399725:C:G' have the same
+position.
+Warning: Variants '21:18510267:C:T' and '21:18510267:C:A' have the same
+position.
+Warning: Variants '21:18516137:C:T' and '21:18516137:C:A' have the same
+position.
+Warning: Variants '21:18604973:C:T' and '21:18604973:C:A' have the same
+position.
+Warning: Variants '21:18687265:A:T' and '21:18687265:A:G' have the same
+position.
+Warning: Variants '21:18732715:G:C' and '21:18732715:G:A' have the same
+position.
+Warning: Variants '21:18754676:A:T' and '21:18754676:A:G' have the same
+position.
+Warning: Variants '21:18770111:G:T' and '21:18770111:G:A' have the same
+position.
+Warning: Variants '21:18875028:C:T' and '21:18875028:C:A' have the same
+position.
+Warning: Variants '21:18909417:A:T' and '21:18909417:A:G' have the same
+position.
+Warning: Variants '21:19036878:C:T' and '21:19036878:C:A' have the same
+position.
+Warning: Variants '21:19086994:T:G' and '21:19086994:T:A' have the same
+position.
+Warning: Variants '21:19104889:G:T' and '21:19104889:G:A' have the same
+position.
+Warning: Variants '21:19175942:C:T' and '21:19175942:C:A' have the same
+position.
+Warning: Variants '21:19221400:C:T' and '21:19221400:C:A' have the same
+position.
+Warning: Variants '21:19281114:T:C' and '21:19281114:T:A' have the same
+position.
+Warning: Variants '21:19282064:C:T' and '21:19282064:C:A' have the same
+position.
+Warning: Variants '21:19321890:A:T' and '21:19321890:A:C' have the same
+position.
+Warning: Variants '21:19332165:T:G' and '21:19332165:T:A' have the same
+position.
+Warning: Variants '21:19345488:C:T' and '21:19345488:C:A' have the same
+position.
+Warning: Variants '21:19400175:G:C' and '21:19400175:G:A' have the same
+position.
+Warning: Variants '21:19444639:C:T' and '21:19444639:C:G' have the same
+position.
+Warning: Variants '21:19471937:T:G' and '21:19471937:T:C' have the same
+position.
+Warning: Variants '21:19564650:C:T' and '21:19564650:C:G' have the same
+position.
+Warning: Variants '21:19623470:G:T' and '21:19623470:G:A' have the same
+position.
+Warning: Variants '21:19733920:G:T' and '21:19733920:G:A' have the same
+position.
+Warning: Variants '21:19740915:T:C' and '21:19740915:T:A' have the same
+position.
+Warning: Variants '21:19755675:C:T' and '21:19755675:C:G' have the same
+position.
+Warning: Variants '21:19763702:G:T' and '21:19763702:G:C' have the same
+position.
+Warning: Variants '21:19782945:G:C' and '21:19782945:G:A' have the same
+position.
+Warning: Variants '21:19864719:C:G' and '21:19864719:C:A' have the same
+position.
+Warning: Variants '21:20061598:A:G' and '21:20061598:A:C' have the same
+position.
+Warning: Variants '21:20061746:C:T' and '21:20061746:C:A' have the same
+position.
+Warning: Variants '21:20064603:A:G' and '21:20064603:A:C' have the same
+position.
+Warning: Variants '21:20123123:C:G' and '21:20123123:C:A' have the same
+position.
+Warning: Variants '21:20154838:C:T' and '21:20154838:C:A' have the same
+position.
+Warning: Variants '21:20159777:A:T' and '21:20159777:A:C' have the same
+position.
+Warning: Variants '21:20359227:T:G' and '21:20359227:T:A' have the same
+position.
+Warning: Variants '21:20379459:T:G' and '21:20379459:T:A' have the same
+position.
+Warning: Variants '21:20392413:C:T' and '21:20392413:C:G' have the same
+position.
+Warning: Variants '21:20434554:G:T' and '21:20434554:G:A' have the same
+position.
+Warning: Variants '21:20446639:C:T' and '21:20446639:C:G' have the same
+position.
+Warning: Variants '21:20484390:G:T' and '21:20484390:G:A' have the same
+position.
+Warning: Variants '21:20503571:T:G' and '21:20503571:T:A' have the same
+position.
+Warning: Variants '21:20511730:C:G' and '21:20511730:C:A' have the same
+position.
+Warning: Variants '21:20733911:C:G' and '21:20733911:C:A' have the same
+position.
+Warning: Variants '21:20772460:G:T' and '21:20772460:G:A' have the same
+position.
+Warning: Variants '21:20837161:C:T' and '21:20837161:C:A' have the same
+position.
+Warning: Variants '21:20948028:C:T' and '21:20948028:C:A' have the same
+position.
+Warning: Variants '21:21050955:C:G' and '21:21050955:C:A' have the same
+position.
+Warning: Variants '21:21066273:C:T' and '21:21066273:C:G' have the same
+position.
+Warning: Variants '21:21080324:A:G' and '21:21080324:A:C' have the same
+position.
+Warning: Variants '21:21118332:C:T' and '21:21118332:C:G' have the same
+position.
+Warning: Variants '21:21143972:G:T' and '21:21143972:G:A' have the same
+position.
+Warning: Variants '21:21178332:C:T' and '21:21178332:C:A' have the same
+position.
+Warning: Variants '21:21257474:C:G' and '21:21257474:C:A' have the same
+position.
+Warning: Variants '21:21294579:G:T' and '21:21294579:G:A' have the same
+position.
+Warning: Variants '21:21388254:C:G' and '21:21388254:C:A' have the same
+position.
+Warning: Variants '21:21441200:T:C' and '21:21441200:T:A' have the same
+position.
+Warning: Variants '21:21449059:G:T' and '21:21449059:G:A' have the same
+position.
+Warning: Variants '21:21537802:T:G' and '21:21537802:T:A' have the same
+position.
+Warning: Variants '21:21654857:A:G' and '21:21654857:A:C' have the same
+position.
+Warning: Variants '21:21719312:C:G' and '21:21719312:C:A' have the same
+position.
+Warning: Variants '21:21817447:C:T' and '21:21817447:C:A' have the same
+position.
+Warning: Variants '21:21911064:G:C' and '21:21911064:G:A' have the same
+position.
+Warning: Variants '21:21966545:G:T' and '21:21966545:G:A' have the same
+position.
+Warning: Variants '21:22038418:C:G' and '21:22038418:C:A' have the same
+position.
+Warning: Variants '21:22135337:G:T' and '21:22135337:G:A' have the same
+position.
+Warning: Variants '21:22136027:C:T' and '21:22136027:C:A' have the same
+position.
+Warning: Variants '21:22219738:C:T' and '21:22219738:C:A' have the same
+position.
+Warning: Variants '21:22276049:C:T' and '21:22276049:C:G' have the same
+position.
+Warning: Variants '21:22330697:C:T' and '21:22330697:C:A' have the same
+position.
+Warning: Variants '21:22393816:A:T' and '21:22393816:A:C' have the same
+position.
+Warning: Variants '21:22463794:G:T' and '21:22463794:G:A' have the same
+position.
+Warning: Variants '21:22495385:T:G' and '21:22495385:T:A' have the same
+position.
+Warning: Variants '21:22568101:T:C' and '21:22568101:T:A' have the same
+position.
+Warning: Variants '21:22590508:C:T' and '21:22590508:C:A' have the same
+position.
+Warning: Variants '21:22623733:G:T' and '21:22623733:G:A' have the same
+position.
+Warning: Variants '21:22659039:C:T' and '21:22659039:C:A' have the same
+position.
+Warning: Variants '21:22663864:C:T' and '21:22663864:C:A' have the same
+position.
+Warning: Variants '21:22833396:A:G' and '21:22833396:A:C' have the same
+position.
+Warning: Variants '21:23009150:G:T' and '21:23009150:G:A' have the same
+position.
+Warning: Variants '21:23035429:G:T' and '21:23035429:G:A' have the same
+position.
+Warning: Variants '21:23066957:T:C' and '21:23066957:T:A' have the same
+position.
+Warning: Variants '21:23091768:G:C' and '21:23091768:G:A' have the same
+position.
+Warning: Variants '21:23178127:G:T' and '21:23178127:G:C' have the same
+position.
+Warning: Variants '21:23351985:G:T' and '21:23351985:G:A' have the same
+position.
+Warning: Variants '21:23355573:G:T' and '21:23355573:G:A' have the same
+position.
+Warning: Variants '21:23400688:C:T' and '21:23400688:C:A' have the same
+position.
+Warning: Variants '21:23446673:C:T' and '21:23446673:C:A' have the same
+position.
+Warning: Variants '21:23472478:G:C' and '21:23472478:G:A' have the same
+position.
+Warning: Variants '21:23531433:C:T' and '21:23531433:C:G' have the same
+position.
+Warning: Variants '21:23556113:C:T' and '21:23556113:C:G' have the same
+position.
+Warning: Variants '21:23637125:C:G' and '21:23637125:C:A' have the same
+position.
+Warning: Variants '21:23667706:C:T' and '21:23667706:C:A' have the same
+position.
+Warning: Variants '21:23682541:C:G' and '21:23682541:C:A' have the same
+position.
+Warning: Variants '21:23713115:T:G' and '21:23713115:T:C' have the same
+position.
+Warning: Variants '21:23787601:G:T' and '21:23787601:G:A' have the same
+position.
+Warning: Variants '21:23824193:C:T' and '21:23824193:C:A' have the same
+position.
+Warning: Variants '21:23845200:C:T' and '21:23845200:C:A' have the same
+position.
+Warning: Variants '21:23859071:C:G' and '21:23859071:C:A' have the same
+position.
+Warning: Variants '21:23870943:G:C' and '21:23870943:G:A' have the same
+position.
+Warning: Variants '21:23898705:C:T' and '21:23898705:C:G' have the same
+position.
+Warning: Variants '21:23927383:G:T' and '21:23927383:G:A' have the same
+position.
+Warning: Variants '21:24000638:C:T' and '21:24000638:C:A' have the same
+position.
+Warning: Variants '21:24002835:C:T' and '21:24002835:C:G' have the same
+position.
+Warning: Variants '21:24012486:G:T' and '21:24012486:G:A' have the same
+position.
+Warning: Variants '21:24038294:T:G' and '21:24038294:T:A' have the same
+position.
+Warning: Variants '21:24042236:G:C' and '21:24042236:G:A' have the same
+position.
+Warning: Variants '21:24051905:T:G' and '21:24051905:T:C' have the same
+position.
+Warning: Variants '21:24076985:C:T' and '21:24076985:C:A' have the same
+position.
+Warning: Variants '21:24112228:C:G' and '21:24112228:C:A' have the same
+position.
+Warning: Variants '21:24130153:C:T' and '21:24130153:C:A' have the same
+position.
+Warning: Variants '21:24223717:C:T' and '21:24223717:C:A' have the same
+position.
+Warning: Variants '21:24250800:C:T' and '21:24250800:C:A' have the same
+position.
+Warning: Variants '21:24290671:T:G' and '21:24290671:T:A' have the same
+position.
+Warning: Variants '21:24299250:G:C' and '21:24299250:G:A' have the same
+position.
+Warning: Variants '21:24316068:C:T' and '21:24316068:C:G' have the same
+position.
+Warning: Variants '21:24340787:C:T' and '21:24340787:C:A' have the same
+position.
+Warning: Variants '21:24407879:A:T' and '21:24407879:A:C' have the same
+position.
+Warning: Variants '21:24599738:T:G' and '21:24599738:T:A' have the same
+position.
+Warning: Variants '21:24687101:A:T' and '21:24687101:A:G' have the same
+position.
+Warning: Variants '21:24889537:G:C' and '21:24889537:G:A' have the same
+position.
+Warning: Variants '21:24892368:G:C' and '21:24892368:G:A' have the same
+position.
+Warning: Variants '21:25004375:G:T' and '21:25004375:G:C' have the same
+position.
+Warning: Variants '21:25056297:G:T' and '21:25056297:G:A' have the same
+position.
+Warning: Variants '21:25215780:G:T' and '21:25215780:G:C' have the same
+position.
+Warning: Variants '21:25244925:T:G' and '21:25244925:T:C' have the same
+position.
+Warning: Variants '21:25283699:C:T' and '21:25283699:C:G' have the same
+position.
+Warning: Variants '21:25401279:C:G' and '21:25401279:C:A' have the same
+position.
+Warning: Variants '21:25413717:T:G' and '21:25413717:T:A' have the same
+position.
+Warning: Variants '21:25451846:A:G' and '21:25451846:A:C' have the same
+position.
+Warning: Variants '21:25605286:A:G' and '21:25605286:A:C' have the same
+position.
+Warning: Variants '21:25606071:T:G' and '21:25606071:T:C' have the same
+position.
+Warning: Variants '21:25674724:G:C' and '21:25674724:G:A' have the same
+position.
+Warning: Variants '21:25695622:C:T' and '21:25695622:C:G' have the same
+position.
+Warning: Variants '21:25763003:G:T' and '21:25763003:G:A' have the same
+position.
+Warning: Variants '21:25897804:C:T' and '21:25897804:C:G' have the same
+position.
+Warning: Variants '21:26080326:G:T' and '21:26080326:G:A' have the same
+position.
+Warning: Variants '21:26241296:G:T' and '21:26241296:G:A' have the same
+position.
+Warning: Variants '21:26312474:G:C' and '21:26312474:G:A' have the same
+position.
+Warning: Variants '21:26353581:T:C' and '21:26353581:T:A' have the same
+position.
+Warning: Variants '21:26356634:C:T' and '21:26356634:C:A' have the same
+position.
+Warning: Variants '21:26397482:G:T' and '21:26397482:G:A' have the same
+position.
+Warning: Variants '21:26404500:G:T' and '21:26404500:G:A' have the same
+position.
+Warning: Variants '21:26444977:G:C' and '21:26444977:G:A' have the same
+position.
+Warning: Variants '21:26452005:C:T' and '21:26452005:C:A' have the same
+position.
+Warning: Variants '21:26459470:G:T' and '21:26459470:G:A' have the same
+position.
+Warning: Variants '21:26470321:G:T' and '21:26470321:G:A' have the same
+position.
+Warning: Variants '21:26690328:C:T' and '21:26690328:C:A' have the same
+position.
+Warning: Variants '21:26698496:A:T' and '21:26698496:A:G' have the same
+position.
+Warning: Variants '21:26723428:C:T' and '21:26723428:C:G' have the same
+position.
+Warning: Variants '21:26751745:C:T' and '21:26751745:C:G' have the same
+position.
+Warning: Variants '21:26836149:G:C' and '21:26836149:G:A' have the same
+position.
+Warning: Variants '21:26861045:C:T' and '21:26861045:C:G' have the same
+position.
+Warning: Variants '21:26861753:A:G' and '21:26861753:A:C' have the same
+position.
+Warning: Variants '21:27008224:G:T' and '21:27008224:G:A' have the same
+position.
+Warning: Variants '21:27040326:G:C' and '21:27040326:G:A' have the same
+position.
+Warning: Variants '21:27188416:C:T' and '21:27188416:C:A' have the same
+position.
+Warning: Variants '21:27189740:G:T' and '21:27189740:G:A' have the same
+position.
+Warning: Variants '21:27266789:C:T' and '21:27266789:C:G' have the same
+position.
+Warning: Variants '21:27394338:T:G' and '21:27394338:T:A' have the same
+position.
+Warning: Variants '21:27456398:G:C' and '21:27456398:G:A' have the same
+position.
+Warning: Variants '21:27478153:T:C' and '21:27478153:T:A' have the same
+position.
+Warning: Variants '21:27603594:G:C' and '21:27603594:G:A' have the same
+position.
+Warning: Variants '21:27649717:G:T' and '21:27649717:G:A' have the same
+position.
+Warning: Variants '21:27765263:A:G' and '21:27765263:A:C' have the same
+position.
+Warning: Variants '21:27877494:G:C' and '21:27877494:G:A' have the same
+position.
+Warning: Variants '21:28006967:A:T' and '21:28006967:A:C' have the same
+position.
+Warning: Variants '21:28040300:T:G' and '21:28040300:T:A' have the same
+position.
+Warning: Variants '21:28047793:C:T' and '21:28047793:C:A' have the same
+position.
+Warning: Variants '21:28071827:A:G' and '21:28071827:A:C' have the same
+position.
+Warning: Variants '21:28086485:G:T' and '21:28086485:G:A' have the same
+position.
+Warning: Variants '21:28087801:G:T' and '21:28087801:G:C' have the same
+position.
+Warning: Variants '21:28094646:G:C' and '21:28094646:G:A' have the same
+position.
+Warning: Variants '21:28162972:C:T' and '21:28162972:C:G' have the same
+position.
+Warning: Variants '21:28166664:C:T' and '21:28166664:C:A' have the same
+position.
+Warning: Variants '21:28182912:C:T' and '21:28182912:C:G' have the same
+position.
+Warning: Variants '21:28183552:C:T' and '21:28183552:C:G' have the same
+position.
+Warning: Variants '21:28368998:C:T' and '21:28368998:C:A' have the same
+position.
+Warning: Variants '21:28564478:G:C' and '21:28564478:G:A' have the same
+position.
+Warning: Variants '21:28659738:A:T' and '21:28659738:A:G' have the same
+position.
+Warning: Variants '21:28743329:A:G' and '21:28743329:A:C' have the same
+position.
+Warning: Variants '21:29003340:A:T' and '21:29003340:A:G' have the same
+position.
+Warning: Variants '21:29034734:T:C' and '21:29034734:T:A' have the same
+position.
+Warning: Variants '21:29071908:C:T' and '21:29071908:C:G' have the same
+position.
+Warning: Variants '21:29096994:G:T' and '21:29096994:G:A' have the same
+position.
+Warning: Variants '21:29190676:A:T' and '21:29190676:A:G' have the same
+position.
+Warning: Variants '21:29371902:C:T' and '21:29371902:C:A' have the same
+position.
+Warning: Variants '21:29449718:G:T' and '21:29449718:G:A' have the same
+position.
+Warning: Variants '21:29476400:C:T' and '21:29476400:C:A' have the same
+position.
+Warning: Variants '21:29495759:A:G' and '21:29495759:A:C' have the same
+position.
+Warning: Variants '21:29584013:A:T' and '21:29584013:A:G' have the same
+position.
+Warning: Variants '21:29629575:C:T' and '21:29629575:C:A' have the same
+position.
+Warning: Variants '21:29631783:A:T' and '21:29631783:A:C' have the same
+position.
+Warning: Variants '21:29632011:C:T' and '21:29632011:C:A' have the same
+position.
+Warning: Variants '21:29767113:C:T' and '21:29767113:C:A' have the same
+position.
+Warning: Variants '21:29780754:C:T' and '21:29780754:C:G' have the same
+position.
+Warning: Variants '21:29788408:G:C' and '21:29788408:G:A' have the same
+position.
+Warning: Variants '21:29838681:C:T' and '21:29838681:C:A' have the same
+position.
+Warning: Variants '21:29891291:G:T' and '21:29891291:G:A' have the same
+position.
+Warning: Variants '21:29946142:G:C' and '21:29946142:G:A' have the same
+position.
+Warning: Variants '21:29955766:A:G' and '21:29955766:A:C' have the same
+position.
+Warning: Variants '21:29968408:T:C' and '21:29968408:T:A' have the same
+position.
+Warning: Variants '21:30044753:C:T' and '21:30044753:C:A' have the same
+position.
+Warning: Variants '21:30136317:C:T' and '21:30136317:C:G' have the same
+position.
+Warning: Variants '21:30165158:T:G' and '21:30165158:T:C' have the same
+position.
+Warning: Variants '21:30179340:A:G' and '21:30179340:A:C' have the same
+position.
+Warning: Variants '21:30210706:A:T' and '21:30210706:A:C' have the same
+position.
+Warning: Variants '21:30230037:G:T' and '21:30230037:G:C' have the same
+position.
+Warning: Variants '21:30287124:C:T' and '21:30287124:C:A' have the same
+position.
+Warning: Variants '21:30318003:A:T' and '21:30318003:A:C' have the same
+position.
+Warning: Variants '21:30367127:A:T' and '21:30367127:A:G' have the same
+position.
+Warning: Variants '21:30487751:G:T' and '21:30487751:G:A' have the same
+position.
+Warning: Variants '21:30513208:G:T' and '21:30513208:G:C' have the same
+position.
+Warning: Variants '21:30522019:C:T' and '21:30522019:C:G' have the same
+position.
+Warning: Variants '21:30603578:C:T' and '21:30603578:C:A' have the same
+position.
+Warning: Variants '21:30687798:T:C' and '21:30687798:T:A' have the same
+position.
+Warning: Variants '21:30693507:G:T' and '21:30693507:G:A' have the same
+position.
+Warning: Variants '21:30760304:A:T' and '21:30760304:A:G' have the same
+position.
+Warning: Variants '21:30938662:T:C' and '21:30938662:T:A' have the same
+position.
+Warning: Variants '21:30941246:G:T' and '21:30941246:G:C' have the same
+position.
+Warning: Variants '21:31003648:G:T' and '21:31003648:G:A' have the same
+position.
+Warning: Variants '21:31010120:T:G' and '21:31010120:T:C' have the same
+position.
+Warning: Variants '21:31055159:C:T' and '21:31055159:C:A' have the same
+position.
+Warning: Variants '21:31065430:C:T' and '21:31065430:C:A' have the same
+position.
+Warning: Variants '21:31115418:C:T' and '21:31115418:C:A' have the same
+position.
+Warning: Variants '21:31123440:C:T' and '21:31123440:C:G' have the same
+position.
+Warning: Variants '21:31257290:G:C' and '21:31257290:G:A' have the same
+position.
+Warning: Variants '21:31370195:C:T' and '21:31370195:C:G' have the same
+position.
+Warning: Variants '21:31433662:G:C' and '21:31433662:G:A' have the same
+position.
+Warning: Variants '21:31445218:A:G' and '21:31445218:A:C' have the same
+position.
+Warning: Variants '21:31449598:G:C' and '21:31449598:G:A' have the same
+position.
+Warning: Variants '21:31610053:C:T' and '21:31610053:C:A' have the same
+position.
+Warning: Variants '21:31708290:C:T' and '21:31708290:C:A' have the same
+position.
+Warning: Variants '21:31837295:A:T' and '21:31837295:A:G' have the same
+position.
+Warning: Variants '21:31926177:C:T' and '21:31926177:C:A' have the same
+position.
+Warning: Variants '21:32054856:G:T' and '21:32054856:G:C' have the same
+position.
+Warning: Variants '21:32080962:C:T' and '21:32080962:C:A' have the same
+position.
+Warning: Variants '21:32126263:A:G' and '21:32126263:A:C' have the same
+position.
+Warning: Variants '21:32311418:C:T' and '21:32311418:C:G' have the same
+position.
+Warning: Variants '21:32369825:T:G' and '21:32369825:T:C' have the same
+position.
+Warning: Variants '21:32444557:T:C' and '21:32444557:T:A' have the same
+position.
+Warning: Variants '21:32472379:G:C' and '21:32472379:G:A' have the same
+position.
+Warning: Variants '21:32492642:G:C' and '21:32492642:G:A' have the same
+position.
+Warning: Variants '21:32545114:G:C' and '21:32545114:G:A' have the same
+position.
+Warning: Variants '21:32548961:C:T' and '21:32548961:C:G' have the same
+position.
+Warning: Variants '21:32622894:G:T' and '21:32622894:G:A' have the same
+position.
+Warning: Variants '21:32694520:A:G' and '21:32694520:A:C' have the same
+position.
+Warning: Variants '21:32789945:G:C' and '21:32789945:G:A' have the same
+position.
+Warning: Variants '21:32830557:C:T' and '21:32830557:C:G' have the same
+position.
+Warning: Variants '21:33021935:C:T' and '21:33021935:C:A' have the same
+position.
+Warning: Variants '21:33022899:C:G' and '21:33022899:C:A' have the same
+position.
+Warning: Variants '21:33030889:C:T' and '21:33030889:C:A' have the same
+position.
+Warning: Variants '21:33045165:C:T' and '21:33045165:C:A' have the same
+position.
+Warning: Variants '21:33068363:C:G' and '21:33068363:C:A' have the same
+position.
+Warning: Variants '21:33186621:C:T' and '21:33186621:C:G' have the same
+position.
+Warning: Variants '21:33305868:G:C' and '21:33305868:G:A' have the same
+position.
+Warning: Variants '21:33404135:T:G' and '21:33404135:T:A' have the same
+position.
+Warning: Variants '21:33408283:A:G' and '21:33408283:A:C' have the same
+position.
+Warning: Variants '21:33579702:A:G' and '21:33579702:A:C' have the same
+position.
+Warning: Variants '21:33774273:T:G' and '21:33774273:T:C' have the same
+position.
+Warning: Variants '21:33804593:G:T' and '21:33804593:G:A' have the same
+position.
+Warning: Variants '21:33911671:T:G' and '21:33911671:T:C' have the same
+position.
+Warning: Variants '21:33930845:G:T' and '21:33930845:G:A' have the same
+position.
+Warning: Variants '21:33931451:C:T' and '21:33931451:C:A' have the same
+position.
+Warning: Variants '21:34004128:C:T' and '21:34004128:C:A' have the same
+position.
+Warning: Variants '21:34040430:C:T' and '21:34040430:C:A' have the same
+position.
+Warning: Variants '21:34053166:T:G' and '21:34053166:T:A' have the same
+position.
+Warning: Variants '21:34308680:A:G' and '21:34308680:A:C' have the same
+position.
+Warning: Variants '21:34343774:G:C' and '21:34343774:G:A' have the same
+position.
+Warning: Variants '21:34343838:G:T' and '21:34343838:G:A' have the same
+position.
+Warning: Variants '21:34512545:G:T' and '21:34512545:G:C' have the same
+position.
+Warning: Variants '21:34547585:C:T' and '21:34547585:C:A' have the same
+position.
+Warning: Variants '21:34710123:A:T' and '21:34710123:A:G' have the same
+position.
+Warning: Variants '21:34980543:C:T' and '21:34980543:C:A' have the same
+position.
+Warning: Variants '21:35039987:C:T' and '21:35039987:C:A' have the same
+position.
+Warning: Variants '21:35237878:G:T' and '21:35237878:G:A' have the same
+position.
+Warning: Variants '21:35244362:T:C' and '21:35244362:T:A' have the same
+position.
+Warning: Variants '21:35266130:G:C' and '21:35266130:G:A' have the same
+position.
+Warning: Variants '21:35304595:T:G' and '21:35304595:T:C' have the same
+position.
+Warning: Variants '21:35310987:T:G' and '21:35310987:T:A' have the same
+position.
+Warning: Variants '21:35319905:G:C' and '21:35319905:G:A' have the same
+position.
+Warning: Variants '21:35321492:A:G' and '21:35321492:A:C' have the same
+position.
+Warning: Variants '21:35403424:C:T' and '21:35403424:C:G' have the same
+position.
+Warning: Variants '21:35412119:T:C' and '21:35412119:T:A' have the same
+position.
+Warning: Variants '21:35435677:T:G' and '21:35435677:T:C' have the same
+position.
+Warning: Variants '21:35478529:G:T' and '21:35478529:G:A' have the same
+position.
+Warning: Variants '21:35499559:C:T' and '21:35499559:C:G' have the same
+position.
+Warning: Variants '21:35505915:G:T' and '21:35505915:G:A' have the same
+position.
+Warning: Variants '21:35522904:G:C' and '21:35522904:G:A' have the same
+position.
+Warning: Variants '21:35528948:C:T' and '21:35528948:C:G' have the same
+position.
+Warning: Variants '21:35558137:G:C' and '21:35558137:G:A' have the same
+position.
+Warning: Variants '21:35569316:C:T' and '21:35569316:C:A' have the same
+position.
+Warning: Variants '21:35657449:C:T' and '21:35657449:C:A' have the same
+position.
+Warning: Variants '21:35768184:T:G' and '21:35768184:T:A' have the same
+position.
+Warning: Variants '21:35774583:C:G' and '21:35774583:C:A' have the same
+position.
+Warning: Variants '21:35867548:C:T' and '21:35867548:C:G' have the same
+position.
+Warning: Variants '21:36071822:C:T' and '21:36071822:C:A' have the same
+position.
+Warning: Variants '21:36128799:C:T' and '21:36128799:C:A' have the same
+position.
+Warning: Variants '21:36144231:C:T' and '21:36144231:C:A' have the same
+position.
+Warning: Variants '21:36176362:A:G' and '21:36176362:A:C' have the same
+position.
+Warning: Variants '21:36210726:C:T' and '21:36210726:C:A' have the same
+position.
+Warning: Variants '21:36227479:T:G' and '21:36227479:T:A' have the same
+position.
+Warning: Variants '21:36227526:T:G' and '21:36227526:T:A' have the same
+position.
+Warning: Variants '21:36240109:C:G' and '21:36240109:C:A' have the same
+position.
+Warning: Variants '21:36332331:G:C' and '21:36332331:G:A' have the same
+position.
+Warning: Variants '21:36428500:C:G' and '21:36428500:C:A' have the same
+position.
+Warning: Variants '21:36446257:A:T' and '21:36446257:A:G' have the same
+position.
+Warning: Variants '21:36455256:C:T' and '21:36455256:C:A' have the same
+position.
+Warning: Variants '21:36492572:T:G' and '21:36492572:T:C' have the same
+position.
+Warning: Variants '21:36613841:C:T' and '21:36613841:C:A' have the same
+position.
+Warning: Variants '21:36631651:C:T' and '21:36631651:C:A' have the same
+position.
+Warning: Variants '21:36631852:G:T' and '21:36631852:G:A' have the same
+position.
+Warning: Variants '21:36737381:G:C' and '21:36737381:G:A' have the same
+position.
+Warning: Variants '21:36753040:G:T' and '21:36753040:G:A' have the same
+position.
+Warning: Variants '21:36836602:G:C' and '21:36836602:G:A' have the same
+position.
+Warning: Variants '21:36899089:T:C' and '21:36899089:T:A' have the same
+position.
+Warning: Variants '21:36983263:T:G' and '21:36983263:T:A' have the same
+position.
+Warning: Variants '21:36996554:G:T' and '21:36996554:G:A' have the same
+position.
+Warning: Variants '21:37029697:G:T' and '21:37029697:G:A' have the same
+position.
+Warning: Variants '21:37032456:C:G' and '21:37032456:C:A' have the same
+position.
+Warning: Variants '21:37052034:G:C' and '21:37052034:G:A' have the same
+position.
+Warning: Variants '21:37251168:C:T' and '21:37251168:C:A' have the same
+position.
+Warning: Variants '21:37317134:C:T' and '21:37317134:C:G' have the same
+position.
+Warning: Variants '21:37344105:C:T' and '21:37344105:C:G' have the same
+position.
+Warning: Variants '21:37431418:C:T' and '21:37431418:C:A' have the same
+position.
+Warning: Variants '21:37464822:T:G' and '21:37464822:T:C' have the same
+position.
+Warning: Variants '21:37756062:C:T' and '21:37756062:C:A' have the same
+position.
+Warning: Variants '21:37772062:A:G' and '21:37772062:A:C' have the same
+position.
+Warning: Variants '21:37858286:G:C' and '21:37858286:G:A' have the same
+position.
+Warning: Variants '21:38146429:G:C' and '21:38146429:G:A' have the same
+position.
+Warning: Variants '21:38201429:G:C' and '21:38201429:G:A' have the same
+position.
+Warning: Variants '21:38273690:A:G' and '21:38273690:A:C' have the same
+position.
+Warning: Variants '21:38281423:C:G' and '21:38281423:C:A' have the same
+position.
+Warning: Variants '21:38347133:C:T' and '21:38347133:C:A' have the same
+position.
+Warning: Variants '21:38596786:A:T' and '21:38596786:A:C' have the same
+position.
+Warning: Variants '21:38599626:G:T' and '21:38599626:G:A' have the same
+position.
+Warning: Variants '21:38752991:C:T' and '21:38752991:C:A' have the same
+position.
+Warning: Variants '21:38779033:T:C' and '21:38779033:T:A' have the same
+position.
+Warning: Variants '21:38845169:T:C' and '21:38845169:T:A' have the same
+position.
+Warning: Variants '21:38898084:A:G' and '21:38898084:A:C' have the same
+position.
+Warning: Variants '21:39008939:C:T' and '21:39008939:C:G' have the same
+position.
+Warning: Variants '21:39062363:C:T' and '21:39062363:C:A' have the same
+position.
+Warning: Variants '21:39132521:G:T' and '21:39132521:G:A' have the same
+position.
+Warning: Variants '21:39165308:C:T' and '21:39165308:C:G' have the same
+position.
+Warning: Variants '21:39240752:T:C' and '21:39240752:T:A' have the same
+position.
+Warning: Variants '21:39274969:G:T' and '21:39274969:G:A' have the same
+position.
+Warning: Variants '21:39434857:C:T' and '21:39434857:C:A' have the same
+position.
+Warning: Variants '21:39445342:T:G' and '21:39445342:T:C' have the same
+position.
+Warning: Variants '21:39554365:G:T' and '21:39554365:G:A' have the same
+position.
+Warning: Variants '21:39560932:T:C' and '21:39560932:T:A' have the same
+position.
+Warning: Variants '21:39587880:C:T' and '21:39587880:C:G' have the same
+position.
+Warning: Variants '21:39664324:C:T' and '21:39664324:C:G' have the same
+position.
+Warning: Variants '21:39675450:C:G' and '21:39675450:C:A' have the same
+position.
+Warning: Variants '21:39764839:T:C' and '21:39764839:T:A' have the same
+position.
+Warning: Variants '21:39800339:C:T' and '21:39800339:C:G' have the same
+position.
+Warning: Variants '21:39896088:G:C' and '21:39896088:G:A' have the same
+position.
+Warning: Variants '21:39897606:T:G' and '21:39897606:T:C' have the same
+position.
+Warning: Variants '21:39913140:T:G' and '21:39913140:T:A' have the same
+position.
+Warning: Variants '21:39973294:C:T' and '21:39973294:C:A' have the same
+position.
+Warning: Variants '21:39978994:C:T' and '21:39978994:C:A' have the same
+position.
+Warning: Variants '21:40006549:C:T' and '21:40006549:C:A' have the same
+position.
+Warning: Variants '21:40033162:G:T' and '21:40033162:G:C' have the same
+position.
+Warning: Variants '21:40113678:A:T' and '21:40113678:A:C' have the same
+position.
+Warning: Variants '21:40117296:C:T' and '21:40117296:C:A' have the same
+position.
+Warning: Variants '21:40161639:T:G' and '21:40161639:T:A' have the same
+position.
+Warning: Variants '21:40176053:A:G' and '21:40176053:A:C' have the same
+position.
+Warning: Variants '21:40198115:G:T' and '21:40198115:G:A' have the same
+position.
+Warning: Variants '21:40264336:G:T' and '21:40264336:G:A' have the same
+position.
+Warning: Variants '21:40289631:T:G' and '21:40289631:T:C' have the same
+position.
+Warning: Variants '21:40290047:T:C' and '21:40290047:T:A' have the same
+position.
+Warning: Variants '21:40300915:C:T' and '21:40300915:C:A' have the same
+position.
+Warning: Variants '21:40557751:C:G' and '21:40557751:C:A' have the same
+position.
+Warning: Variants '21:40577715:G:C' and '21:40577715:G:A' have the same
+position.
+Warning: Variants '21:40580952:G:T' and '21:40580952:G:A' have the same
+position.
+Warning: Variants '21:40646630:A:T' and '21:40646630:A:C' have the same
+position.
+Warning: Variants '21:40670408:T:G' and '21:40670408:T:C' have the same
+position.
+Warning: Variants '21:40792951:G:T' and '21:40792951:G:C' have the same
+position.
+Warning: Variants '21:40828484:C:T' and '21:40828484:C:G' have the same
+position.
+Warning: Variants '21:40902282:G:T' and '21:40902282:G:A' have the same
+position.
+Warning: Variants '21:40997957:C:T' and '21:40997957:C:G' have the same
+position.
+Warning: Variants '21:41003677:G:C' and '21:41003677:G:A' have the same
+position.
+Warning: Variants '21:41028148:C:T' and '21:41028148:C:A' have the same
+position.
+Warning: Variants '21:41080464:C:T' and '21:41080464:C:G' have the same
+position.
+Warning: Variants '21:41142741:C:G' and '21:41142741:C:A' have the same
+position.
+Warning: Variants '21:41150796:A:G' and '21:41150796:A:C' have the same
+position.
+Warning: Variants '21:41221621:C:T' and '21:41221621:C:G' have the same
+position.
+Warning: Variants '21:41361433:C:T' and '21:41361433:C:G' have the same
+position.
+Warning: Variants '21:41414128:C:T' and '21:41414128:C:A' have the same
+position.
+Warning: Variants '21:41449769:C:G' and '21:41449769:C:A' have the same
+position.
+Warning: Variants '21:41546239:T:G' and '21:41546239:T:A' have the same
+position.
+Warning: Variants '21:41583813:C:T' and '21:41583813:C:G' have the same
+position.
+Warning: Variants '21:41588870:C:T' and '21:41588870:C:A' have the same
+position.
+Warning: Variants '21:41631173:C:T' and '21:41631173:C:A' have the same
+position.
+Warning: Variants '21:41698301:G:T' and '21:41698301:G:A' have the same
+position.
+Warning: Variants '21:41703012:G:C' and '21:41703012:G:A' have the same
+position.
+Warning: Variants '21:41713089:T:C' and '21:41713089:T:A' have the same
+position.
+Warning: Variants '21:41782540:T:C' and '21:41782540:T:A' have the same
+position.
+Warning: Variants '21:41830827:G:T' and '21:41830827:G:A' have the same
+position.
+Warning: Variants '21:41834601:C:T' and '21:41834601:C:A' have the same
+position.
+Warning: Variants '21:41915598:G:T' and '21:41915598:G:A' have the same
+position.
+Warning: Variants '21:42019119:C:G' and '21:42019119:C:A' have the same
+position.
+Warning: Variants '21:42039564:G:T' and '21:42039564:G:A' have the same
+position.
+Warning: Variants '21:42086585:G:T' and '21:42086585:G:C' have the same
+position.
+Warning: Variants '21:42095309:G:T' and '21:42095309:G:A' have the same
+position.
+Warning: Variants '21:42106618:G:T' and '21:42106618:G:A' have the same
+position.
+Warning: Variants '21:42108610:C:T' and '21:42108610:C:G' have the same
+position.
+Warning: Variants '21:42111154:C:G' and '21:42111154:C:A' have the same
+position.
+Warning: Variants '21:42113953:C:T' and '21:42113953:C:G' have the same
+position.
+Warning: Variants '21:42125378:C:T' and '21:42125378:C:G' have the same
+position.
+Warning: Variants '21:42134759:C:G' and '21:42134759:C:A' have the same
+position.
+Warning: Variants '21:42143588:G:T' and '21:42143588:G:A' have the same
+position.
+Warning: Variants '21:42177393:G:C' and '21:42177393:G:A' have the same
+position.
+Warning: Variants '21:42244681:C:T' and '21:42244681:C:G' have the same
+position.
+Warning: Variants '21:42278851:C:T' and '21:42278851:C:A' have the same
+position.
+Warning: Variants '21:42291939:G:T' and '21:42291939:G:A' have the same
+position.
+Warning: Variants '21:42342550:C:T' and '21:42342550:C:A' have the same
+position.
+Warning: Variants '21:42357049:A:T' and '21:42357049:A:G' have the same
+position.
+Warning: Variants '21:42405519:T:G' and '21:42405519:T:A' have the same
+position.
+Warning: Variants '21:42412263:C:T' and '21:42412263:C:A' have the same
+position.
+Warning: Variants '21:42418360:A:G' and '21:42418360:A:C' have the same
+position.
+Warning: Variants '21:42432527:G:C' and '21:42432527:G:A' have the same
+position.
+Warning: Variants '21:42455738:C:T' and '21:42455738:C:G' have the same
+position.
+Warning: Variants '21:42615199:G:C' and '21:42615199:G:A' have the same
+position.
+Warning: Variants '21:42728858:T:G' and '21:42728858:T:A' have the same
+position.
+Warning: Variants '21:42743735:G:C' and '21:42743735:G:A' have the same
+position.
+Warning: Variants '21:42800713:G:T' and '21:42800713:G:A' have the same
+position.
+Warning: Variants '21:42884674:C:G' and '21:42884674:C:A' have the same
+position.
+Warning: Variants '21:42920682:T:G' and '21:42920682:T:A' have the same
+position.
+Warning: Variants '21:42930314:G:T' and '21:42930314:G:A' have the same
+position.
+Warning: Variants '21:42937976:A:T' and '21:42937976:A:G' have the same
+position.
+Warning: Variants '21:43340981:G:T' and '21:43340981:G:A' have the same
+position.
+Warning: Variants '21:43343703:G:C' and '21:43343703:G:A' have the same
+position.
+Warning: Variants '21:43344794:C:G' and '21:43344794:C:A' have the same
+position.
+Warning: Variants '21:43361842:C:T' and '21:43361842:C:A' have the same
+position.
+Warning: Variants '21:43578255:G:T' and '21:43578255:G:A' have the same
+position.
+Warning: Variants '21:43581330:G:T' and '21:43581330:G:A' have the same
+position.
+Warning: Variants '21:43724132:G:C' and '21:43724132:G:A' have the same
+position.
+Warning: Variants '21:43732236:C:T' and '21:43732236:C:A' have the same
+position.
+Warning: Variants '21:43735368:G:T' and '21:43735368:G:A' have the same
+position.
+Warning: Variants '21:43756740:C:T' and '21:43756740:C:G' have the same
+position.
+Warning: Variants '21:43766333:G:C' and '21:43766333:G:A' have the same
+position.
+Warning: Variants '21:43768593:G:C' and '21:43768593:G:A' have the same
+position.
+Warning: Variants '21:43801712:G:C' and '21:43801712:G:A' have the same
+position.
+Warning: Variants '21:43833558:A:G' and '21:43833558:A:C' have the same
+position.
+Warning: Variants '21:43903158:A:T' and '21:43903158:A:G' have the same
+position.
+Warning: Variants '21:43986939:C:T' and '21:43986939:C:G' have the same
+position.
+Warning: Variants '21:44016930:T:G' and '21:44016930:T:C' have the same
+position.
+Warning: Variants '21:44019477:A:G' and '21:44019477:A:C' have the same
+position.
+Warning: Variants '21:44050569:T:G' and '21:44050569:T:C' have the same
+position.
+Warning: Variants '21:44057565:C:T' and '21:44057565:C:G' have the same
+position.
+Warning: Variants '21:44279521:T:G' and '21:44279521:T:A' have the same
+position.
+Warning: Variants '21:44312425:G:T' and '21:44312425:G:A' have the same
+position.
+Warning: Variants '21:44327030:G:C' and '21:44327030:G:A' have the same
+position.
+Warning: Variants '21:44359503:C:T' and '21:44359503:C:A' have the same
+position.
+Warning: Variants '21:44361412:G:C' and '21:44361412:G:A' have the same
+position.
+Warning: Variants '21:44373448:A:T' and '21:44373448:A:G' have the same
+position.
+Warning: Variants '21:44479733:C:T' and '21:44479733:C:A' have the same
+position.
+Warning: Variants '21:44551426:G:C' and '21:44551426:G:A' have the same
+position.
+Warning: Variants '21:44574966:G:C' and '21:44574966:G:A' have the same
+position.
+Warning: Variants '21:44579403:C:G' and '21:44579403:C:A' have the same
+position.
+Warning: Variants '21:44678095:C:T' and '21:44678095:C:A' have the same
+position.
+Warning: Variants '21:44705876:G:T' and '21:44705876:G:A' have the same
+position.
+Warning: Variants '21:44707145:A:G' and '21:44707145:A:C' have the same
+position.
+Warning: Variants '21:44734084:A:G' and '21:44734084:A:C' have the same
+position.
+Warning: Variants '21:44749573:C:T' and '21:44749573:C:A' have the same
+position.
+Warning: Variants '21:44752411:C:G' and '21:44752411:C:A' have the same
+position.
+Warning: Variants '21:44816666:T:C' and '21:44816666:T:A' have the same
+position.
+Warning: Variants '21:44838098:G:C' and '21:44838098:G:A' have the same
+position.
+Warning: Variants '21:44876420:C:T' and '21:44876420:C:G' have the same
+position.
+Warning: Variants '21:44886692:C:T' and '21:44886692:C:A' have the same
+position.
+Warning: Variants '21:44896601:C:T' and '21:44896601:C:A' have the same
+position.
+Warning: Variants '21:44923566:T:G' and '21:44923566:T:C' have the same
+position.
+Warning: Variants '21:44974355:G:T' and '21:44974355:G:A' have the same
+position.
+Warning: Variants '21:44976635:G:T' and '21:44976635:G:A' have the same
+position.
+Warning: Variants '21:44983106:C:T' and '21:44983106:C:G' have the same
+position.
+Warning: Variants '21:44986375:G:C' and '21:44986375:G:A' have the same
+position.
+Warning: Variants '21:45004592:G:T' and '21:45004592:G:C' have the same
+position.
+Warning: Variants '21:45008389:T:C' and '21:45008389:T:A' have the same
+position.
+Warning: Variants '21:45172859:A:T' and '21:45172859:A:G' have the same
+position.
+Warning: Variants '21:45269577:C:T' and '21:45269577:C:G' have the same
+position.
+Warning: Variants '21:45275849:C:T' and '21:45275849:C:A' have the same
+position.
+Warning: Variants '21:45327565:C:T' and '21:45327565:C:G' have the same
+position.
+Warning: Variants '21:45351150:C:T' and '21:45351150:C:G' have the same
+position.
+Warning: Variants '21:45419710:G:T' and '21:45419710:G:A' have the same
+position.
+Warning: Variants '21:45435864:T:G' and '21:45435864:T:A' have the same
+position.
+Warning: Variants '21:45456666:C:T' and '21:45456666:C:G' have the same
+position.
+Warning: Variants '21:45469577:C:G' and '21:45469577:C:A' have the same
+position.
+Warning: Variants '21:45476389:C:G' and '21:45476389:C:A' have the same
+position.
+Warning: Variants '21:45494662:C:T' and '21:45494662:C:A' have the same
+position.
+Warning: Variants '21:45504647:G:C' and '21:45504647:G:A' have the same
+position.
+Warning: Variants '21:45514075:G:C' and '21:45514075:G:A' have the same
+position.
+Warning: Variants '21:45949119:T:G' and '21:45949119:T:C' have the same
+position.
+Warning: Variants '21:45967260:G:T' and '21:45967260:G:A' have the same
+position.
+Warning: Variants '21:45976185:G:C' and '21:45976185:G:A' have the same
+position.
+Warning: Variants '21:46093307:C:G' and '21:46093307:C:A' have the same
+position.
+Warning: Variants '21:46128576:G:T' and '21:46128576:G:A' have the same
+position.
+Warning: Variants '21:46142680:A:G' and '21:46142680:A:C' have the same
+position.
+Warning: Variants '21:46223552:G:C' and '21:46223552:G:A' have the same
+position.
+Warning: Variants '21:46223919:C:T' and '21:46223919:C:G' have the same
+position.
+Warning: Variants '21:46278895:A:G' and '21:46278895:A:C' have the same
+position.
+Warning: Variants '21:46324657:G:C' and '21:46324657:G:A' have the same
+position.
+Warning: Variants '21:46625546:C:T' and '21:46625546:C:A' have the same
+position.
+Performing single-pass merge (1748 people, 327210 variants).
+Merged fileset written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr21-merge.bed +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr21-merge.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr21-merge.fam .
+327210 variants loaded from .bim file.
+1748 people (0 males, 0 females, 1748 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr21.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 1748 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.590066.
+327210 variants and 1748 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr21.bed
++ /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr21.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr21.fam ... done.
+
+End time: Mon Apr 11 22:01:18 2022

@@ -1,0 +1,183 @@
+PLINK v1.90b6.21 64-bit (19 Oct 2020)
+Options in effect:
+  --keep-allele-order
+  --make-bed
+  --merge-list /broad/sankaranlab/lcato/hbf/MAMA4/mergelists/merge_chr22
+  --out /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr22
+
+Hostname: ugertmp-c024.broadinstitute.org
+Working directory: /broad/sankaranlab/lcato/hbf/MAMA4
+Start time: Mon Apr 11 22:01:17 2022
+
+Random number seed: 1649714477
+515437 MB RAM detected; reserving 257718 MB for main workspace.
+Warning: Variants '22:11555981:C:T' and '22:11555981:C:G' have the same
+position.
+Warning: Variants '22:11611545:C:T' and '22:11611545:C:G' have the same
+position.
+Warning: Variants '22:11626883:C:T' and '22:11626883:C:A' have the same
+position.
+Warning: Variants '22:12038334:T:C' and '22:12038334:T:A' have the same
+position.
+Warning: Variants '22:15942405:G:T' and '22:15942405:G:A' have the same
+position.
+Warning: Variants '22:16386690:C:T' and '22:16386690:C:A' have the same
+position.
+Warning: Variants '22:17847636:C:T' and '22:17847636:C:A' have the same
+position.
+Warning: Variants '22:19126479:C:T' and '22:19126479:C:G' have the same
+position.
+Warning: Variants '22:19420693:C:T' and '22:19420693:C:A' have the same
+position.
+Warning: Variants '22:19558085:C:T' and '22:19558085:C:A' have the same
+position.
+Warning: Variants '22:19699330:A:G' and '22:19699330:A:C' have the same
+position.
+Warning: Variants '22:20362908:G:T' and '22:20362908:G:A' have the same
+position.
+Warning: Variants '22:20424136:G:C' and '22:20424136:G:A' have the same
+position.
+Warning: Variants '22:20563544:C:T' and '22:20563544:C:G' have the same
+position.
+Warning: Variants '22:20872469:C:T' and '22:20872469:C:A' have the same
+position.
+Warning: Variants '22:21045847:G:T' and '22:21045847:G:C' have the same
+position.
+Warning: Variants '22:21071437:G:C' and '22:21071437:G:A' have the same
+position.
+Warning: Variants '22:23210306:G:T' and '22:23210306:G:A' have the same
+position.
+Warning: Variants '22:24442592:C:G' and '22:24442592:C:A' have the same
+position.
+Warning: Variants '22:24722676:G:C' and '22:24722676:G:A' have the same
+position.
+Warning: Variants '22:24972202:C:T' and '22:24972202:C:G' have the same
+position.
+Warning: Variants '22:25305213:C:T' and '22:25305213:C:G' have the same
+position.
+Warning: Variants '22:26239721:G:T' and '22:26239721:G:A' have the same
+position.
+Warning: Variants '22:26619571:C:T' and '22:26619571:C:A' have the same
+position.
+Warning: Variants '22:26814891:A:T' and '22:26814891:A:G' have the same
+position.
+Warning: Variants '22:26843314:G:T' and '22:26843314:G:A' have the same
+position.
+Warning: Variants '22:26943443:T:G' and '22:26943443:T:C' have the same
+position.
+Warning: Variants '22:26996341:C:T' and '22:26996341:C:A' have the same
+position.
+Warning: Variants '22:28056805:C:T' and '22:28056805:C:A' have the same
+position.
+Warning: Variants '22:28265264:G:C' and '22:28265264:G:A' have the same
+position.
+Warning: Variants '22:29669978:G:T' and '22:29669978:G:C' have the same
+position.
+Warning: Variants '22:29880062:G:T' and '22:29880062:G:A' have the same
+position.
+Warning: Variants '22:30554820:C:T' and '22:30554820:C:G' have the same
+position.
+Warning: Variants '22:30786147:G:T' and '22:30786147:G:A' have the same
+position.
+Warning: Variants '22:31545081:G:T' and '22:31545081:G:C' have the same
+position.
+Warning: Variants '22:31617227:G:T' and '22:31617227:G:C' have the same
+position.
+Warning: Variants '22:32072882:A:G' and '22:32072882:A:C' have the same
+position.
+Warning: Variants '22:32772182:G:T' and '22:32772182:G:C' have the same
+position.
+Warning: Variants '22:33015509:C:G' and '22:33015509:C:A' have the same
+position.
+Warning: Variants '22:33197372:T:G' and '22:33197372:T:C' have the same
+position.
+Warning: Variants '22:33279416:G:C' and '22:33279416:G:A' have the same
+position.
+Warning: Variants '22:34658116:G:T' and '22:34658116:G:A' have the same
+position.
+Warning: Variants '22:35895154:C:T' and '22:35895154:C:G' have the same
+position.
+Warning: Variants '22:37159316:G:T' and '22:37159316:G:A' have the same
+position.
+Warning: Variants '22:37956093:C:T' and '22:37956093:C:G' have the same
+position.
+Warning: Variants '22:38031586:A:T' and '22:38031586:A:G' have the same
+position.
+Warning: Variants '22:38375999:C:T' and '22:38375999:C:G' have the same
+position.
+Warning: Variants '22:40839094:C:G' and '22:40839094:C:A' have the same
+position.
+Warning: Variants '22:41091805:G:T' and '22:41091805:G:C' have the same
+position.
+Warning: Variants '22:42196600:C:T' and '22:42196600:C:G' have the same
+position.
+Warning: Variants '22:42568774:C:T' and '22:42568774:C:G' have the same
+position.
+Warning: Variants '22:42786429:G:T' and '22:42786429:G:A' have the same
+position.
+Warning: Variants '22:43331932:T:G' and '22:43331932:T:C' have the same
+position.
+Warning: Variants '22:43366748:A:T' and '22:43366748:A:C' have the same
+position.
+Warning: Variants '22:43771708:C:T' and '22:43771708:C:G' have the same
+position.
+Warning: Variants '22:43809610:G:T' and '22:43809610:G:C' have the same
+position.
+Warning: Variants '22:44016310:A:T' and '22:44016310:A:C' have the same
+position.
+Warning: Variants '22:44710513:G:T' and '22:44710513:G:A' have the same
+position.
+Warning: Variants '22:45508810:C:T' and '22:45508810:C:A' have the same
+position.
+Warning: Variants '22:45991919:C:T' and '22:45991919:C:A' have the same
+position.
+Warning: Variants '22:47683577:C:T' and '22:47683577:C:G' have the same
+position.
+Warning: Variants '22:47931436:G:T' and '22:47931436:G:A' have the same
+position.
+Warning: Variants '22:48313094:A:G' and '22:48313094:A:C' have the same
+position.
+Warning: Variants '22:49028458:G:C' and '22:49028458:G:A' have the same
+position.
+Warning: Variants '22:49084830:A:T' and '22:49084830:A:G' have the same
+position.
+Warning: Variants '22:49085809:G:T' and '22:49085809:G:C' have the same
+position.
+Warning: Variants '22:49171005:G:T' and '22:49171005:G:A' have the same
+position.
+Warning: Variants '22:49228092:C:T' and '22:49228092:C:A' have the same
+position.
+Warning: Variants '22:49290260:G:C' and '22:49290260:G:A' have the same
+position.
+Warning: Variants '22:49665398:T:C' and '22:49665398:T:A' have the same
+position.
+Warning: Variants '22:50282391:C:T' and '22:50282391:C:G' have the same
+position.
+Warning: Variants '22:50450171:G:T' and '22:50450171:G:C' have the same
+position.
+Warning: Variants '22:50517957:C:T' and '22:50517957:C:G' have the same
+position.
+Warning: Variants '22:50756489:T:G' and '22:50756489:T:A' have the same
+position.
+Warning: Variants '22:50777904:G:T' and '22:50777904:G:A' have the same
+position.
+Performing single-pass merge (1748 people, 331856 variants).
+Merged fileset written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr22-merge.bed +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr22-merge.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr22-merge.fam .
+331856 variants loaded from .bim file.
+1748 people (0 males, 0 females, 1748 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr22.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 1748 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.57341.
+331856 variants and 1748 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr22.bed
++ /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr22.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr22.fam ... done.
+
+End time: Mon Apr 11 22:01:22 2022

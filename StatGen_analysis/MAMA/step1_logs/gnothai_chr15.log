@@ -1,0 +1,251 @@
+PLINK v1.90b6.21 64-bit (19 Oct 2020)
+Options in effect:
+  --keep-allele-order
+  --make-bed
+  --merge-list /broad/sankaranlab/lcato/hbf/MAMA4/mergelists/merge_chr15
+  --out /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr15
+
+Hostname: uger-r7-c011.broadinstitute.org
+Working directory: /broad/sankaranlab/lcato/hbf/MAMA4
+Start time: Mon Apr 11 22:00:56 2022
+
+Random number seed: 1649714456
+386012 MB RAM detected; reserving 193006 MB for main workspace.
+Warning: Variants '15:17017342:G:T' and '15:17017342:G:A' have the same
+position.
+Warning: Variants '15:17052534:T:G' and '15:17052534:T:C' have the same
+position.
+Warning: Variants '15:19825385:C:T' and '15:19825385:C:A' have the same
+position.
+Warning: Variants '15:22234803:C:T' and '15:22234803:C:G' have the same
+position.
+Warning: Variants '15:23721249:G:T' and '15:23721249:G:A' have the same
+position.
+Warning: Variants '15:23820493:T:C' and '15:23820493:T:A' have the same
+position.
+Warning: Variants '15:23894744:A:G' and '15:23894744:A:C' have the same
+position.
+Warning: Variants '15:24486232:C:T' and '15:24486232:C:G' have the same
+position.
+Warning: Variants '15:24494797:G:C' and '15:24494797:G:A' have the same
+position.
+Warning: Variants '15:25213083:C:T' and '15:25213083:C:G' have the same
+position.
+Warning: Variants '15:25514793:C:G' and '15:25514793:C:A' have the same
+position.
+Warning: Variants '15:25788566:C:T' and '15:25788566:C:G' have the same
+position.
+Warning: Variants '15:26082315:T:G' and '15:26082315:T:A' have the same
+position.
+Warning: Variants '15:26560676:G:T' and '15:26560676:G:A' have the same
+position.
+Warning: Variants '15:27176923:G:C' and '15:27176923:G:A' have the same
+position.
+Warning: Variants '15:28849761:C:T' and '15:28849761:C:A' have the same
+position.
+Warning: Variants '15:28954339:G:C' and '15:28954339:G:A' have the same
+position.
+Warning: Variants '15:31334680:G:C' and '15:31334680:G:A' have the same
+position.
+Warning: Variants '15:31825773:G:C' and '15:31825773:G:A' have the same
+position.
+Warning: Variants '15:32924755:A:T' and '15:32924755:A:G' have the same
+position.
+Warning: Variants '15:33072181:G:C' and '15:33072181:G:A' have the same
+position.
+Warning: Variants '15:33937606:C:T' and '15:33937606:C:G' have the same
+position.
+Warning: Variants '15:35042396:G:T' and '15:35042396:G:A' have the same
+position.
+Warning: Variants '15:37473936:C:T' and '15:37473936:C:G' have the same
+position.
+Warning: Variants '15:38431525:C:T' and '15:38431525:C:A' have the same
+position.
+Warning: Variants '15:39395521:G:T' and '15:39395521:G:A' have the same
+position.
+Warning: Variants '15:39519163:G:T' and '15:39519163:G:A' have the same
+position.
+Warning: Variants '15:39544347:G:T' and '15:39544347:G:A' have the same
+position.
+Warning: Variants '15:40260551:C:T' and '15:40260551:C:G' have the same
+position.
+Warning: Variants '15:41150607:G:C' and '15:41150607:G:A' have the same
+position.
+Warning: Variants '15:42386411:A:G' and '15:42386411:A:C' have the same
+position.
+Warning: Variants '15:43306787:G:C' and '15:43306787:G:A' have the same
+position.
+Warning: Variants '15:44013168:T:G' and '15:44013168:T:C' have the same
+position.
+Warning: Variants '15:44275721:G:C' and '15:44275721:G:A' have the same
+position.
+Warning: Variants '15:45420606:A:T' and '15:45420606:A:G' have the same
+position.
+Warning: Variants '15:46137083:G:C' and '15:46137083:G:A' have the same
+position.
+Warning: Variants '15:47420622:A:T' and '15:47420622:A:G' have the same
+position.
+Warning: Variants '15:48536354:C:G' and '15:48536354:C:A' have the same
+position.
+Warning: Variants '15:49798427:G:C' and '15:49798427:G:A' have the same
+position.
+Warning: Variants '15:53195500:C:G' and '15:53195500:C:A' have the same
+position.
+Warning: Variants '15:54761523:C:T' and '15:54761523:C:A' have the same
+position.
+Warning: Variants '15:56125732:A:G' and '15:56125732:A:C' have the same
+position.
+Warning: Variants '15:58341671:T:G' and '15:58341671:T:C' have the same
+position.
+Warning: Variants '15:58590353:C:T' and '15:58590353:C:A' have the same
+position.
+Warning: Variants '15:58635010:T:C' and '15:58635010:T:A' have the same
+position.
+Warning: Variants '15:59171659:C:T' and '15:59171659:C:A' have the same
+position.
+Warning: Variants '15:59287660:G:T' and '15:59287660:G:A' have the same
+position.
+Warning: Variants '15:61405266:G:T' and '15:61405266:G:C' have the same
+position.
+Warning: Variants '15:61518521:G:T' and '15:61518521:G:A' have the same
+position.
+Warning: Variants '15:61760553:G:C' and '15:61760553:G:A' have the same
+position.
+Warning: Variants '15:62938138:C:T' and '15:62938138:C:A' have the same
+position.
+Warning: Variants '15:64099081:A:T' and '15:64099081:A:G' have the same
+position.
+Warning: Variants '15:64186613:G:C' and '15:64186613:G:A' have the same
+position.
+Warning: Variants '15:64941280:C:T' and '15:64941280:C:A' have the same
+position.
+Warning: Variants '15:67470380:A:G' and '15:67470380:A:C' have the same
+position.
+Warning: Variants '15:68425042:G:T' and '15:68425042:G:A' have the same
+position.
+Warning: Variants '15:69287178:T:G' and '15:69287178:T:A' have the same
+position.
+Warning: Variants '15:69696671:G:T' and '15:69696671:G:A' have the same
+position.
+Warning: Variants '15:70079301:G:T' and '15:70079301:G:A' have the same
+position.
+Warning: Variants '15:70117298:C:T' and '15:70117298:C:A' have the same
+position.
+Warning: Variants '15:70986543:T:C' and '15:70986543:T:A' have the same
+position.
+Warning: Variants '15:72783856:G:T' and '15:72783856:G:C' have the same
+position.
+Warning: Variants '15:73860049:T:G' and '15:73860049:T:C' have the same
+position.
+Warning: Variants '15:74318089:G:T' and '15:74318089:G:C' have the same
+position.
+Warning: Variants '15:75353493:C:T' and '15:75353493:C:A' have the same
+position.
+Warning: Variants '15:75761814:C:T' and '15:75761814:C:G' have the same
+position.
+Warning: Variants '15:77258453:C:T' and '15:77258453:C:A' have the same
+position.
+Warning: Variants '15:77921976:G:T' and '15:77921976:G:A' have the same
+position.
+Warning: Variants '15:77979899:A:T' and '15:77979899:A:C' have the same
+position.
+Warning: Variants '15:78732280:T:C' and '15:78732280:T:A' have the same
+position.
+Warning: Variants '15:79989448:C:T' and '15:79989448:C:A' have the same
+position.
+Warning: Variants '15:81457532:A:T' and '15:81457532:A:G' have the same
+position.
+Warning: Variants '15:81810145:T:G' and '15:81810145:T:C' have the same
+position.
+Warning: Variants '15:82688249:G:T' and '15:82688249:G:C' have the same
+position.
+Warning: Variants '15:82758479:A:G' and '15:82758479:A:C' have the same
+position.
+Warning: Variants '15:83434669:C:T' and '15:83434669:C:G' have the same
+position.
+Warning: Variants '15:83671338:A:G' and '15:83671338:A:C' have the same
+position.
+Warning: Variants '15:84398726:G:C' and '15:84398726:G:A' have the same
+position.
+Warning: Variants '15:85445133:A:G' and '15:85445133:A:C' have the same
+position.
+Warning: Variants '15:86297845:G:C' and '15:86297845:G:A' have the same
+position.
+Warning: Variants '15:86935472:T:G' and '15:86935472:T:A' have the same
+position.
+Warning: Variants '15:87183289:G:T' and '15:87183289:G:A' have the same
+position.
+Warning: Variants '15:87218306:C:T' and '15:87218306:C:G' have the same
+position.
+Warning: Variants '15:87662720:G:C' and '15:87662720:G:A' have the same
+position.
+Warning: Variants '15:87834600:A:G' and '15:87834600:A:C' have the same
+position.
+Warning: Variants '15:87860376:G:T' and '15:87860376:G:A' have the same
+position.
+Warning: Variants '15:88510964:G:T' and '15:88510964:G:C' have the same
+position.
+Warning: Variants '15:89357615:T:G' and '15:89357615:T:A' have the same
+position.
+Warning: Variants '15:89492149:C:G' and '15:89492149:C:A' have the same
+position.
+Warning: Variants '15:89516182:G:C' and '15:89516182:G:A' have the same
+position.
+Warning: Variants '15:89542326:G:C' and '15:89542326:G:A' have the same
+position.
+Warning: Variants '15:89790915:G:T' and '15:89790915:G:A' have the same
+position.
+Warning: Variants '15:90639544:G:T' and '15:90639544:G:A' have the same
+position.
+Warning: Variants '15:92225950:T:C' and '15:92225950:T:A' have the same
+position.
+Warning: Variants '15:92409476:G:C' and '15:92409476:G:A' have the same
+position.
+Warning: Variants '15:93113103:T:G' and '15:93113103:T:C' have the same
+position.
+Warning: Variants '15:93915563:G:T' and '15:93915563:G:A' have the same
+position.
+Warning: Variants '15:94651139:C:T' and '15:94651139:C:G' have the same
+position.
+Warning: Variants '15:94794004:C:T' and '15:94794004:C:A' have the same
+position.
+Warning: Variants '15:95254078:G:T' and '15:95254078:G:A' have the same
+position.
+Warning: Variants '15:96824597:C:G' and '15:96824597:C:A' have the same
+position.
+Warning: Variants '15:98166674:G:T' and '15:98166674:G:A' have the same
+position.
+Warning: Variants '15:98394384:G:C' and '15:98394384:G:A' have the same
+position.
+Warning: Variants '15:98434962:C:T' and '15:98434962:C:A' have the same
+position.
+Warning: Variants '15:99007708:A:G' and '15:99007708:A:C' have the same
+position.
+Warning: Variants '15:100230944:G:C' and '15:100230944:G:A' have the same
+position.
+Warning: Variants '15:100799338:T:C' and '15:100799338:T:A' have the same
+position.
+Warning: Variants '15:100825847:C:T' and '15:100825847:C:A' have the same
+position.
+Warning: Variants '15:101751393:T:C' and '15:101751393:T:A' have the same
+position.
+Performing single-pass merge (1748 people, 697519 variants).
+Merged fileset written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr15-merge.bed +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr15-merge.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr15-merge.fam .
+697519 variants loaded from .bim file.
+1748 people (0 males, 0 females, 1748 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr15.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 1748 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.584136.
+697519 variants and 1748 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr15.bed
++ /broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr15.bim +
+/broad/sankaranlab/lcato/hbf/MAMA4/PLINK_panel/gnothai_chr15.fam ... done.
+
+End time: Mon Apr 11 22:01:05 2022
