@@ -6,20 +6,28 @@ library(RColorBrewer)
 library(rtracklayer)
 library(patchwork)
 
-b37_GENE_REF <- '/lab-share/Hem-Sankaran-e2/Public/ref_genomes/human/hg19_ncbiRefSeq_RefSeqAll_2026UCSC.tsv.gz'
+b36_GENE_REF <- '/path/to/hg19_ncbiRefSeq_RefSeqAll_2026UCSC.tsv.gz'  # Update this path as needed
 
-ATAC_DIR_WENG2024   <- '/lab-share/Hem-Sankaran-e2/Public/inhouse_datasets/bone_marrow_atac_peak_bigwig/hg19_liftOver/'
-ATAC_DIR_CORCES2016 <- '/lab-share/Hem-Sankaran-e2/Public/inhouse_datasets/Corces_2016_hg19bw/'
+ATAC_DIR_WENG2024   <- '/path/to/bone_marrow_atac_peak_bigwig/hg19_liftOver/'  # Update this path as needed
+ATAC_DIR_CORCES2016 <- '/path/to/Corces_2016_hg19bw/'  # Update this path as needed
 
 # Load shared step4 utility functions 
-source("scripts/step4_utility.R")
+# source("scripts/step4_utility.R")
+get_script_dir <- function() {
+    file_arg <- sub("^--file=", "", commandArgs(trailingOnly = FALSE)[grep("^--file=", commandArgs(trailingOnly = FALSE))])
+    if (length(file_arg) > 0) {
+        return(dirname(normalizePath(file_arg[1])))
+    }
+    return(getwd())
+}
+source(file.path(get_script_dir(), "step4_utility.R"))
 
 # Hard-code MAMA files here:
 # header: 'hg19_chr', 'hg19_pos', 'hg19_id', 'rsID', 'SNP', 'hg38_chr', 'hg38_pos', 'A1', 'A2', 'FREQ', 'BETA', 'SE', 'Z', 'P', 'N_EFF', 'N_ORIG'
 mama_files <- list()
-mama_files[["EUR"]] <- "/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/raw/hg19_sumstats/MAMA_EUR_SNPaligned_16865_hg19_cleaned_merged.tsv.gz"
-mama_files[["AFR"]] <- "/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/raw/hg19_sumstats/MAMA_AFR_SNPaligned_16865_hg19_cleaned_merged.tsv.gz"
-mama_files[["THAI"]] <- "/lab-share/Hem-Sankaran-e2/Public/projects/xhcheng/HbF/bach2_multi_finemap/raw/hg19_sumstats/MAMA_THAI_SNPaligned_16865_hg19_cleaned_merged.tsv.gz"
+mama_files[["EUR"]] <- "/path/to/BACH2_hbf/StatGen_analysis/MultiSuSiE/raw/hg19_sumstats/MAMA_EUR_SNPaligned_16865_hg19_cleaned_merged.tsv.gz"
+mama_files[["AFR"]] <- "/path/to/BACH2_hbf/StatGen_analysis/MultiSuSiE/raw/hg19_sumstats/MAMA_AFR_SNPaligned_16865_hg19_cleaned_merged.tsv.gz"
+mama_files[["THAI"]] <- "/path/to/BACH2_hbf/StatGen_analysis/MultiSuSiE/raw/hg19_sumstats/MAMA_THAI_SNPaligned_16865_hg19_cleaned_merged.tsv.gz"
 
 
 if(! interactive()){
@@ -29,7 +37,7 @@ if(! interactive()){
     #    If omitted or empty, all BigWig/bedgraph files in the chosen ATAC directory are plotted.
     # 8) [optional] comma-separated credible-set rsIDs to annotate, e.g. "rs1,rs2,rs3"
     #    If omitted or empty, default labeling behavior is used.
-    # 9) [optional] leading SNP rsID for LD coloring, e.g. "rs123456"
+    # 9) [optional] leading SNP rsID for LD coloring, e.g., "rs123456"
     #    If omitted, determined as the variant with highest -log10p across EUR/AFR/THAI.
     # 10) [optional] ATAC data source: "Corces2016" (default) or "Weng2024"
     input_file_prefix <- commandArgs(trailingOnly = TRUE)[1]

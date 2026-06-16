@@ -6,12 +6,12 @@ library(RColorBrewer)
 library(rtracklayer)
 library(patchwork)
 
-b37_GENE_REF <- '/lab-share/Hem-Sankaran-e2/Public/ref_genomes/human/hg19_ncbiRefSeq_RefSeqAll_2026UCSC.tsv.gz'
+b36_GENE_REF <- '/path/to/hg19_ncbiRefSeq_RefSeqAll_2026UCSC.tsv.gz'  # Update this path as needed
 
-ATAC_DIR_WENG2024   <- '/lab-share/Hem-Sankaran-e2/Public/inhouse_datasets/bone_marrow_atac_peak_bigwig/hg19_liftOver/'
-ATAC_DIR_CORCES2016 <- '/lab-share/Hem-Sankaran-e2/Public/inhouse_datasets/Corces_2016_hg19bw/'
+ATAC_DIR_WENG2024   <- '/path/to/bone_marrow_atac_peak_bigwig/hg19_liftOver/'  # Update this path as needed
+ATAC_DIR_CORCES2016 <- '/path/to/Corces_2016_hg19bw/'  # Update this path as needed
 
-# Load shared step4 utility functions from the sibling scripts utility folder.
+# Load shared step4 utility functions 
 get_script_dir <- function() {
     file_arg <- sub("^--file=", "", commandArgs(trailingOnly = FALSE)[grep("^--file=", commandArgs(trailingOnly = FALSE))])
     if (length(file_arg) > 0) {
@@ -19,7 +19,7 @@ get_script_dir <- function() {
     }
     return(getwd())
 }
-source(file.path(get_script_dir(), "..", "2052490848", "step4_utility.R"))
+source(file.path(get_script_dir(), "step4_utility.R"))
 
 
 resolve_variant_atac <- function(variant_dt, atac_dt_list) {
@@ -350,7 +350,7 @@ read_and_merge_pip_sources <- function(pip_sources, credible_snps_dt, chrom_arg 
 usage <- function() {
     msg <- c(
         "Usage:",
-        "Rscript step4_plot_variant_tiles.R \\",
+        "Rscript 4_plot_variant_tiles.R \\",
         "  --credible-set path/to/*_credible_sets.tsv \\",
         "  --pip \"file1.tsv:'label1',file2.tsv:'label2'\" \\",
         "  --atac-dir Weng2024|Corces2016|both|/path/to/atac_tracks \\",
@@ -365,7 +365,7 @@ usage <- function() {
         "- --atac-dir both plots Weng2024 and Corces2016 as separate ATAC panels with separate color scales.",
         "- Each ATAC track/cell type is shown as its own tile column.",
         "- --cell-types specifies cell types per source (space-separated source:\"type1,type2,...\" entries).",
-        "  Example: --cell-types Weng2024:\"HSC,MPP\" Corces2016:\"CD34,CD14\"",
+        "  Example: --cell-types Weng2024:\"HSC,MEP\" Corces2016:\"HSC,MPP,LMPP\"",
         "- PIP is colored with a pseudo-log scale.",
         "- split-pip isolates PIP == 1 into its own top color.",
         "- rank-var-by controls row order from top to bottom."
