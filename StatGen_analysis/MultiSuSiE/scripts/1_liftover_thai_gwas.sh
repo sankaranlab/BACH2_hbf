@@ -43,7 +43,7 @@ LABSHARE="/path/to/shared"
 WDIR="${LABSHARE}/BACH2_hbf/StatGen_analysis/MultiSuSiE"
 cd $WDIR
 
-THAI_GWAS="${WDIR}/qc/sumstats/Thai_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz"
+THAI_GWAS="${WDIR}/qc-ed/Thai_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz"
 CHAIN="${LABSHARE}/ref_genomes/human/hg38ToHg19.over.chain.gz"
 
 # Extract CHR and BP from gwas, form a bed for liftover
