@@ -20,21 +20,31 @@ This directory hosts scripts on statistical genetics analyses downstream of GWAS
 
 <a id="data-download"></a>
 
-All GWAS summary statistics have been uploaded to the GWAS Catalog and can be accessed via:
+The summary statistics of GWAS we conducted ourselves have been uploaded to the GWAS Catalog and can be accessed via:
 
-| Cohort          | Access Code |
-|-----------------|-------------|
-| St. Jude        |             |
-| GTEx            |             |
-| Interval        |             |
-| Sardinia        |             |
-| TopMed          |             |
-| BIOS (eQTLgen)  |             |
-| Sweden          |             |
-| Thailand        |             |
-| Tanzania        |             |
+| Cohort          | Accession Code  |
+|-----------------|--------------|
+| TopMed          | GCST90860859 |
+| Tanzania        | GCST90860860 |
+| Sweden          | GCST90860861 |
+| LifeLines DEEP <br> (eQTLgen BIOS)  | GCST90860862 |
+| Leidon Longevity Study<br> (eQTLgen BIOS)  | GCST90860863 |
+| Rotterdam Study<br> (eQTLgen BIOS)  | GCST90860864 |
+| Thailand        | GCST90860865 |
+
+The other GWAS panels have already been published and can be accessed either online or through contacting their authors:
+
+| Cohort              | Publication<br>(PMID or preprint) |
+|---------------------|----------------------|
+| St. Jude<br>(SCCRIP)| 2979764;<br>34283174 |
+| GTEx                |  32913098            |
+| INTERVAL            | 28941948;<br> [medRive preprint](https://doi.org/10.1101/2023.03.14.23287244) |
+| Sardinia            | 18245381             |
+
 
 Detailed meta info of each cohort could be found on the corresponding GWAS catalog page or Supplementary Table 1 of the manuscript.
+
+We have also submitted the FEMA result to GWAS catalog. The accession code is GCST90860858.
 
 ### 0.1. Cohort GWAS data harmonization and QC
 
@@ -45,22 +55,25 @@ Summary statistics that were initially in hg19 were lifted over to hg38. The out
 *  Minor allele count (MAC), if available, $> \max(2Nf_{\min},~\min(40, \sqrt{N}), ~ 20)$
 *  INFO score > 0.6
 
-QC logs are in `re_gwas_qc_mac40_260416.log`. After QC, the column names are:
+QC logs are in `re_gwas_qc_mac40_260416.log`. Note that this script was tailored for the original filenames and headers of the cohort summary statistics. To make it work with sumstats downloaded from GWAS catalog, `COLUMN_MAP`(lines 15--33) needs to be redefined.
 
-| Col Name   |   Content                                                                    |
-|------------|------------------------------------------------------------------------------|
-| chr        |   Chromosome                                                                 |
-| pos        |   Physical position in bp (hg38)                                             |
-| a1         |   Reference allele                                                           |
-| a2         |   Effect allele                                                              |
-| ea_freq    |   Sample frequency of the effect allele (A2)                                 |
-| ea_count   |   Sample count of the effect allele (A2)                                     |
-| n          |   Sample Size                                                                |
-| p          |   P value  (`P_BOLT_LMM` for BOLT-LMM output)                                |
-| beta       |   Effect size estimate                                                       |
-| se         |   Standard error                                                             |
-| z          |   Z statistics (signed squareroot of `CHISQ_BOLT_LMM` for BOLT-LMM output)   |
-| info       |   INFO score                                                                 |
+After QC, the column names are:
+
+| Col Name   |   Content                                   |
+|------------|---------------------------------------------|
+| chr        |   Chromosome                                |
+| pos        |   Physical position in bp (hg38)            |
+| a1         |   Reference allele                          |
+| a2         |   Effect allele                             |
+| ea_freq    |   Sample frequency of the effect allele (A2)|
+| ea_count   |   Sample count of the effect allele (A2)    |
+| n          |   Sample Size                               |
+| p          |   P value  (`P_BOLT_LMM` for BOLT-LMM)      |
+| beta       |   Effect size estimate                      |
+| se         |   Standard error                            |
+| z          |Z statistic (signed squareroot of `CHISQ_BOLT_LMM` for BOLT-LMM)|
+| info       |   Imputation INFO score                     |
+
 
 
 ## 1. Fixed-effect Meta Analysis (FEMA) via METAL
