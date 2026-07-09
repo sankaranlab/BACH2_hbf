@@ -24,7 +24,7 @@ The summary statistics of GWAS we conducted ourselves have been uploaded to the 
 
 | Cohort          | Accession Code  |
 |-----------------|--------------|
-| TopMed          | [embargoed_until_publication] |
+| TOPMed          | [embargoed_until_publication] |
 | Tanzania        | [embargoed_until_publication] |
 | Sweden          | [embargoed_until_publication] |
 | LifeLines DEEP <br> (eQTLgen BIOS)  | [embargoed_until_publication] |
