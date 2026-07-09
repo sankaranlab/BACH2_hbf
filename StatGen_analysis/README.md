@@ -24,13 +24,13 @@ The summary statistics of GWAS we conducted ourselves have been uploaded to the 
 
 | Cohort          | Accession Code  |
 |-----------------|--------------|
-| TopMed          | GCST90860859 |
-| Tanzania        | GCST90860860 |
-| Sweden          | GCST90860861 |
-| LifeLines DEEP <br> (eQTLgen BIOS)  | GCST90860862 |
-| Leidon Longevity Study<br> (eQTLgen BIOS)  | GCST90860863 |
-| Rotterdam Study<br> (eQTLgen BIOS)  | GCST90860864 |
-| Thailand        | GCST90860865 |
+| TopMed          | [embargoed_until_publication] |
+| Tanzania        | [embargoed_until_publication] |
+| Sweden          | [embargoed_until_publication] |
+| LifeLines DEEP <br> (eQTLgen BIOS)  | [embargoed_until_publication] |
+| Leiden Longevity Study<br> (eQTLgen BIOS)  | [embargoed_until_publication] |
+| Rotterdam Study<br> (eQTLgen BIOS)  | [embargoed_until_publication] |
+| Thailand        | [embargoed_until_publication] |
 
 The other GWAS panels have already been published and can be accessed either online or through contacting their authors:
 
@@ -38,13 +38,13 @@ The other GWAS panels have already been published and can be accessed either onl
 |---------------------|----------------------|
 | St. Jude<br>(SCCRIP)| 2979764;<br>34283174 |
 | GTEx                |  32913098            |
-| INTERVAL            | 28941948;<br> [medRive preprint](https://doi.org/10.1101/2023.03.14.23287244) |
+| INTERVAL            | 28941948;<br> [medRxiv preprint](https://doi.org/10.1101/2023.03.14.23287244) |
 | Sardinia            | 18245381             |
 
 
 Detailed meta info of each cohort could be found on the corresponding GWAS catalog page or Supplementary Table 1 of the manuscript.
 
-We have also submitted the FEMA result to GWAS catalog. The accession code is GCST90860858.
+We have also submitted the FEMA result to GWAS catalog. The accession code is [embargoed_until_publication].
 
 ### 0.1. Cohort GWAS data harmonization and QC
 
