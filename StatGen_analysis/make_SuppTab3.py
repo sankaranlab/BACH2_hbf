@@ -63,22 +63,36 @@ snp	chr	pos	a1	a2	id	ea_freq	info	beta	p	n	se	z	impute	maf
 cohort_sumstats/TOPMed_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz
 snp	chr	pos	a1	a2	ea_count	ea_freq	info	n	beta	se	TSTAT	p	VART	VARTSTAR	z	maf	mac
 
-    
+Lastly:
+Align the variants with reference sequence (REF_FA), such that the reported alleles (A1 and A2) match the
+reference and alternate alleles in the reference genome. A1/A2 are then renamed REF/ALT, with ALT always
+the effect allele.
 
 Output header:
-"MarkerName	Chr	Position	A1	A2	AF2_META	BETA_META	SE_META	P_META	EUR_MAMA_AF2	EUR_MAMA_BETA	EUR_MAMA_SE	EUR_MAMA_P	AFR_MAMA_AF2	AFR_MAMA_BETA	AFR_MAMA_SE	AFR_MAMA_P	THAI_MAMA_AF2	THAI_MAMA_BETA	THAI_MAMA_SE	THAI_MAMA_P	INTERVAL_AF2	INTERVAL_BETA	INTERVAL_SE	INTERVAL_P	SARDINIA_AF2	SARDINIA_BETA	SARDINIA_SE	SARDINIA_P	SWEDEN_AF2	SWEDEN_BETA	SWEDEN_SE	SWEDEN_P	GTEx_AF2	GTEx_BETA	GTEx_SE	GTEx_P	BIOS_LL_AF2	BIOS_LL_BETA	BIOS_LL_SE	BIOS_LL_P	BIOS_LLS_AF2	BIOS_LLS_BETA	BIOS_LLS_SE	BIOS_LLS_P	BIOS_RS_AF2	BIOS_RS_BETA	BIOS_RS_SE	BIOS_RS_P	TOPMED_AF2	TOPMED_BETA	TOPMED_SE	TOPMED_P	StJude_AF2	StJude_BETA	StJude_SE	StJude_P	TANZANIA_AF2	TANZANIA_BETA	TANZANIA_SE	TANZANIA_P	THAI_AF2	THAI_BETA	THAI_SE	THAI_P"
+"MarkerName	Chr	Position	REF	ALT	AF2_META	BETA_META	SE_META	P_META	EUR_MAMA_AF2	EUR_MAMA_BETA	EUR_MAMA_SE	EUR_MAMA_P	AFR_MAMA_AF2	AFR_MAMA_BETA	AFR_MAMA_SE	AFR_MAMA_P	THAI_MAMA_AF2	THAI_MAMA_BETA	THAI_MAMA_SE	THAI_MAMA_P	INTERVAL_AF2	INTERVAL_BETA	INTERVAL_SE	INTERVAL_P	SARDINIA_AF2	SARDINIA_BETA	SARDINIA_SE	SARDINIA_P	SWEDEN_AF2	SWEDEN_BETA	SWEDEN_SE	SWEDEN_P	GTEx_AF2	GTEx_BETA	GTEx_SE	GTEx_P	BIOS_LL_AF2	BIOS_LL_BETA	BIOS_LL_SE	BIOS_LL_P	BIOS_LLS_AF2	BIOS_LLS_BETA	BIOS_LLS_SE	BIOS_LLS_P	BIOS_RS_AF2	BIOS_RS_BETA	BIOS_RS_SE	BIOS_RS_P	TOPMED_AF2	TOPMED_BETA	TOPMED_SE	TOPMED_P	StJude_AF2	StJude_BETA	StJude_SE	StJude_P	TANZANIA_AF2	TANZANIA_BETA	TANZANIA_SE	TANZANIA_P	THAI_AF2	THAI_BETA	THAI_SE	THAI_P"
 """
 import sys
 import time
 import os
+import resource
 import pandas as pd
 import math
 import re
+import pysam # type: ignore
 
 
 # set working directory
 LABSHARE = "/lab-share/Hem-Sankaran-e2/Public"
 WDIR = f"{LABSHARE}/projects/xhcheng/HbF/Hbf_BACH2_wip/metaGWAS_analysis"
+# reference genome (matching index file hg38.fa.fai exists in the same dir)
+REF_FA = f"{LABSHARE}/ref_genomes/human/hg38/hg38.fa"
+
+
+def get_peak_mem_mb():
+    """Return this process's peak resident set size (RSS) so far, in MB."""
+    rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+    # ru_maxrss is KB on Linux, bytes on macOS.
+    return rss / 1024 if sys.platform != "darwin" else rss / (1024 * 1024)
 
 
 def normalize_chromosome(chrom):
@@ -164,7 +178,7 @@ def swap_output_allele_orientation(df):
         swapped["A1"] = swapped["A2"]
         swapped["A2"] = original_a1
 
-    af_cols = [col for col in swapped.columns if col.endswith("_AF2")]
+    af_cols = [col for col in swapped.columns if col.endswith("_AF2") or col == "AF2_META"]
     beta_cols = [col for col in swapped.columns if col.endswith("_BETA")]
     z_cols = [col for col in swapped.columns if col.endswith("_Z") or col == "Z_META"]
 
@@ -177,12 +191,97 @@ def swap_output_allele_orientation(df):
     return swapped
 
 
+def align_alleles_to_reference(df, ref_fasta_path, incompatible_outfile=None):
+    """
+    Align A1/A2 to REF_FA so the reported alternate allele (currently A2, the
+    effect allele) is always the non-reference base, then rename A1/A2 to REF/ALT.
+
+    Rows whose REF_FA base matches neither A1 nor A2 (ref/alt mismatch, e.g. due to
+    an indel, tri-allelic site, or stale coordinates) are flagged as incompatible
+    and dropped, since we cannot safely infer which allele is the true ALT.
+    """
+    aligned = df.copy()
+    fasta = pysam.FastaFile(ref_fasta_path)
+    contigs = set(fasta.references)
+
+    # Work out whether REF_FA uses "chr1"-style or "1"-style contig names.
+    contig_for_chrom = {}
+    for chrom in aligned["Chr"].dropna().unique():
+        chrom_str = str(chrom)
+        if chrom_str in contigs:
+            contig_for_chrom[chrom_str] = chrom_str
+        elif f"chr{chrom_str}" in contigs:
+            contig_for_chrom[chrom_str] = f"chr{chrom_str}"
+        else:
+            contig_for_chrom[chrom_str] = None
+
+    def fetch_ref_base(chrom, pos):
+        if pd.isna(chrom) or pd.isna(pos):
+            return pd.NA
+        contig = contig_for_chrom.get(str(chrom))
+        if contig is None:
+            return pd.NA
+        try:
+            base = fasta.fetch(contig, int(pos) - 1, int(pos))
+        except (KeyError, ValueError, IndexError):
+            return pd.NA
+        return base.upper() if base else pd.NA
+
+    aligned["REF_FA_base"] = [
+        fetch_ref_base(chrom, pos) for chrom, pos in zip(aligned["Chr"], aligned["Position"])
+    ]
+    fasta.close()
+
+    matches_a1 = aligned["REF_FA_base"] == aligned["A1"]
+    matches_a2 = aligned["REF_FA_base"] == aligned["A2"]
+    ref_mismatch = ~(matches_a1 | matches_a2)
+
+    n_mismatch = int(ref_mismatch.sum())
+    if n_mismatch and incompatible_outfile:
+        mismatch_rows = aligned.loc[
+            ref_mismatch, ["MarkerName", "Chr", "Position", "A1", "A2", "REF_FA_base"]
+        ].copy()
+        mismatch_rows.insert(0, "COHORT", "REF_FA_mismatch")
+        mismatch_rows.to_csv(
+            incompatible_outfile,
+            sep="\t",
+            index=False,
+            mode="a",
+            header=not os.path.exists(incompatible_outfile),
+        )
+    print(f"  REF_FA alignment: {n_mismatch} SNPs matched neither allele and were dropped")
+
+    aligned = aligned.loc[~ref_mismatch].copy()
+    matches_a2 = matches_a2.loc[aligned.index]
+
+    # Where A2 (the effect allele) is actually the reference base, swap A1/A2 and
+    # flip AF/BETA/Z so the reported ALT (new A2) stays the effect allele.
+    needs_swap = matches_a2
+
+    af_cols = [c for c in aligned.columns if c.endswith("_AF2") or c == "AF2_META"]
+    beta_cols = [c for c in aligned.columns if c.endswith("_BETA")]
+    z_cols = [c for c in aligned.columns if c.endswith("_Z") or c == "Z_META"]
+
+    for col in af_cols:
+        aligned.loc[needs_swap, col] = 1 - pd.to_numeric(aligned.loc[needs_swap, col], errors="coerce")
+    for col in beta_cols + z_cols:
+        aligned.loc[needs_swap, col] = -pd.to_numeric(aligned.loc[needs_swap, col], errors="coerce")
+
+    original_a1 = aligned["A1"].copy()
+    aligned.loc[needs_swap, "A1"] = aligned.loc[needs_swap, "A2"]
+    aligned.loc[needs_swap, "A2"] = original_a1.loc[needs_swap]
+
+    aligned = aligned.drop(columns=["REF_FA_base"])
+    aligned = aligned.rename(columns={"A1": "REF", "A2": "ALT"})
+    return aligned
+
+
 FILE_PATHS = {
     # "FEMA": "cohort_sumstats/FEMA_CloudTanz_METALOUT_inv_1.tbl",
     "FEMA": "cohort_sumstats/METAL_hbf_inv_ALL_info6_mac40_SE_gcOn_hg38.tsv.gz",
     # "MAMA_skeleton": "cohort_sumstats/UA_HBF_MAMA_{pop}.res", # pop can be EUR, AFR, THAI
     # "MAMA_skeleton": "cohort_sumstats/XC_newFema_16865_{pop}_HBF.res", # pop can be EUR, AFR, THAI
-    "MAMA_skeleton": "MAMA/XC_SNPaligned_16865_{pop}_HBF.res", # pop can be EUR, AFR, THAI
+    "MAMA_skeleton": "MAMA/XC_SNPaligned_16865_{pop}_HBF.res.gz", # pop can be EUR, AFR, THAI
     "BIOS": "cohort_sumstats/BIOS_{panel}_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz", # panel can be LL, LLS_660Q, RS
     "GTEx": "cohort_sumstats/GTEx_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz", 
     "Sardinia": "cohort_sumstats/Sardinia_chrALL_MAF0p1pct_hg38_info6.clean.tsv.gz",
@@ -208,7 +307,7 @@ def read_and_standardize(filepath, source_name, cohort=None, literal_p_as_string
     else:
         df = pd.read_csv(full_path, sep="\t", low_memory=False)
 
-    print(f"  Loaded {source_name} from {filepath}: {df.shape[0]} rows x {df.shape[1]} cols")
+    print(f"  Loaded {source_name} from {filepath}: {df.shape[0]} rows x {df.shape[1]} cols (mem={get_peak_mem_mb():.0f}MB)")
     
     # Standardize key columns based on source
     if source_name == "FEMA":
@@ -427,7 +526,8 @@ def harmonize_and_merge_by_pos(base_df, incoming_df, prefix, incompatible_outfil
     print(
         f"    {prefix}: matched={matched.sum()}, same={same[matched].sum()}, "
         f"swapped={swapped[matched].sum()}, incompatible={incompatible.sum()}, "
-        f"recovered_by_rsid={recovered_by_rsid.sum()}, unmatched={(~matched).sum()}"
+        f"recovered_by_rsid={recovered_by_rsid.sum()}, unmatched={(~matched).sum()}, "
+        f"mem={get_peak_mem_mb():.0f}MB"
     )
 
     merged = merged.drop(columns=[
@@ -441,7 +541,12 @@ def harmonize_and_merge_by_pos(base_df, incoming_df, prefix, incompatible_outfil
 def main():
     t0 = time.time()
     def ts():
-        return f"+{time.time() - t0:.1f}s"
+        mem = get_peak_mem_mb()
+        if mem < 1024:
+            mem_str = f"{mem:.0f}MB"
+        else:
+            mem_str = f"{mem/1024:.2f}GB"
+        return f"+{time.time() - t0:.1f}s, mem={mem_str}"
     
     input_suffix = sys.argv[1] if len(sys.argv) > 1 else "input"
 
@@ -476,8 +581,7 @@ def main():
     # Extract FEMA meta-analysis results
     fema_data = fema[["MarkerName", "Chr", "Position", "A1", "A2"]].copy()
     fema_data["AF2_META"] = fema["AF2_META"]
-    # fema_data["BETA_META"] = fema["BETA"]
-    # fema_data["SE_META"] = fema["SE"]
+    fema_data["Z_META"] = fema["Z"]
     fema_data["P_META_log10p"] = fema["P_META_log10p"]
     fema_data["N_META"] = fema["N_META"]
 
@@ -631,6 +735,10 @@ def main():
     # Swap to the opposite reported allele across the final output table.
     result = swap_output_allele_orientation(result)
 
+    print(f"[{ts()}] Aligning alleles to reference genome ({REF_FA})...")
+    before_filter_n = len(result)
+    result = align_alleles_to_reference(result, REF_FA, incompatible_outfile)
+    print(f"  [{ts()}] Aligned to REF_FA: {before_filter_n} -> {len(result)}")
 
     # Save a NA-filled version of the result before filtering out rows with missing MAMA data, for transparency and potential future use.
     result.to_csv(f"supplementary_table_3_{input_suffix}_logP_wNA.tsv", sep="\t", index=False)
@@ -645,7 +753,7 @@ def main():
     snps_per_chromosome = result.groupby("Chr").size()
     for chrom, count in snps_per_chromosome.items():
         print(f"Chromosome {chrom}: {count} SNPs")
-    print(f"Overall: {len(result)} SNPs")
+    print(f"Overall: {len(result)} SNPs (mem={get_peak_mem_mb():.0f}MB)")
     
     print(f"[{ts()}] [6/6] Writing output file...")
     # Write output with -log10P values
