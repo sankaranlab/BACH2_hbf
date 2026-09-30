@@ -2,8 +2,9 @@
 
 Scripts and supplementary files for the manuscript:
 
-> **"Human genetics implicates a BACH2-NRF2 axis in fetal hemoglobin activation"**  
-> Preprint: https://www.medrxiv.org/content/10.1101/2023.03.24.23287659v3
+> **["Human genetics implicates a BACH2-NRF2 axis in fetal hemoglobin activation"](https://www.nature.com/articles/s41586-026-11113-2)**  
+> Citation: <br>
+> Guo, CJ., Arora, U.P., Cheng, X. et al. Human genetics implicates a BACH2–NRF2 axis in fetal haemoglobin activation. Nature (2026). https://doi.org/10.1038/s41586-026-11113-2 
 
 ## Table of contents
 
