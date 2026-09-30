@@ -7,17 +7,15 @@ Citation:
 
 This repository hosts scripts used for the identification of a BACH2–NRF2 regulatory axis regulating fetal hemoglobin (HbF) expression. The analyses are grouped into the following categories:
 
-1. **Statistical genetics** — Meta-GWAS, fine-mapping, and heritability/genetic-correlation analyses identify and characterize HbF-associated loci, implicating BACH2.
-2. **SCAVENGE** — Propagates fine-mapped GWAS variant scores across a bone marrow scATAC-seq cell graph to identify the hematopoietic cell types most relevant to HbF regulation.
-3. **Bulk RNA-seq** — Characterizes transcriptional changes upon BACH2 knockdown, highlighting upregulation of fetal globin genes (*HBG1/HBG2*).
-4. **CUT&RUN** — Maps BACH2 and NRF2 occupancy genome-wide in erythroid cells, linking GWAS variants to regulatory elements.
+1. **[`StatGen_analysis/`](StatGen_analysis/)** <br>
+   Includes GWAS meta-analyses, conditional analysis, fine-mapping, heritability & genetic-correlation analyses, and multi-ancestry fine-mapping of the BACH2 locus.
 
+2. **[`SCAVENGE_analysis/`](SCAVENGE_analysis/)**<br>
+   Propagates fine-mapped GWAS variant scores across cell graph constructed based on Granja *et al.* (2019)'s bone marrow scATAC-seq data to identify the hematopoietic cell types most relevant to HbF regulation.
 
-## Repository structure
+3. **[`BulkRNAseq_analysis/`](BulkRNAseq_analysis/)**<br>
+   Characterizes transcriptional changes upon BACH2 knockdown, highlighting upregulation of fetal globin genes (*HBG1/HBG2*). 
+   Pipeline includes STAR alignment, featureCounts quantification, and DESeq2 differential expression for BACH2-sh2 vs. scramble control.
 
-| Directory | Description |
-|-----------|-------------|
-| [`StatGen_analysis/`](StatGen_analysis/) | Meta-GWAS, COJO fine-mapping, SNP heritability estimation, and genetic correlation analyses |
-| [`SCAVENGE_analysis/`](SCAVENGE_analysis/) | Per-cell trait relevance scoring using SCAVENGE on Granja 2019 bone marrow scATAC-seq data |
-| [`BulkRNAseq_analysis/`](BulkRNAseq_analysis/) | STAR alignment, featureCounts quantification, and DESeq2 differential expression for BACH2-sh2 vs. scramble control |
-| [`CUTRUN_analysis/`](CUTRUN_analysis/) | End-to-end CUT&RUN pipeline: trimming, spike-in normalization, hg38 alignment, peak calling, bigWig tracks, and FIMO motif scanning |
+4. **[`CUTRUN_analysis/`](CUTRUN_analysis/)**<br>
+   Maps BACH2 and NRF2 occupancy genome-wide in erythroid cells, linking GWAS variants to regulatory elements. Pipeline includes End-to-end CUT&RUN pipeline: trimming, spike-in normalization, hg38 alignment, peak calling, bigWig tracks, and FIMO motif scanning.
